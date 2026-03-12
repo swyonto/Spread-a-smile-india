@@ -83,7 +83,7 @@
 
 ---
 
-## ⬜ Step 3 — Navbar Component
+## ✅ Step 3 — Navbar Component (DONE)
 
 ### Files to build
 - [ ] `views/partials/navbar.ejs` — finalize markup
@@ -103,7 +103,7 @@
 
 ---
 
-## ⬜ Step 4 — Footer Component
+## ✅ Step 4 — Footer Component (DONE)
 
 ### Files to build
 - [ ] `views/partials/footer.ejs` — finalize markup
@@ -119,7 +119,7 @@
 
 ---
 
-## ⬜ Step 5 — Carousel Component
+## ✅ Step 5 — Carousel Component (DONE)
 
 ### Files to build
 - [ ] `views/partials/carousel.ejs` — finalize markup
@@ -145,7 +145,7 @@
 
 ---
 
-## ⬜ Step 6 — Image Card + Gallery Components
+## ✅ Step 6 — Image Card + Gallery Components (DONE)
 
 ### Files to build
 - [ ] `views/partials/imageCard.ejs` — finalize markup

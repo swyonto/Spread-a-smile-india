@@ -1,0 +1,31 @@
+<%
+  /*
+   * pageCard.ejs — navigation/explore card component
+   *
+   * Required locals:
+   *   title       {string} — card heading
+   *   description {string} — short description text
+   *   link        {string} — URL to navigate to on click
+   *   image       {string} — background image URL
+   *   icon        {string} — Font Awesome class string e.g. 'fa-solid fa-heart'
+   */
+  const _title       = locals.title       || '';
+  const _description = locals.description || '';
+  const _link        = locals.link        || '#';
+  const _image       = locals.image       || '';
+  const _icon        = locals.icon        || 'fa-solid fa-star';
+%>
+
+<a href="<%= _link %>" class="page-card">
+  <div class="page-card-img-wrap">
+    <img src="<%= _image %>" alt="<%= _title %>" loading="lazy" />
+    <div class="page-card-img-overlay"></div>
+  </div>
+  <div class="page-card-body">
+    <h3 class="page-card-title"><%= _title %></h3>
+    <p class="page-card-desc"><%= _description %></p>
+    <span class="page-card-cta">
+      Explore <i class="fa-solid fa-arrow-right"></i>
+    </span>
+  </div>
+</a>

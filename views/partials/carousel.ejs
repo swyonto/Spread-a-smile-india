@@ -1,64 +1,80 @@
-<!-- Carousel Component -->
-<!-- Usage: <%- include('../partials/carousel', { type: 'image' | 'video' }) %> -->
-<!-- Defaults to image carousel if type is not passed -->
+<%
+  /*
+   * carousel.ejs — reusable carousel component
+   *
+   * Required locals:
+   *   carouselId {string} — unique id for this carousel instance
+   *   slides     {Array}  — array of slide objects:
+   *     { type: 'image',   src, alt, heading, subheading? }
+   *     { type: 'video',   src (.mp4 direct URL), heading, subheading? }
+   *     { type: 'youtube', embedId, heading, subheading? }
+   */
+  const _id     = locals.carouselId || 'carousel';
+  const _slides = locals.slides || [];
+%>
 
-<div class="carousel" id="carousel">
+<div class="carousel" id="<%= _id %>" data-carousel>
+
+  <!-- Track -->
   <div class="carousel-track-wrapper">
-    <div class="carousel-track" id="carouselTrack">
+    <div class="carousel-track">
 
-      <!-- Slide 1: Image -->
-      <div class="carousel-slide">
-        <img
-          src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg"
-          alt="Transforming Lives Through Education"
-          loading="lazy"
-        />
-        <div class="carousel-caption">
-          <h2>Transforming Lives Through Education</h2>
-        </div>
-      </div>
+      <% _slides.forEach(function(slide, i) { %>
+      <div class="carousel-slide<%= (slide.type === 'video' || slide.type === 'youtube') ? ' carousel-slide--video' : '' %>" data-index="<%= i %>">
 
-      <!-- Slide 2: Image -->
-      <div class="carousel-slide">
-        <img
-          src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide2_woman.jpg"
-          alt="Empowering Women"
-          loading="lazy"
-        />
-        <div class="carousel-caption">
-          <h2>Empowering Women</h2>
-        </div>
-      </div>
+        <% if (slide.type === 'image') { %>
+          <img src="<%= slide.src %>" alt="<%= slide.alt || slide.heading %>" loading="<%= i === 0 ? 'eager' : 'lazy' %>" />
 
-      <!-- Slide 3: Video -->
-      <div class="carousel-slide carousel-slide--video">
-        <video
-          id="carouselVideo"
-          src="https://www.youtube.com/watch?v=_XuH6OPxoas"
-          muted
-          loop
-          playsinline
-          preload="none"
-        ></video>
+        <% } else if (slide.type === 'video') { %>
+          <video class="carousel-video" src="<%= slide.src %>" muted loop playsinline preload="none"></video>
+          <div class="video-controls">
+            <button class="video-pause-btn" aria-label="Pause video" title="Pause / Resume video">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button class="sound-toggle" aria-label="Toggle sound" title="Toggle sound">
+              <i class="fa-solid fa-volume-xmark"></i>
+            </button>
+          </div>
+
+        <% } else if (slide.type === 'youtube') { %>
+          <iframe
+            class="carousel-youtube"
+            src="https://www.youtube.com/embed/<%= slide.embedId %>?autoplay=0&mute=1&rel=0&modestbranding=1"
+            title="<%= slide.heading %>"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        <% } %>
+
+        <% if (slide.heading) { %>
         <div class="carousel-caption">
-          <h2>TEDx Talk</h2>
+          <h2 class="carousel-heading"><%= slide.heading %></h2>
+          <% if (slide.subheading) { %>
+          <p class="carousel-subheading"><%= slide.subheading %></p>
+          <% } %>
         </div>
-        <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">🔇</button>
+        <% } %>
+
       </div>
+      <% }); %>
 
     </div>
   </div>
 
-  <!-- Controls -->
-  <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous slide">&#8592;</button>
-  <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next slide">&#8594;</button>
+  <!-- Prev / Next -->
+  <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button class="carousel-btn carousel-btn--next" aria-label="Next slide">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
 
   <!-- Dots -->
-  <div class="carousel-dots" id="carouselDots">
-    <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
-    <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
-    <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+  <div class="carousel-dots">
+    <% _slides.forEach(function(_, i) { %>
+    <button class="carousel-dot <%= i === 0 ? 'active' : '' %>" data-index="<%= i %>" aria-label="Go to slide <%= i + 1 %>"></button>
+    <% }); %>
   </div>
-</div>
 
-<script src="/js/carousel.js"></script>
+</div>

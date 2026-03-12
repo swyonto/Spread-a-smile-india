@@ -1,7 +1,34 @@
-<!-- Image Card Component -->
-<!-- Usage: <%- include('../partials/imageCard', { image: 'url', heading: 'Title' }) %> -->
+<%
+  /*
+   * imageCard.ejs — Image card component
+   *
+   * Required locals:
+   *   image   {string} — image URL
+   *   heading {string} — card heading
+   *   alt?    {string} — alt text (falls back to heading)
+   *   link?   {string} — optional href to wrap card in <a>
+   */
+  const _alt  = locals.alt  || heading;
+  const _link = locals.link || null;
+%>
 
+<% if (_link) { %>
+<a href="<%= _link %>" class="image-card">
+<% } else { %>
 <div class="image-card">
-  <img src="<%= image %>" alt="<%= heading %>" loading="lazy" />
-  <h3 class="image-card-heading"><%= heading %></h3>
+<% } %>
+
+  <div class="image-card-img-wrap">
+    <img src="<%= image %>" alt="<%= _alt %>" loading="lazy" />
+    <div class="image-card-img-overlay"></div>
+  </div>
+  <div class="image-card-body">
+    <h3 class="image-card-heading"><%= heading %></h3>
+    <span class="image-card-cta">Explore <i class="fa-solid fa-arrow-right"></i></span>
+  </div>
+
+<% if (_link) { %>
+</a>
+<% } else { %>
 </div>
+<% } %>

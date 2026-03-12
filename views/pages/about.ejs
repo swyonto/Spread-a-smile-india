@@ -12,7 +12,24 @@
   <main>
     <!-- Section 1: Video Carousel -->
     <section class="about-video-section">
-      <%- include('../partials/carousel', { type: 'video' }) %>
+      <%- include('../partials/carousel', {
+        carouselId: 'aboutCarousel',
+        slides: [
+          {
+            type: 'youtube',
+            embedId: '_XuH6OPxoas',
+            heading: 'TEDx Talk — Sangita Mehra',
+            subheading: 'Sharing lived stories of resilience, education, and hope.'
+          },
+          {
+            type: 'image',
+            src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide2_woman.jpg',
+            alt: 'Women Empowerment',
+            heading: 'Empowering Women',
+            subheading: 'Vocational training that creates sustainable futures.'
+          }
+        ]
+      }) %>
     </section>
 
     <!-- Section 2: How We Are Different -->
@@ -69,5 +86,6 @@
   <%- include('../partials/footer') %>
 
   <script src="/js/theme.js"></script>
+  <script src="/js/carousel.js"></script>
 </body>
 </html>

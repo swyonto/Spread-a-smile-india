@@ -1,3 +1,418 @@
 /* ============================================
    home.css — Home Page Section Styles
    ============================================ */
+
+/* ---- Shared section header ---- */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-heading);
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Section 2 — What We Do Cards
+   ============================================ */
+.home-cards-section {
+  padding: 5rem 2rem;
+  background-color: var(--color-bg-alt);
+}
+
+.home-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .home-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .home-cards-section {
+    padding: 3rem 1rem;
+  }
+  .home-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Section 3 — Know About Us (Page Cards)
+   ============================================ */
+.home-explore-section {
+  padding: 5rem 2rem;
+  background-color: var(--color-bg-alt);
+}
+
+.home-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- page-card component --- */
+.page-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-nav-border);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.page-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-lg);
+  opacity: 1;
+}
+
+.page-card-img-wrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.page-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.page-card:hover .page-card-img-wrap img {
+  transform: scale(1.07);
+}
+
+.page-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30, 15, 60, 0.6) 0%, transparent 65%);
+}
+
+.page-card-icon-badge {
+  position: absolute;
+  bottom: -1rem;
+  left: 1.25rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #c084fc, #818cf8);
+  color: #fff;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 12px rgba(129, 140, 248, 0.5);
+  z-index: 2;
+}
+
+.page-card-body {
+  padding: 1.75rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.page-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.page-card-desc {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.page-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+  transition: gap 0.22s ease;
+}
+
+.page-card:hover .page-card-cta {
+  gap: 0.7rem;
+}
+
+.page-card-cta i {
+  font-size: 0.72rem;
+  transition: transform 0.22s ease;
+}
+
+.page-card:hover .page-card-cta i {
+  transform: translateX(3px);
+}
+
+@media (max-width: 1024px) {
+  .home-explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .home-explore-section {
+    padding: 3rem 1rem;
+  }
+  .home-explore-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Section 4 — Mission
+   ============================================ */
+.home-mission-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 520px;
+  background-color: var(--color-bg-alt);
+}
+
+/* Text column */
+.mission-text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem 5rem 6rem;
+  gap: 1.25rem;
+}
+
+.mission-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-primary);
+  width: fit-content;
+}
+
+.mission-text-col h2 {
+  font-size: 2rem;
+  color: var(--color-heading);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.mission-text-col p {
+  font-size: 0.97rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Bullet points */
+.mission-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.mission-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.mission-points li i {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* CTA button */
+.mission-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  background-color: var(--color-primary);
+  color: var(--color-btn-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color var(--transition), transform var(--transition);
+  margin-top: 0.5rem;
+}
+
+.mission-btn:hover {
+  background-color: var(--color-accent);
+  transform: translateX(3px);
+  opacity: 1;
+}
+
+/* Image column */
+.mission-image-col {
+  overflow: hidden;
+}
+
+.mission-image-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.mission-image-col:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 900px) {
+  .home-mission-section {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .mission-text-col {
+    padding: 3rem 2rem;
+  }
+
+  .mission-image-col {
+    height: 320px;
+  }
+}
+
+@media (max-width: 540px) {
+  .mission-text-col {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .mission-text-col h2 {
+    font-size: 1.6rem;
+  }
+
+  .mission-image-col {
+    height: 240px;
+  }
+}
+
+/* ============================================
+   Section 4 — Impact Stats
+   ============================================ */
+.home-stats-section {
+  background-color: var(--color-heading);
+  padding: 4rem 2rem;
+}
+
+.stats-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .stats-inner {
+    gap: 0;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-item {
+    min-width: 45%;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .stat-number { font-size: 2rem; }
+}
+
+@media (max-width: 400px) {
+  .stat-item { min-width: 100%; }
+}

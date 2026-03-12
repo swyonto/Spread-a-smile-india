@@ -1,30 +1,74 @@
 <footer class="footer">
   <div class="footer-inner">
 
-    <!-- Contact Info -->
-    <div class="footer-col">
-      <h4>Contact Info</h4>
-      <p>108/A 1st Floor, Mandir Wali Gali<br />
-         (Opposite Canara Bank), Munirka Village<br />
-         New Delhi 110067</p>
-      <p>+91 97178 66620<br />+91 98917 28996</p>
-      <p>Sunday – Saturday</p>
+    <!-- Col 1: Brand + About -->
+    <div class="footer-col footer-col--brand">
+      <a href="/" class="footer-brand">
+        <img src="https://ik.imagekit.io/l15cczdgu/Assets/logo.webp?updatedAt=1761388991377" alt="Spread Smile India Logo" class="footer-logo" />
+        <span class="footer-brand-name">Spread Smile India</span>
+      </a>
+      <p class="footer-tagline">Transforming lives through education, health, and empowerment since 2005.</p>
     </div>
 
-    <!-- Social Links -->
+    <!-- Col 2: Quick Links -->
     <div class="footer-col">
-      <h4>Follow Us</h4>
-      <ul class="footer-social">
-        <li><a href="https://www.facebook.com/SpreadASmileIndia/" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="https://instagram.com/sangitamehra1" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://www.youtube.com/watch?v=_XuH6OPxoas" target="_blank" rel="noopener">YouTube</a></li>
+      <h4 class="footer-heading">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="/"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+        <li><a href="/about"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+        <li><a href="/programs"><i class="fa-solid fa-chevron-right"></i> Programs</a></li>
+        <li><a href="/impact"><i class="fa-solid fa-chevron-right"></i> Impact</a></li>
+        <li><a href="/dignitaries"><i class="fa-solid fa-chevron-right"></i> Dignitaries</a></li>
       </ul>
     </div>
 
+    <!-- Col 3: Contact Info -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Contact Us</h4>
+      <ul class="footer-contact">
+        <li>
+          <i class="fa-solid fa-location-dot"></i>
+          <span>108/A 1st Floor, Mandir Wali Gali, Opposite Canara Bank, Munirka Village, New Delhi 110067</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 97178 66620<br />+91 98917 28996</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-clock"></i>
+          <span>Sunday – Saturday</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Follow Us -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Follow Us</h4>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/SpreadASmileIndia/" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/sangitamehra1" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.youtube.com/watch?v=_XuH6OPxoas" target="_blank" rel="noopener" aria-label="YouTube" class="social-btn">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
   </div>
 
+  <!-- Bottom Bar -->
   <div class="footer-bottom">
-    <p>© Spread Smile India</p>
+    <p>© <span id="footerYear"></span> Spread Smile India. All rights reserved.</p>
+    <p class="footer-reg">Registered NGO &nbsp;|&nbsp; 20 Years of Service</p>
   </div>
 </footer>
+
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
+</script>

@@ -28,16 +28,25 @@
 
 .navbar-logo {
   height: 44px;
-  width: auto;
-  object-fit: contain;
+  width: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2.5px solid transparent;
+  background:
+    linear-gradient(var(--color-nav-bg), var(--color-nav-bg)) padding-box,
+    linear-gradient(135deg, #c084fc 0%, #818cf8 45%, #e879f9 100%) border-box;
+  box-shadow: 0 0 0 1px rgba(192, 132, 252, 0.18);
 }
 
 .navbar-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--color-nav-text);
   white-space: nowrap;
+  line-height: 1.2;
 }
 
 /* --- Center: Nav Links --- */
@@ -51,25 +60,49 @@
 }
 
 .nav-link {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 0.9rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.92rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--color-nav-text);
   background: none;
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: color var(--transition), background-color var(--transition);
+  transition: color var(--transition);
   white-space: nowrap;
+}
+
+/* Sliding underline on hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #c084fc, #818cf8);
+  border-radius: 2px;
+  transition: width 0.26s ease, left 0.26s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 70%;
+  left: 15%;
 }
 
 .nav-link:hover {
   color: var(--color-primary);
-  background-color: var(--color-bg-alt);
+}
+
+.nav-link.active {
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 /* --- Dropdown --- */
@@ -89,21 +122,32 @@
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-6px);
   min-width: 200px;
   background-color: var(--color-nav-bg);
   border: 1px solid var(--color-nav-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
+  /* visible padding stays inside; invisible bridge above prevents hover gap */
   padding: 0.5rem 0;
+  margin-top: 8px;
   list-style: none;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(-50%) translateY(-6px);
   transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
   pointer-events: none;
+}
+
+/* Invisible bridge fills the 8px gap so hover isn't lost mid-cursor-travel */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
 }
 
 .nav-dropdown:hover .dropdown-menu,
@@ -112,6 +156,11 @@
   visibility: visible;
   transform: translateX(-50%) translateY(0);
   pointer-events: all;
+}
+
+/* No underline on dropdown toggle buttons — only on plain <a> links */
+button.nav-link::after {
+  display: none;
 }
 
 .dropdown-menu li a {

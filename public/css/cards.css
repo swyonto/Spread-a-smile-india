@@ -1,3 +1,92 @@
 /* ============================================
    cards.css — Image Card Component Styles
    ============================================ */
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-nav-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.image-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-lg);
+  opacity: 1;
+}
+
+/* --- Image wrapper --- */
+.image-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.image-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.image-card:hover .image-card-img-wrap img {
+  transform: scale(1.07);
+}
+
+/* Gradient overlay on image — same as pageCard */
+.image-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30, 15, 60, 0.55) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* --- Body --- */
+.image-card-body {
+  padding: 1rem 1.25rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.image-card-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.image-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+  transition: gap 0.22s ease;
+}
+
+.image-card:hover .image-card-cta {
+  gap: 0.7rem;
+}
+
+.image-card-cta i {
+  font-size: 0.72rem;
+  transition: transform 0.22s ease;
+}
+
+.image-card:hover .image-card-cta i {
+  transform: translateX(3px);
+}

@@ -1,10 +1,22 @@
-<!-- Gallery Component -->
-<!-- Usage: <%- include('../partials/gallery', { images: ['url1', 'url2', ...] }) %> -->
+<%
+  /*
+   * gallery.ejs — Image grid gallery component
+   *
+   * Required locals:
+   *   images  {Array<string|Object>} — array of image URLs, or objects:
+   *             { src: 'url', alt: 'text' }
+   *   cols?   {number} — number of columns (default 3)
+   */
+  const _cols = locals.cols || 3;
+%>
 
-<div class="gallery-grid">
-  <% images.forEach(function(imgUrl) { %>
+<div class="gallery-grid" style="--gallery-cols: <%= _cols %>">
+  <% images.forEach(function(item) {
+    const src = (typeof item === 'string') ? item : item.src;
+    const alt = (typeof item === 'object' && item.alt) ? item.alt : 'Gallery image';
+  %>
     <div class="gallery-item">
-      <img src="<%= imgUrl %>" alt="Gallery image" loading="lazy" />
+      <img src="<%= src %>" alt="<%= alt %>" loading="lazy" />
     </div>
   <% }); %>
 </div>

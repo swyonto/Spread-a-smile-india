@@ -11,35 +11,149 @@
   <%- include('../partials/navbar') %>
 
   <main>
-    <!-- Section 1: Hero Carousel -->
-    <%- include('../partials/carousel') %>
 
-    <!-- Section 2: Image Cards -->
+    <!-- ======================================
+         Section 1: Hero Carousel
+         ====================================== -->
+    <%- include('../partials/carousel', {
+      carouselId: 'heroCarousel',
+      slides: [
+        {
+          type: 'image',
+          src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page4.webp',
+          alt: '20 Years of Transforming Lives Through Education',
+          heading: 'Transforming Lives Through Education',
+          subheading: 'Helping destitute street children move from streets to classrooms since 2005.'
+        },
+        {
+          type: 'image',
+          src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide2_woman.jpg',
+          alt: 'Empowering Women',
+          heading: 'Empowering Women',
+          subheading: 'Strengthening communities through skill development and financial independence.'
+        },
+        {
+          type: 'video',
+          src: 'assets/landing page/tedxtalk.mp4',
+          alt: 'TEDx Talk',
+          heading: 'TEDx Talk — Sangita Mehra',
+          subheading: 'Sharing lived stories of resilience, education, and hope.'
+        }
+      ]
+    }) %>
+
+    <!-- ======================================
+         Section 2: What We Do — Image Cards
+         ====================================== -->
     <section class="home-cards-section">
-      <div class="cards-grid">
-        <%- include('../partials/imageCard', { image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg', heading: 'Education' }) %>
-        <%- include('../partials/imageCard', { image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg', heading: 'Skill Development' }) %>
-        <%- include('../partials/imageCard', { image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg', heading: 'Community Support' }) %>
-        <%- include('../partials/imageCard', { image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg', heading: 'Health & Nutrition' }) %>
+      <div class="section-header">
+        <h2>What We Do</h2>
+        <p>Four pillars that drive lasting change in every community we serve.</p>
+      </div>
+      <div class="home-cards-grid">
+        <%- include('../partials/imageCard', {
+          image:   'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg',
+          heading: 'Education',
+          link:    '/programs#program-education'
+        }) %>
+        <%- include('../partials/imageCard', {
+          image:   'https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg',
+          heading: 'Skill Development',
+          link:    '/programs#program-computer'
+        }) %>
+        <%- include('../partials/imageCard', {
+          image:   'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg',
+          heading: 'Health & Nutrition',
+          link:    '/programs#program-health'
+        }) %>
+        <%- include('../partials/imageCard', {
+          image:   'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg',
+          heading: 'Community Support',
+          link:    '/programs#program-celebrations'
+        }) %>
       </div>
     </section>
 
-    <!-- Section 3: Mission Text + Image -->
-    <section class="home-mission-section">
-      <div class="mission-content">
-        <p class="mission-text">
-          Since 2005, Spread Smile India has been transforming lives — helping destitute street children move
-          from streets to classrooms through education, healthcare, and empowerment.
-        </p>
+    <!-- ======================================
+         Section 3: Know About Us — Page Cards
+         ====================================== -->
+    <section class="home-explore-section">
+      <div class="section-header">
+        <h2>Know About Us</h2>
+        <p>Everything we do, in one place. Explore the heart of Spread a Smile India.</p>
       </div>
-      <div class="mission-image">
-        <img src="https://spreadasmileindia.com/src/images/landing-page/lading-page1.webp" alt="Our mission in action" loading="lazy" />
+      <div class="home-explore-grid">
+        <%- include('../partials/pageCard', {
+          title:       'About Us',
+          description: 'Our journey, founding story, values, and the people behind the mission.',
+          link:        '/about',
+          image:       'https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg',
+          icon:        'fa-solid fa-heart'
+        }) %>
+        <%- include('../partials/pageCard', {
+          title:       'Our Programs',
+          description: 'Education, health, nutrition, computer literacy and community celebrations.',
+          link:        '/programs',
+          image:       'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg',
+          icon:        'fa-solid fa-seedling'
+        }) %>
+        <%- include('../partials/pageCard', {
+          title:       'Our Impact',
+          description: 'Real numbers and real stories from the communities we serve every day.',
+          link:        '/impact',
+          image:       'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg',
+          icon:        'fa-solid fa-chart-line'
+        }) %>
+        <%- include('../partials/pageCard', {
+          title:       'Dignitaries',
+          description: 'Leaders, changemakers and supporters who stand with our cause.',
+          link:        '/dignitaries',
+          image:       'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg',
+          icon:        'fa-solid fa-user-tie'
+        }) %>
       </div>
     </section>
+
+    <!-- ======================================
+         Section 4: Mission — Text + Image
+         ====================================== -->
+    <%#
+    ======================================
+    Section 3: Mission — Text + Image
+    (commented out — uncomment when ready)
+    ======================================
+    <section class="home-mission-section">
+      <div class="mission-text-col">
+        <span class="mission-eyebrow">Our Mission</span>
+        <h2>From Streets to Classrooms</h2>
+        <p>
+          Since 2005, Spread Smile India has worked at the grassroots to create lasting change.
+          We help destitute street children and their families access education, healthcare,
+          nutrition, and skill-based empowerment — breaking cycles of poverty one life at a time.
+        </p>
+        <ul class="mission-points">
+          <li><i class="fa-solid fa-circle-check"></i> Supporting underprivileged children across 7+ Delhi traffic signals</li>
+          <li><i class="fa-solid fa-circle-check"></i> Enabling women towards financial independence</li>
+          <li><i class="fa-solid fa-circle-check"></i> Equipping youth with life and skill-based learning</li>
+          <li><i class="fa-solid fa-circle-check"></i> Free computer education and certification</li>
+        </ul>
+        <a href="/about" class="mission-btn">Learn About Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="mission-image-col">
+        <img
+          src="https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0541.jpg"
+          alt="Our mission in action"
+          loading="lazy"
+        />
+      </div>
+    </section>
+    %>
+
   </main>
 
   <%- include('../partials/footer') %>
 
   <script src="/js/theme.js"></script>
+  <script src="/js/carousel.js"></script>
 </body>
 </html>
