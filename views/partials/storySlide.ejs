@@ -1,0 +1,49 @@
+<%
+  /*
+   * storySlide.ejs — Single slide for the impact story auto-slider
+   *
+   * Required locals:
+   *   beforeImg    {string} — before image URL
+   *   afterImg     {string} — after image URL
+   *   name         {string} — story heading e.g. "Rahul's Story"
+   *   ageLine      {string} — age + year line e.g. "Age 12 · Joined 2021"
+   *   quote        {string} — first-person quote text
+   *   programIcon  {string} — Font Awesome class e.g. "fa-solid fa-book-open"
+   *   programName  {string} — program label e.g. "Education Program"
+   *
+   * Optional locals:
+   *   beforeAlt    {string} — alt for before image
+   *   afterAlt     {string} — alt for after image
+   */
+  const _bAlt = locals.beforeAlt || (name + ' — before');
+  const _aAlt = locals.afterAlt  || (name + ' — after');
+%>
+
+<div class="story-slide">
+  <div class="story-slide-inner">
+
+    <!-- Before / After images (side by side) -->
+    <div class="story-images">
+      <div class="story-img-half">
+        <img src="<%= beforeImg %>" alt="<%= _bAlt %>" loading="lazy" />
+        <span class="sil before-lbl">Before</span>
+      </div>
+      <div class="story-img-half">
+        <img src="<%= afterImg %>" alt="<%= _aAlt %>" loading="lazy" />
+        <span class="sil after-lbl">After</span>
+      </div>
+    </div>
+
+    <!-- Story text panel -->
+    <div class="story-content">
+      <div class="story-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+      <h3 class="story-name"><%= name %></h3>
+      <p class="story-age"><i class="fa-regular fa-calendar"></i> <%= ageLine %></p>
+      <blockquote class="story-text"><%= quote %></blockquote>
+      <div class="story-program-tag">
+        <i class="<%= programIcon %>"></i> <%= programName %>
+      </div>
+    </div>
+
+  </div>
+</div>

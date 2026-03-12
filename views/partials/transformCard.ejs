@@ -1,0 +1,46 @@
+<%
+  /*
+   * transformCard.ejs — Before/After hover wipe card
+   *
+   * Required locals:
+   *   beforeImg   {string} — before image URL
+   *   afterImg    {string} — after image URL
+   *   name        {string} — child's name
+   *   age         {string} — child's age e.g. "12"
+   *   desc        {string} — short description
+   *   badgeIcon   {string} — Font Awesome class e.g. "fa-solid fa-book-open"
+   *   badgeName   {string} — program label e.g. "Education Program"
+   *
+   * Optional locals:
+   *   beforeAlt   {string} — alt text for before image (defaults to name + " — before")
+   *   afterAlt    {string} — alt text for after image  (defaults to name + " — after")
+   */
+  const _bAlt = locals.beforeAlt || (name + ' — before');
+  const _aAlt = locals.afterAlt  || (name + ' — after');
+%>
+
+<article class="transform-card" tabindex="0">
+
+  <div class="tc-img-wrap">
+    <!-- AFTER sits underneath -->
+    <img class="tc-after" src="<%= afterImg %>" alt="<%= _aAlt %>" loading="lazy" />
+
+    <!-- BEFORE overlays on top — wipes away on hover -->
+    <div class="tc-before-layer">
+      <img src="<%= beforeImg %>" alt="<%= _bAlt %>" loading="lazy" />
+    </div>
+
+    <span class="tc-label tc-label-before">Before</span>
+    <span class="tc-label tc-label-after">After</span>
+    <div class="tc-hint"><i class="fa-regular fa-hand-pointer"></i> Hover to reveal</div>
+  </div>
+
+  <div class="tc-body">
+    <h3 class="tc-name"><%= name %> &mdash; <span>Age&nbsp;<%= age %></span></h3>
+    <p class="tc-desc"><%= desc %></p>
+    <span class="tc-program-badge">
+      <i class="<%= badgeIcon %>"></i> <%= badgeName %>
+    </span>
+  </div>
+
+</article>

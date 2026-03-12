@@ -1,0 +1,126 @@
+/* ============================================
+   theme2.css — Golden Yellow & Orange palette
+   Warm, joyful, energetic.
+
+   HOW TO SWITCH:
+   In views/partials/head.ejs, replace:
+     <link rel="stylesheet" href="/css/theme.css" />
+   with:
+     <link rel="stylesheet" href="/css/theme2.css" />
+   ============================================ */
+
+/* --- Light Theme (default) --- */
+[data-theme="light"] {
+  --color-primary:    #f97316;          /* vivid orange             */
+  --color-accent:     #eab308;          /* golden yellow            */
+  --color-highlight:  #fb923c;          /* light orange             */
+  --color-bg:         #fffbeb;          /* warm yellow-white        */
+  --color-bg-alt:     #fef3c7;          /* light amber              */
+  --color-secondary:  #fde68a;          /* soft yellow              */
+
+  --color-text:       #1c1400;          /* deep warm black          */
+  --color-text-muted: #92620a;          /* dark golden-brown        */
+  --color-heading:    #1c1400;
+
+  --color-nav-bg:     #ffffff;
+  --color-nav-text:   #1c1400;
+  --color-nav-hover:  #f97316;
+  --color-nav-border: #fcd34d;
+
+  --color-footer-bg:            #ffffff;
+  --color-footer-text:          #1c1400;
+  --color-footer-link:          #92400e;
+  --color-footer-tagline:       rgba(146, 64, 14,  0.70);
+  --color-footer-bottom:        rgba(146, 64, 14,  0.50);
+  --color-footer-divider:       rgba(249, 115, 22, 0.12);
+  --color-footer-social-bg:     rgba(249, 115, 22, 0.08);
+  --color-footer-social-border: rgba(249, 115, 22, 0.20);
+
+  --color-carousel-heading: #fffbeb;
+  --color-carousel-sub:     #fde68a;
+
+  --color-card-bg:     #ffffff;
+  --color-card-shadow: rgba(0, 0, 0, 0.07);
+
+  --color-border:   #fcd34d;
+  --color-divider:  #fcd34d;
+
+  --color-btn-bg:    #f97316;
+  --color-btn-text:  #ffffff;
+  --color-btn-hover: #ea6c0a;
+
+  /* Dark-band sections (hero, CTA — always inverted) */
+  --color-dark-band:       #1a0f00;
+  --color-dark-band-mid:   #5c3000;
+  --color-dark-band-text:  #fffbeb;
+  --color-dark-band-muted: rgba(253, 230, 138, 0.70);
+  --color-dark-band-faint: rgba(249, 115, 22,  0.15);
+
+  --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --transition: 0.3s ease;
+}
+
+/* --- Dark Theme --- */
+[data-theme="dark"] {
+  --color-primary:    #fb923c;          /* bright orange            */
+  --color-accent:     #facc15;          /* bright yellow            */
+  --color-highlight:  #fbbf24;          /* amber                    */
+  --color-bg:         #1a1000;          /* deep warm dark           */
+  --color-bg-alt:     #2a1c00;          /* slightly lighter         */
+  --color-secondary:  #5c3d00;          /* muted amber-dark         */
+
+  --color-text:       #fffbeb;          /* warm off-white           */
+  --color-text-muted: #c49a3c;          /* muted gold               */
+  --color-heading:    #fffbeb;
+
+  --color-nav-bg:     #2a1c00;
+  --color-nav-text:   #fffbeb;
+  --color-nav-hover:  #fb923c;
+  --color-nav-border: #3d2800;
+
+  --color-footer-bg:            #0f0900;
+  --color-footer-text:          #fb923c;
+  --color-footer-link:          rgba(251, 146, 60, 0.65);
+  --color-footer-tagline:       rgba(251, 146, 60, 0.50);
+  --color-footer-bottom:        rgba(251, 146, 60, 0.35);
+  --color-footer-divider:       rgba(255, 255, 255, 0.07);
+  --color-footer-social-bg:     rgba(255, 255, 255, 0.07);
+  --color-footer-social-border: rgba(255, 255, 255, 0.12);
+
+  --color-carousel-heading: #fffbeb;
+  --color-carousel-sub:     #fde68a;
+
+  --color-card-bg:     #2a1c00;
+  --color-card-shadow: rgba(0, 0, 0, 0.40);
+
+  --color-border:   #3d2800;
+  --color-divider:  #3d2800;
+
+  --color-btn-bg:    #fb923c;
+  --color-btn-text:  #1a1000;
+  --color-btn-hover: #f97316;
+
+  /* Dark-band sections (hero, CTA — always inverted) */
+  --color-dark-band:       #0f0900;
+  --color-dark-band-mid:   #3d2000;
+  --color-dark-band-text:  #fffbeb;
+  --color-dark-band-muted: rgba(253, 230, 138, 0.65);
+  --color-dark-band-faint: rgba(249, 115, 22,  0.12);
+
+  --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.55);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --transition: 0.3s ease;
+}

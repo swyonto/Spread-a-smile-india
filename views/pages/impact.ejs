@@ -1,3 +1,94 @@
+<%
+/* ═══════════════════════════════════════════════
+   DATA — edit here to add / update cards & slides
+═══════════════════════════════════════════════ */
+
+const stats = [
+  { target: 5000,  label: 'Lives Impacted'    },
+  { target: 1200,  label: 'Children in School' },
+  { target: 800,   label: 'Women Empowered'    },
+  { target: 300,   label: 'Job Placements'     },
+  { target: 20,    label: 'Years of Service'   }
+];
+
+const transformCards = [
+  {
+    beforeImg:  'https://ik.imagekit.io/l15cczdgu/transformation/transformation1.jpg',
+    afterImg:   'https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0640.jpg',
+    name:       'Rahul',
+    age:        '12',
+    desc:       'Found begging at a traffic signal, Rahul could not write his own name. Today he attends school, scores top marks in maths, and dreams of becoming an engineer.',
+    badgeIcon:  'fa-solid fa-book-open',
+    badgeName:  'Education Program'
+  },
+  {
+    beforeImg:  'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg',
+    afterImg:   'https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0541.jpg',
+    name:       'Priya',
+    age:        '10',
+    desc:       'Once selling flowers at ITO signal, Priya now reads full books and recently won her school\'s first-ever spelling competition.',
+    badgeIcon:  'fa-solid fa-book-open',
+    badgeName:  'Education Program'
+  },
+  {
+    beforeImg:  'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page3.webp',
+    afterImg:   'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page2.webp',
+    name:       'Arjun',
+    age:        '14',
+    desc:       'Arjun had never touched a computer. After joining our digital literacy program he built his first website and earned a government scholarship.',
+    badgeIcon:  'fa-solid fa-laptop-code',
+    badgeName:  'Computer Literacy'
+  },
+  {
+    beforeImg:  'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page5.webp',
+    afterImg:   'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page4.webp',
+    name:       'Maya',
+    age:        '9',
+    desc:       'Severely malnourished when she first arrived, Maya could barely stand. Through our nutrition and health program she is now the most energetic child in her class.',
+    badgeIcon:  'fa-solid fa-heart-pulse',
+    badgeName:  'Health & Nutrition'
+  }
+];
+
+const stories = [
+  {
+    beforeImg:   'https://ik.imagekit.io/l15cczdgu/transformation/transformation1.jpg',
+    afterImg:    'https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0640.jpg',
+    name:        "Rahul's Story",
+    ageLine:     'Age 12 · Joined 2021',
+    quote:       '"I used to beg at traffic signals — I didn\'t even know what a classroom looked like. Today I go to school every day and my teacher says I\'m one of the brightest. I want to be an engineer one day and build roads, so no child ever has to beg on one."',
+    programIcon: 'fa-solid fa-book-open',
+    programName: 'Education Program'
+  },
+  {
+    beforeImg:   'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg',
+    afterImg:    'https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0541.jpg',
+    name:        "Priya's Story",
+    ageLine:     'Age 10 · Joined 2022',
+    quote:       '"I used to sell flowers with my mother at ITO signal. When the didi from Spread Smile India asked if I wanted to learn letters, I was confused — what were letters? Now I can read full books. I won a spelling bee at school last month!"',
+    programIcon: 'fa-solid fa-book-open',
+    programName: 'Education Program'
+  },
+  {
+    beforeImg:   'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page3.webp',
+    afterImg:    'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page2.webp',
+    name:        "Arjun's Story",
+    ageLine:     'Age 14 · Joined 2020',
+    quote:       '"I had never touched a computer in my life. When I first sat in front of one, I thought it was magic. Now I know how to type, use the internet, and even write simple code. My dream is to work in IT and make my parents proud."',
+    programIcon: 'fa-solid fa-laptop-code',
+    programName: 'Computer Literacy Program'
+  },
+  {
+    beforeImg:   'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page5.webp',
+    afterImg:    'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page4.webp',
+    name:        "Maya's Story",
+    ageLine:     'Age 9 · Joined 2023',
+    quote:       '"When Maya first came to us, she was severely malnourished and her family hadn\'t eaten a proper meal in days. Our health and nutrition team worked with her family for months. Today she dances, laughs, and is the most energetic child in her class."',
+    programIcon: 'fa-solid fa-heart-pulse',
+    programName: 'Health & Nutrition Program'
+  }
+];
+%>
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -10,59 +101,131 @@
 
   <main>
 
-    <!-- Impact Stats -->
-    <section class="impact-stats-section">
-      <h2>Lives We've Touched</h2>
-      <div class="stats-grid">
-        <div class="stat-item">
-          <span class="stat-number">5000+</span>
-          <p class="stat-label">Lives Impacted</p>
+    <!-- ══════════════════════════════════════════════
+         § 1  HERO + ANIMATED STATS
+    ══════════════════════════════════════════════ -->
+    <section class="impact-hero">
+      <div class="impact-hero-inner">
+
+        <span class="impact-tag-pill">Our Impact</span>
+        <h1 class="impact-hero-heading">Transforming Lives,<br>One Smile at a Time</h1>
+        <p class="impact-hero-sub">
+          Every number below represents a real child, a real family, a real future changed —
+          because every life is worth fighting for.
+        </p>
+
+        <div class="impact-stats-row">
+          <% stats.forEach(function(stat, i) { %>
+            <div class="stat-box">
+              <div class="stat-num-wrap">
+                <span class="stat-num" data-target="<%= stat.target %>">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <p class="stat-lbl"><%= stat.label %></p>
+            </div>
+            <% if (i < stats.length - 1) { %>
+              <div class="stat-divider"></div>
+            <% } %>
+          <% }); %>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">1200+</span>
-          <p class="stat-label">Children in School</p>
+
+      </div>
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         § 2  TRANSFORMATION CARDS (hover wipe reveal)
+    ══════════════════════════════════════════════ -->
+    <section class="impact-transform-section">
+      <div class="impact-section-inner">
+
+        <div class="impact-section-header">
+          <span class="impact-tag-pill">Before &amp; After</span>
+          <h2 class="impact-section-title">Real Transformations</h2>
+          <p class="impact-section-sub">
+            Hover over a card to reveal the transformation.
+            These are real children — their journeys are real.
+          </p>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">800+</span>
-          <p class="stat-label">Women Empowered</p>
+
+        <div class="transform-grid">
+          <% transformCards.forEach(function(card) { %>
+            <%- include('../partials/transformCard', card) %>
+          <% }); %>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">300+</span>
-          <p class="stat-label">Job Placements</p>
-        </div>
+
       </div>
     </section>
 
-    <!-- Before / After Transformation -->
-    <section class="impact-transformation-section">
-      <h2>Real Transformation</h2>
-      <div class="transformation-grid">
-        <div class="transformation-item">
-          <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation1.jpg" alt="Before transformation" loading="lazy" />
-          <img src="https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0640.jpg" alt="After transformation" loading="lazy" />
-        </div>
-        <div class="transformation-item">
-          <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg" alt="Before transformation" loading="lazy" />
-          <img src="https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0541.jpg" alt="After transformation" loading="lazy" />
-        </div>
-      </div>
-    </section>
 
-    <!-- Stories -->
+    <!-- ══════════════════════════════════════════════
+         § 3  AUTO-SWIPING STORY SLIDER
+    ══════════════════════════════════════════════ -->
     <section class="impact-stories-section">
-      <h2>Real Stories. Real Change.</h2>
-      <div class="stories-grid">
-        <div class="story-item">
-          <img src="https://ik.imagekit.io/l15cczdgu/story1.jpg" alt="Story" loading="lazy" />
-          <p>From street child to college graduate — Priya's inspiring journey</p>
+      <div class="impact-section-inner">
+
+        <div class="impact-section-header">
+          <span class="impact-tag-pill">True Stories</span>
+          <h2 class="impact-section-title">Their Journey. Their Voice.</h2>
+          <p class="impact-section-sub">
+            Real children, real change. Each card auto-advances — or use the arrows to explore.
+          </p>
         </div>
-        <div class="story-item">
-          <img src="https://ik.imagekit.io/l15cczdgu/story2.jpg" alt="Story" loading="lazy" />
-          <p>Women empowerment workshop — 12 new entrepreneurs born today!</p>
+
+        <div class="story-slider-wrap" id="storySliderWrap">
+
+          <div class="story-track" id="storyTrack">
+            <% stories.forEach(function(story) { %>
+              <%- include('../partials/storySlide', story) %>
+            <% }); %>
+          </div>
+
+          <button class="story-arrow story-prev" id="storyPrev" aria-label="Previous story">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="story-arrow story-next" id="storyNext" aria-label="Next story">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <div class="story-progress-bar">
+            <div class="story-progress-fill" id="storyProgress"></div>
+          </div>
+
+          <div class="story-dots" id="storyDots">
+            <% stories.forEach(function(_, i) { %>
+              <button
+                class="story-dot <%= i === 0 ? 'active' : '' %>"
+                data-index="<%= i %>"
+                aria-label="Go to story <%= i + 1 %>"
+              ></button>
+            <% }); %>
+          </div>
+
         </div>
-        <div class="story-item">
-          <img src="https://ik.imagekit.io/l15cczdgu/story3.jpg" alt="Story" loading="lazy" />
-          <p>Free health camp reaching 150+ families in Delhi</p>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         § 4  CALL TO ACTION
+    ══════════════════════════════════════════════ -->
+    <section class="impact-cta-section">
+      <div class="impact-cta-inner">
+        <div class="impact-cta-icon"><i class="fa-solid fa-heart"></i></div>
+        <h2 class="impact-cta-title">Be Part of the Next Transformation</h2>
+        <p class="impact-cta-sub">
+          Every rupee donated, every hour volunteered, every smile shared —
+          moves a child closer to the life they deserve.
+        </p>
+        <div class="impact-cta-btns">
+          <a href="/programs" class="impact-cta-btn impact-cta-btn--primary">
+            <i class="fa-solid fa-seedling"></i> Explore Our Programs
+          </a>
+          <a href="/about" class="impact-cta-btn impact-cta-btn--secondary">
+            <i class="fa-solid fa-users"></i> About Us
+          </a>
         </div>
       </div>
     </section>
@@ -72,5 +235,7 @@
   <%- include('../partials/footer') %>
 
   <script src="/js/theme.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/impact.js"></script>
 </body>
 </html>

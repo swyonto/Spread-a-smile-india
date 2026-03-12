@@ -1,3 +1,731 @@
 /* ============================================
-   impact.css — Impact Page Section Styles
+   impact.css — Impact Page Styles
+   All colours use CSS variables — theme-aware.
    ============================================ */
+
+/* ── Shared Section Utilities ──────────────── */
+
+.impact-tag-pill {
+  display: inline-block;
+  padding: 0.32em 1em;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  background: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  margin-bottom: 0.9rem;
+}
+
+.impact-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.impact-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.impact-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0 0 0.7rem;
+  line-height: 1.2;
+}
+
+.impact-section-sub {
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+
+/* ══════════════════════════════════════════════
+   § 1  HERO
+══════════════════════════════════════════════ */
+
+.impact-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(150deg,
+    var(--color-dark-band)     0%,
+    var(--color-dark-band)     45%,
+    var(--color-dark-band-mid) 100%
+  );
+  padding: clamp(110px, 14vw, 160px) 2rem clamp(60px, 8vw, 90px);
+  text-align: center;
+  isolation: isolate;
+}
+
+/* ambient glow blobs */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.25;
+  z-index: 0;
+}
+.hero-blob-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-primary);
+  top: -120px;
+  right: -100px;
+}
+.hero-blob-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-accent);
+  bottom: -80px;
+  left: -80px;
+}
+
+.impact-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.impact-hero-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 700;
+  color: var(--color-dark-band-text);
+  line-height: 1.15;
+  margin: 0 0 1.1rem;
+}
+
+.impact-hero-sub {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: var(--color-dark-band-muted);
+  max-width: 540px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+/* ── Stats row ── */
+
+.impact-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 0;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 2rem;
+}
+
+.stat-num-wrap {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.6rem);
+  font-weight: 700;
+  color: var(--color-dark-band-text);
+  line-height: 1;
+}
+
+.stat-plus {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-top: 0.15em;
+}
+
+.stat-lbl {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-dark-band-muted);
+  margin: 0;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--color-dark-band-faint);
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .stat-divider { display: none; }
+  .impact-stats-row { gap: 1.5rem; }
+  .stat-box { padding: 0 1rem; }
+}
+
+
+/* ══════════════════════════════════════════════
+   § 2  TRANSFORMATION CARDS (hover wipe reveal)
+══════════════════════════════════════════════ */
+
+.impact-transform-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background-color: var(--color-bg);
+}
+
+.transform-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+
+/* ── card shell ── */
+.transform-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-card-bg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.transform-card:hover,
+.transform-card:focus-visible {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── image container ── */
+.tc-img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+/* AFTER image — bottom layer */
+.tc-after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* BEFORE image layer — top layer, clips away on hover */
+.tc-before-layer {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0% 0 0);
+  transition: clip-path 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: clip-path;
+}
+
+.tc-before-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* On hover/focus: wipe the before layer left → right */
+.transform-card:hover .tc-before-layer,
+.transform-card:focus-visible .tc-before-layer {
+  clip-path: inset(0 0% 0 100%);
+}
+
+/* ── BEFORE / AFTER labels ── */
+.tc-label {
+  position: absolute;
+  top: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.28em 0.7em;
+  border-radius: 100px;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.4s ease;
+}
+
+.tc-label-before {
+  left: 0.75rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  opacity: 1;
+}
+
+.tc-label-after {
+  right: 0.75rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  opacity: 0;
+}
+
+/* swap labels on hover */
+.transform-card:hover .tc-label-before,
+.transform-card:focus-visible .tc-label-before {
+  opacity: 0;
+}
+
+.transform-card:hover .tc-label-after,
+.transform-card:focus-visible .tc-label-after {
+  opacity: 1;
+}
+
+/* ── hover hint ── */
+.tc-hint {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.3em 0.8em;
+  border-radius: 100px;
+  pointer-events: none;
+  z-index: 5;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.transform-card:hover .tc-hint,
+.transform-card:focus-visible .tc-hint {
+  opacity: 0;
+}
+
+/* ── card body ── */
+.tc-body {
+  padding: 1.1rem 1.25rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tc-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.tc-name span {
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.tc-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tc-program-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  padding: 0.3em 0.75em;
+  border-radius: 100px;
+  width: fit-content;
+  margin-top: 0.2rem;
+}
+
+
+/* ══════════════════════════════════════════════
+   § 3  STORY AUTO-SWIPING SLIDER
+══════════════════════════════════════════════ */
+
+.impact-stories-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background-color: var(--color-bg-alt);
+}
+
+/* ── wrapper ── */
+.story-slider-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  padding-bottom: 3.5rem;
+}
+
+/* ── track (clips slides) ── */
+.story-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+}
+
+/* ── each slide ── */
+.story-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.story-slide-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+}
+
+@media (max-width: 700px) {
+  .story-slide-inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+/* ── Story images (before/after split) ── */
+.story-images {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.story-img-half {
+  position: relative;
+  overflow: hidden;
+}
+
+.story-img-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  min-height: 280px;
+  transition: transform 0.6s ease;
+}
+
+.story-img-half:hover img {
+  transform: scale(1.05);
+}
+
+/* before/after image labels */
+.sil {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25em 0.65em;
+  border-radius: 100px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.before-lbl {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.after-lbl {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+}
+
+/* divider line between before/after */
+.story-images::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ── Story content panel ── */
+.story-content {
+  padding: 2rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.65rem;
+  background: var(--color-card-bg);
+}
+
+.story-quote-icon {
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.story-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.story-age {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.story-text {
+  font-size: clamp(0.88rem, 1.6vw, 0.96rem);
+  color: var(--color-text);
+  line-height: 1.75;
+  margin: 0;
+  font-style: italic;
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1rem;
+}
+
+.story-program-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  padding: 0.32em 0.8em;
+  border-radius: 100px;
+  width: fit-content;
+  margin-top: 0.3rem;
+}
+
+/* ── Progress bar (auto-advance indicator) ── */
+.story-progress-bar {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 8rem);
+  height: 2px;
+  background: var(--color-border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.story-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: 100px;
+  transition: width 0.1s linear;
+}
+
+/* ── Dots ── */
+.story-dots {
+  position: absolute;
+  bottom: 0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.story-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, width 0.25s ease;
+}
+
+.story-dot.active {
+  width: 22px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+}
+
+/* ── Prev / Next arrows ── */
+.story-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateY(-1.5rem);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-card-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.25s ease, color 0.25s ease,
+              transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 10;
+}
+
+.story-prev { left:  0.75rem; }
+.story-next { right: 0.75rem; }
+
+.story-arrow:hover {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+  transform: translateY(calc(-50% - 1.5rem)) scale(1.08);
+}
+
+@media (max-width: 600px) {
+  .story-arrow { display: none; }
+  .story-progress-bar { width: calc(100% - 4rem); }
+}
+
+
+/* ══════════════════════════════════════════════
+   § 4  CALL TO ACTION
+══════════════════════════════════════════════ */
+
+.impact-cta-section {
+  padding: clamp(60px, 8vw, 100px) 2rem;
+  background: linear-gradient(150deg,
+    var(--color-dark-band)     0%,
+    var(--color-dark-band-mid) 60%,
+    var(--color-dark-band)     100%
+  );
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%,
+    var(--color-dark-band-faint) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.impact-cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.impact-cta-icon {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-highlight));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.impact-cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-dark-band-text);
+  margin: 0 0 0.9rem;
+  line-height: 1.2;
+}
+
+.impact-cta-sub {
+  font-size: clamp(0.92rem, 1.8vw, 1.05rem);
+  color: var(--color-dark-band-muted);
+  max-width: 500px;
+  margin: 0 auto 2.2rem;
+  line-height: 1.7;
+}
+
+.impact-cta-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.impact-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75em 1.8em;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.impact-cta-btn--primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.impact-cta-btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.impact-cta-btn--secondary {
+  background: var(--color-dark-band-faint);
+  color: var(--color-dark-band-text);
+  border: 1px solid var(--color-dark-band-muted);
+}
+
+.impact-cta-btn--secondary:hover {
+  background: var(--color-dark-band-faint);
+  transform: translateY(-3px);
+}

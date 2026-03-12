@@ -35,8 +35,8 @@
   border: 2.5px solid transparent;
   background:
     linear-gradient(var(--color-nav-bg), var(--color-nav-bg)) padding-box,
-    linear-gradient(135deg, #c084fc 0%, #818cf8 45%, #e879f9 100%) border-box;
-  box-shadow: 0 0 0 1px rgba(192, 132, 252, 0.18);
+    linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 45%, var(--color-highlight) 100%) border-box;
+  box-shadow: 0 0 0 1px var(--color-border);
 }
 
 .navbar-name {
@@ -85,7 +85,7 @@
   left: 50%;
   width: 0;
   height: 2.5px;
-  background: linear-gradient(90deg, #c084fc, #818cf8);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   border-radius: 2px;
   transition: width 0.26s ease, left 0.26s ease;
 }

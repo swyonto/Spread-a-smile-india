@@ -42,6 +42,13 @@
   --color-btn-text:   #1a1a2e;
   --color-btn-hover:  #b8c0ff;
 
+  /* Dark-band sections (hero, CTA — always inverted) */
+  --color-dark-band:       #0d0c1a;
+  --color-dark-band-mid:   #2d1b69;
+  --color-dark-band-text:  #f5f0ff;
+  --color-dark-band-muted: rgba(200, 182, 255, 0.70);
+  --color-dark-band-faint: rgba(192, 132, 252, 0.15);
+
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
   --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
@@ -92,6 +99,13 @@
   --color-btn-bg:     #9d8cdf;
   --color-btn-text:   #12111f;
   --color-btn-hover:  #7b84cc;
+
+  /* Dark-band sections (hero, CTA — always inverted) */
+  --color-dark-band:       #080611;
+  --color-dark-band-mid:   #1e1250;
+  --color-dark-band-text:  #f0eaff;
+  --color-dark-band-muted: rgba(200, 182, 255, 0.65);
+  --color-dark-band-faint: rgba(192, 132, 252, 0.12);
 
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
