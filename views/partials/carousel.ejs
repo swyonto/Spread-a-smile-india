@@ -1,0 +1,64 @@
+<!-- Carousel Component -->
+<!-- Usage: <%- include('../partials/carousel', { type: 'image' | 'video' }) %> -->
+<!-- Defaults to image carousel if type is not passed -->
+
+<div class="carousel" id="carousel">
+  <div class="carousel-track-wrapper">
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- Slide 1: Image -->
+      <div class="carousel-slide">
+        <img
+          src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg"
+          alt="Transforming Lives Through Education"
+          loading="lazy"
+        />
+        <div class="carousel-caption">
+          <h2>Transforming Lives Through Education</h2>
+        </div>
+      </div>
+
+      <!-- Slide 2: Image -->
+      <div class="carousel-slide">
+        <img
+          src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide2_woman.jpg"
+          alt="Empowering Women"
+          loading="lazy"
+        />
+        <div class="carousel-caption">
+          <h2>Empowering Women</h2>
+        </div>
+      </div>
+
+      <!-- Slide 3: Video -->
+      <div class="carousel-slide carousel-slide--video">
+        <video
+          id="carouselVideo"
+          src="https://www.youtube.com/watch?v=_XuH6OPxoas"
+          muted
+          loop
+          playsinline
+          preload="none"
+        ></video>
+        <div class="carousel-caption">
+          <h2>TEDx Talk</h2>
+        </div>
+        <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">🔇</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous slide">&#8592;</button>
+  <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next slide">&#8594;</button>
+
+  <!-- Dots -->
+  <div class="carousel-dots" id="carouselDots">
+    <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+    <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+    <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+  </div>
+</div>
+
+<script src="/js/carousel.js"></script>

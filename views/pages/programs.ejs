@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/gallery.css" />
+  <link rel="stylesheet" href="/css/programs.css" />
+</head>
+<body>
+
+  <%- include('../partials/navbar') %>
+
+  <main>
+
+    <!-- Education -->
+    <section id="program-education" class="program-section">
+      <h2 class="program-title">Education</h2>
+      <div class="program-main-image">
+        <img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg" alt="Education program" loading="lazy" />
+      </div>
+      <%- include('../partials/gallery', {
+        images: [
+          'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation1.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg'
+        ]
+      }) %>
+    </section>
+
+    <!-- Health -->
+    <section id="program-health" class="program-section">
+      <h2 class="program-title">Health</h2>
+      <div class="program-main-image">
+        <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg" alt="Health program" loading="lazy" />
+      </div>
+      <%- include('../partials/gallery', {
+        images: [
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg'
+        ]
+      }) %>
+    </section>
+
+    <!-- Nutrition -->
+    <section id="program-nutrition" class="program-section">
+      <h2 class="program-title">Nutrition</h2>
+      <div class="program-main-image">
+        <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg" alt="Nutrition program" loading="lazy" />
+      </div>
+      <%- include('../partials/gallery', {
+        images: [
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation1.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg'
+        ]
+      }) %>
+    </section>
+
+    <!-- Computer Literacy -->
+    <section id="program-computer" class="program-section">
+      <h2 class="program-title">Computer Literacy</h2>
+      <div class="program-main-image">
+        <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg" alt="Computer literacy program" loading="lazy" />
+      </div>
+      <%- include('../partials/gallery', {
+        images: [
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg'
+        ]
+      }) %>
+    </section>
+
+    <!-- Celebrations -->
+    <section id="program-celebrations" class="program-section">
+      <h2 class="program-title">Celebrations</h2>
+      <div class="program-main-image">
+        <img src="https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0541.jpg" alt="Celebrations" loading="lazy" />
+      </div>
+      <%- include('../partials/gallery', {
+        images: [
+          'https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0541.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0640.jpg',
+          'https://ik.imagekit.io/l15cczdgu/transformation/transformation1.jpg'
+        ]
+      }) %>
+    </section>
+
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>

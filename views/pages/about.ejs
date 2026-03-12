@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/carousel.css" />
+  <link rel="stylesheet" href="/css/about.css" />
+</head>
+<body>
+
+  <%- include('../partials/navbar') %>
+
+  <main>
+    <!-- Section 1: Video Carousel -->
+    <section class="about-video-section">
+      <%- include('../partials/carousel', { type: 'video' }) %>
+    </section>
+
+    <!-- Section 2: How We Are Different -->
+    <section class="about-different-section">
+      <div class="different-text">
+        <h2>How We Are Different</h2>
+        <p>
+          Since 2005, Spread Smile India has been working at the grassroots to create lasting change through
+          education and empowerment. Founded by Sangita Mehra, the organisation is rooted in lived experience
+          and the belief that every child deserves the opportunity to learn, grow, and thrive.
+        </p>
+        <p>
+          We work with marginalized communities in Delhi, providing holistic support that goes beyond classrooms —
+          combining education with nutrition, skill development, emotional well-being, and family empowerment.
+        </p>
+      </div>
+      <div class="different-image">
+        <img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide2_woman.jpg" alt="How we are different" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- Section 3: Our Story Timeline -->
+    <section class="about-story-section">
+      <h2>Our Story</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-year">2005</span>
+          <p class="timeline-desc">Spread Smile India founded by Sangita Mehra</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2008</span>
+          <p class="timeline-desc">First formal education program launched</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2012</span>
+          <p class="timeline-desc">Health and nutrition initiatives introduced</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2015</span>
+          <p class="timeline-desc">Women empowerment and skill development programs started</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2018</span>
+          <p class="timeline-desc">Computer literacy program launched</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <p class="timeline-desc">Reaching 7+ traffic signals across Delhi NCR</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>

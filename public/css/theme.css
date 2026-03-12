@@ -1,0 +1,88 @@
+/* ============================================
+   theme.css — Light / Dark CSS Variables
+   ============================================ */
+
+/* --- Light Theme (default) --- */
+[data-theme="light"] {
+  --color-primary:    #c8b6ff;
+  --color-accent:     #b8c0ff;
+  --color-highlight:  #bbd0ff;
+  --color-bg:         #f5f0ff;
+  --color-bg-alt:     #e7c6ff;
+  --color-secondary:  #ffd6ff;
+
+  --color-text:       #1a1a2e;
+  --color-text-muted: #555577;
+  --color-heading:    #1a1a2e;
+
+  --color-nav-bg:     #ffffff;
+  --color-nav-text:   #1a1a2e;
+  --color-nav-hover:  #c8b6ff;
+  --color-nav-border: #e0d4f7;
+
+  --color-footer-bg:  #1a1a2e;
+  --color-footer-text:#e7c6ff;
+
+  --color-card-bg:    #ffffff;
+  --color-card-shadow: rgba(0, 0, 0, 0.08);
+
+  --color-border:     #ddd0f5;
+  --color-divider:    #e0d4f7;
+
+  --color-btn-bg:     #c8b6ff;
+  --color-btn-text:   #1a1a2e;
+  --color-btn-hover:  #b8c0ff;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --transition: 0.3s ease;
+}
+
+/* --- Dark Theme --- */
+[data-theme="dark"] {
+  --color-primary:    #9d8cdf;
+  --color-accent:     #7b84cc;
+  --color-highlight:  #7a9bbf;
+  --color-bg:         #12111f;
+  --color-bg-alt:     #1c1b30;
+  --color-secondary:  #3b2e4a;
+
+  --color-text:       #e8e0f5;
+  --color-text-muted: #9990b8;
+  --color-heading:    #f0eaff;
+
+  --color-nav-bg:     #1c1b30;
+  --color-nav-text:   #e8e0f5;
+  --color-nav-hover:  #9d8cdf;
+  --color-nav-border: #2e2b45;
+
+  --color-footer-bg:  #0d0c1a;
+  --color-footer-text:#c8b6ff;
+
+  --color-card-bg:    #1c1b30;
+  --color-card-shadow: rgba(0, 0, 0, 0.35);
+
+  --color-border:     #2e2b45;
+  --color-divider:    #2e2b45;
+
+  --color-btn-bg:     #9d8cdf;
+  --color-btn-text:   #12111f;
+  --color-btn-hover:  #7b84cc;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --transition: 0.3s ease;
+}
+

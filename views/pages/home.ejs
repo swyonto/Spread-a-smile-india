@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/carousel.css" />
+  <link rel="stylesheet" href="/css/cards.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+</head>
+<body>
+
+  <%- include('../partials/navbar') %>
+
+  <main>
+    <!-- Section 1: Hero Carousel -->
+    <%- include('../partials/carousel') %>
+
+    <!-- Section 2: Image Cards -->
+    <section class="home-cards-section">
+      <div class="cards-grid">
+        <%- include('../partials/imageCard', { image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg', heading: 'Education' }) %>
+        <%- include('../partials/imageCard', { image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg', heading: 'Skill Development' }) %>
+        <%- include('../partials/imageCard', { image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg', heading: 'Community Support' }) %>
+        <%- include('../partials/imageCard', { image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg', heading: 'Health & Nutrition' }) %>
+      </div>
+    </section>
+
+    <!-- Section 3: Mission Text + Image -->
+    <section class="home-mission-section">
+      <div class="mission-content">
+        <p class="mission-text">
+          Since 2005, Spread Smile India has been transforming lives — helping destitute street children move
+          from streets to classrooms through education, healthcare, and empowerment.
+        </p>
+      </div>
+      <div class="mission-image">
+        <img src="https://spreadasmileindia.com/src/images/landing-page/lading-page1.webp" alt="Our mission in action" loading="lazy" />
+      </div>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>

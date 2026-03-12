@@ -1,0 +1,10 @@
+<!-- Gallery Component -->
+<!-- Usage: <%- include('../partials/gallery', { images: ['url1', 'url2', ...] }) %> -->
+
+<div class="gallery-grid">
+  <% images.forEach(function(imgUrl) { %>
+    <div class="gallery-item">
+      <img src="<%= imgUrl %>" alt="Gallery image" loading="lazy" />
+    </div>
+  <% }); %>
+</div>

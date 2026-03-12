@@ -1,0 +1,60 @@
+<nav class="navbar" id="navbar">
+
+  <!-- Left: Logo + Name -->
+  <div class="navbar-left">
+    <a href="/" class="navbar-brand">
+      <img src="https://ik.imagekit.io/l15cczdgu/Assets/logo.webp?updatedAt=1761388991377" alt="Spread Smile India Logo" class="navbar-logo" />
+      <span class="navbar-name">Spread Smile India</span>
+    </a>
+  </div>
+
+  <!-- Center: Nav Links -->
+  <ul class="navbar-links" id="navbarLinks">
+
+    <li><a href="/" class="nav-link">Home</a></li>
+    <li><a href="/about" class="nav-link">About</a></li>
+
+    <!-- Programs Dropdown -->
+    <li class="nav-dropdown">
+      <button class="nav-link dropdown-toggle" aria-expanded="false">
+        Programs <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="/programs#program-education"><i class="fa-solid fa-book"></i> Education</a></li>
+        <li><a href="/programs#program-health"><i class="fa-solid fa-heart-pulse"></i> Health</a></li>
+        <li><a href="/programs#program-nutrition"><i class="fa-solid fa-apple-whole"></i> Nutrition</a></li>
+        <li><a href="/programs#program-computer"><i class="fa-solid fa-laptop"></i> Computer Literacy</a></li>
+        <li><a href="/programs#program-celebrations"><i class="fa-solid fa-star"></i> Celebrations</a></li>
+      </ul>
+    </li>
+
+    <!-- Impact Dropdown -->
+    <li class="nav-dropdown">
+      <button class="nav-link dropdown-toggle" aria-expanded="false">
+        Impact <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="/impact"><i class="fa-solid fa-chart-line"></i> Impact</a></li>
+        <li><a href="/about#our-story"><i class="fa-solid fa-clock-rotate-left"></i> Our Story</a></li>
+        <li><a href="/dignitaries"><i class="fa-solid fa-users"></i> Dignitaries</a></li>
+      </ul>
+    </li>
+
+  </ul>
+
+  <!-- Right: Theme Toggle + Hamburger -->
+  <div class="navbar-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="fa-solid fa-sun" id="themeIcon"></i>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
+    </button>
+  </div>
+
+</nav>
+
+<!-- Mobile overlay -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<script src="/js/navbar.js"></script>
