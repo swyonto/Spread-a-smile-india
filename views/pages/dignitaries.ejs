@@ -9,25 +9,83 @@
   <%- include('../partials/navbar') %>
 
   <main>
-    <section class="dignitaries-section">
-      <h2>Dignitaries</h2>
 
-      <div class="dignitary-item">
-        <img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide2_woman.jpg" alt="Dignitary" loading="lazy" />
-        <div class="dignitary-text">
-          <h3>Sangita Mehra</h3>
-          <p class="dignitary-title">Founder & Director</p>
-          <p>Sangita Mehra founded Spread Smile India in 2005 driven by a deep commitment to help
-          underprivileged children gain access to education and a better life.</p>
-        </div>
+    <!-- Hero -->
+    <section class="dg-hero">
+      <div class="dg-hero-inner">
+        <p class="dg-hero-label">Our Supporters</p>
+        <h1 class="dg-hero-heading">Ambassadors &amp; Recognition</h1>
+        <p class="dg-hero-sub">We are honoured by the support and recognition from distinguished individuals who believe in our mission to transform lives.</p>
       </div>
-
-      <!-- Additional dignitaries will be added here -->
-
     </section>
+
+    <!-- Recognition Cards -->
+    <section class="dg-section">
+      <div class="dg-list">
+
+        <!-- 1: Kiren Rijiju -->
+        <div class="dg-card dg-reveal">
+          <div class="dg-card-photo">
+            <img src="/assets/ambassadors/ambassador1.jpeg" alt="With Kiren Rijiju" loading="lazy" />
+            <div class="dg-card-name">
+              <span class="dg-name">Shri Kiren Rijiju</span>
+              <span class="dg-title">Minister of State for Home Affairs, Govt. of India</span>
+            </div>
+          </div>
+          <div class="dg-card-letter">
+            <div class="dg-letter-frame">
+              <img src="/assets/ambassadors/letter2.jpg" alt="Letter from Kiren Rijiju" loading="lazy" />
+            </div>
+            <p class="dg-letter-caption">Letter of Recognition &mdash; March 2017</p>
+          </div>
+        </div>
+
+        <!-- 2: Kshenuka Senewiratne -->
+        <div class="dg-card dg-card--flip dg-reveal">
+          <div class="dg-card-photo">
+            <img src="/assets/ambassadors/ambassador2.jpeg" alt="With Kshenuka Senewiratne" loading="lazy" />
+            <div class="dg-card-name">
+              <span class="dg-name">H.E. Kshenuka Senewiratne</span>
+              <span class="dg-title">High Commissioner, Democratic Socialist Republic of Sri Lanka</span>
+            </div>
+          </div>
+          <div class="dg-card-letter">
+            <div class="dg-letter-frame">
+              <img src="/assets/ambassadors/letter3.jpg" alt="Letter from High Commission of Sri Lanka" loading="lazy" />
+            </div>
+            <p class="dg-letter-caption">Letter of Recognition &mdash; December 2024</p>
+          </div>
+        </div>
+
+        <!-- 3: Pattarat Hongtong -->
+        <div class="dg-card dg-reveal">
+          <div class="dg-card-photo">
+            <img src="/assets/ambassadors/ambassador3.jpeg" alt="With Pattarat Hongtong" loading="lazy" />
+            <div class="dg-card-name">
+              <span class="dg-name">H.E. Pattarat Hongtong</span>
+              <span class="dg-title">Ambassador of the Kingdom of Thailand to the Republic of India</span>
+            </div>
+          </div>
+          <div class="dg-card-letter">
+            <div class="dg-letter-frame">
+              <img src="/assets/ambassadors/letter1.jpg" alt="Letter from Royal Thai Embassy" loading="lazy" />
+            </div>
+            <p class="dg-letter-caption">Letter of Recommendation &mdash; January 2025</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <%- include('../partials/footer') %>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/dignitaries.js"></script>
+</body>
+</html>
 
   <script src="/js/theme.js"></script>
 </body>

@@ -1,3 +1,216 @@
 /* ============================================
-   dignitaries.css — Dignitaries Page Styles
+   dignitaries.css — Ambassadors & Recognition
    ============================================ */
+
+/* ---- Hero ---- */
+.dg-hero {
+  background: var(--color-bg-alt);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+}
+
+.dg-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.dg-hero-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 0.9rem;
+}
+
+.dg-hero-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  line-height: 1.1;
+  margin: 0 0 1.1rem;
+}
+
+.dg-hero-sub {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ---- Section ---- */
+.dg-section {
+  padding: 4rem 2rem 5rem;
+  background: var(--color-bg);
+}
+
+.dg-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* ============================================================
+   Recognition Card: photo (left) + letter (right)
+   .dg-card--flip reverses the order for visual rhythm
+   ============================================================ */
+.dg-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  /* scroll-reveal start state */
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.28s ease;
+}
+
+.dg-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.dg-card.dg-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Flip: letter left, photo right */
+.dg-card--flip .dg-card-photo { order: 2; }
+.dg-card--flip .dg-card-letter { order: 1; }
+
+/* ---- Photo column ---- */
+.dg-card-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+.dg-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.dg-card:hover .dg-card-photo img {
+  transform: scale(1.05);
+}
+
+/* Name badge overlaid at bottom of photo */
+.dg-card-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.25rem 1rem;
+  background: linear-gradient(to top, rgba(10, 8, 25, 0.88) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dg-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.dg-title {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.45;
+}
+
+/* ---- Letter column ---- */
+.dg-card-letter {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-bg-alt);
+}
+
+.dg-letter-frame {
+  width: 100%;
+  flex: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  background: #fff;
+}
+
+.dg-letter-frame img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.dg-letter-caption {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 850px) {
+  .dg-hero-heading {
+    font-size: 2.3rem;
+  }
+
+  .dg-card {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reset flip on mobile — always photo on top */
+  .dg-card--flip .dg-card-photo { order: 1; }
+  .dg-card--flip .dg-card-letter { order: 2; }
+
+  .dg-card-photo {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .dg-hero {
+    padding: 3.5rem 1.25rem 3rem;
+  }
+
+  .dg-hero-heading {
+    font-size: 1.9rem;
+  }
+
+  .dg-section {
+    padding: 3rem 1.25rem 4rem;
+  }
+
+  .dg-list {
+    gap: 2.5rem;
+  }
+
+  .dg-card-letter {
+    padding: 1.25rem;
+  }
+
+  .dg-card-photo {
+    min-height: 240px;
+  }
+}

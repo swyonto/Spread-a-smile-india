@@ -2,6 +2,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title><%= title %></title>
 
+<!-- Theme Lock: Prevent Flash of White on Load -->
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
 <!-- Google Fonts: Plus Jakarta Sans (body) + Cormorant Garamond (headings) + Cinzel (brand) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
