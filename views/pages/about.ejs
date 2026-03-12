@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <%- include('../partials/head') %>
-  <link rel="stylesheet" href="/css/carousel.css" />
+  <link rel="stylesheet" href="/css/videoCarousel.css" />
   <link rel="stylesheet" href="/css/about.css" />
 </head>
 <body>
@@ -11,73 +11,157 @@
 
   <main>
     <!-- Section 1: Video Carousel -->
-    <section class="about-video-section">
-      <%- include('../partials/carousel', {
-        carouselId: 'aboutCarousel',
-        slides: [
+    <section class="about-vc-section">
+      <%- include('../partials/videoCarousel', {
+        vcId: 'aboutVC',
+        videos: [
           {
-            type: 'youtube',
-            embedId: '_XuH6OPxoas',
-            heading: 'TEDx Talk — Sangita Mehra',
-            subheading: 'Sharing lived stories of resilience, education, and hope.'
+            type: 'mp4',
+            src: 'https://ik.imagekit.io/l15cczdgu/tr:q-70/Assets/video1t.mp4',
+            poster: 'https://ik.imagekit.io/l15cczdgu/Assets/video1t.mp4/ik-thumbnail.jpg?updatedAt=1761408445617'
           },
           {
-            type: 'image',
-            src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide2_woman.jpg',
-            alt: 'Women Empowerment',
-            heading: 'Empowering Women',
-            subheading: 'Vocational training that creates sustainable futures.'
+            type: 'mp4',
+            src: 'https://ik.imagekit.io/l15cczdgu/tr:q-70/Assets/video2.mp4',
+            poster: 'https://ik.imagekit.io/l15cczdgu/Assets/video2.mp4/ik-thumbnail.jpg?updatedAt=1761410184901'
+          },
+          {
+            type: 'youtube',
+            embedId: '_XuH6OPxoas'
           }
         ]
       }) %>
     </section>
 
-    <!-- Section 2: How We Are Different -->
-    <section class="about-different-section">
-      <div class="different-text">
-        <h2>How We Are Different</h2>
-        <p>
-          Since 2005, Spread Smile India has been working at the grassroots to create lasting change through
-          education and empowerment. Founded by Sangita Mehra, the organisation is rooted in lived experience
-          and the belief that every child deserves the opportunity to learn, grow, and thrive.
-        </p>
-        <p>
-          We work with marginalized communities in Delhi, providing holistic support that goes beyond classrooms —
-          combining education with nutrition, skill development, emotional well-being, and family empowerment.
-        </p>
-      </div>
-      <div class="different-image">
-        <img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide2_woman.jpg" alt="How we are different" loading="lazy" />
+    <!-- Section 2: Who We Are -->
+    <section class="about-who-section">
+      <div class="about-who-inner">
+
+        <!-- Left: Text -->
+        <div class="about-who-text">
+          <h2 class="about-who-heading">Who We Are &amp; What Makes Us Different</h2>
+          <div class="about-who-body">
+            <p>Since 2005, Spread Smile India has been working at the grassroots to create lasting change through education and empowerment. Founded by Sangita Mehra, the organisation is rooted in lived experience and the belief that every child deserves the opportunity to learn, grow, and thrive.</p>
+            <p>We work with marginalized communities in Delhi, providing holistic support that goes beyond classrooms&mdash;combining education with nutrition, skill development, emotional well-being, and family empowerment.</p>
+            <p><strong>Why we exist:</strong> Because education is not just about schooling, but about dignity, independence, and breaking cycles of poverty.</p>
+            <p>Our mission is to transform lives from streets to classrooms and enable families and communities to build self-reliant futures.</p>
+            <ul class="about-who-list">
+              <li><i class="fa-solid fa-circle-check"></i><span>Supporting underprivileged children and families through education and care</span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>Reaching vulnerable communities across 7+ traffic signals in Delhi NCR</span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>Enabling women towards financial independence</span></li>
+              <li><i class="fa-solid fa-circle-check"></i><span>Equipping youth with life and skill-based learning for better futures</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="about-who-img-wrap">
+          <img
+            src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/lading-page1.webp"
+            alt="Spread Smile India team"
+            loading="lazy"
+          />
+        </div>
+
       </div>
     </section>
 
     <!-- Section 3: Our Story Timeline -->
     <section class="about-story-section">
-      <h2>Our Story</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="timeline-year">2005</span>
-          <p class="timeline-desc">Spread Smile India founded by Sangita Mehra</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2008</span>
-          <p class="timeline-desc">First formal education program launched</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2012</span>
-          <p class="timeline-desc">Health and nutrition initiatives introduced</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2015</span>
-          <p class="timeline-desc">Women empowerment and skill development programs started</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2018</span>
-          <p class="timeline-desc">Computer literacy program launched</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2024</span>
-          <p class="timeline-desc">Reaching 7+ traffic signals across Delhi NCR</p>
+      <div class="about-story-inner">
+        <h2 class="about-section-title">Our Story</h2>
+        <div class="tl">
+
+          <!-- 2005 — LEFT -->
+          <div class="tl-item tl-item--left">
+            <div class="tl-card">
+              <div class="tl-card-img">
+                <img src="https://picsum.photos/seed/ssi2005/600/300" alt="2005 — Founded" loading="lazy" />
+              </div>
+              <div class="tl-card-body">
+                <span class="tl-year">2005</span>
+                <h3 class="tl-card-title">Where It All Began</h3>
+                <p class="tl-card-desc">Sangita Mehra founded Spread Smile India in Delhi, driven by the belief that every child deserves dignity and a chance to learn.</p>
+              </div>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+
+          <!-- 2008 — RIGHT -->
+          <div class="tl-item tl-item--right">
+            <div class="tl-card">
+              <div class="tl-card-img">
+                <img src="https://picsum.photos/seed/ssi2008/600/300" alt="2008 — First Classrooms" loading="lazy" />
+              </div>
+              <div class="tl-card-body">
+                <span class="tl-year">2008</span>
+                <h3 class="tl-card-title">First Classrooms</h3>
+                <p class="tl-card-desc">Launched structured learning programs for street children, turning pavements into pathways to education.</p>
+              </div>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+
+          <!-- 2012 — LEFT -->
+          <div class="tl-item tl-item--left">
+            <div class="tl-card">
+              <div class="tl-card-img">
+                <img src="https://picsum.photos/seed/ssi2012/600/300" alt="2012 — Health & Nutrition" loading="lazy" />
+              </div>
+              <div class="tl-card-body">
+                <span class="tl-year">2012</span>
+                <h3 class="tl-card-title">Health &amp; Nutrition</h3>
+                <p class="tl-card-desc">Recognising that learning requires well-being, we introduced daily health checks and nutritious meals into our programs.</p>
+              </div>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+
+          <!-- 2015 — RIGHT -->
+          <div class="tl-item tl-item--right">
+            <div class="tl-card">
+              <div class="tl-card-img">
+                <img src="https://picsum.photos/seed/ssi2015/600/300" alt="2015 — Women Empowerment" loading="lazy" />
+              </div>
+              <div class="tl-card-body">
+                <span class="tl-year">2015</span>
+                <h3 class="tl-card-title">Empowering Women</h3>
+                <p class="tl-card-desc">Vocational training and skill development programs gave women the tools to achieve financial independence.</p>
+              </div>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+
+          <!-- 2018 — LEFT -->
+          <div class="tl-item tl-item--left">
+            <div class="tl-card">
+              <div class="tl-card-img">
+                <img src="https://picsum.photos/seed/ssi2018/600/300" alt="2018 — Digital Literacy" loading="lazy" />
+              </div>
+              <div class="tl-card-body">
+                <span class="tl-year">2018</span>
+                <h3 class="tl-card-title">Digital Futures</h3>
+                <p class="tl-card-desc">Our computer literacy program opened doors to the digital world for hundreds of young learners across Delhi.</p>
+              </div>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+
+          <!-- 2024 — RIGHT -->
+          <div class="tl-item tl-item--right">
+            <div class="tl-card">
+              <div class="tl-card-img">
+                <img src="https://picsum.photos/seed/ssi2024/600/300" alt="2024 — Growing Reach" loading="lazy" />
+              </div>
+              <div class="tl-card-body">
+                <span class="tl-year">2024</span>
+                <h3 class="tl-card-title">Growing Reach</h3>
+                <p class="tl-card-desc">Today we reach 7+ traffic signals across Delhi NCR, touching thousands of lives every year through education and care.</p>
+              </div>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -86,6 +170,8 @@
   <%- include('../partials/footer') %>
 
   <script src="/js/theme.js"></script>
-  <script src="/js/carousel.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/videoCarousel.js"></script>
+  <script src="/js/about.js"></script>
 </body>
 </html>

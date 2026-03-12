@@ -1,3 +1,382 @@
 /* ============================================
    about.css — About Page Section Styles
    ============================================ */
+
+/* ---- Section 1: Video Carousel wrapper ---- */
+.about-vc-section {
+  padding: 2rem 2rem 0;
+  background-color: var(--color-bg);
+}
+
+.about-vc-section .vc {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ================================================
+   Section 2: Who We Are & What Makes Us Different
+   ================================================ */
+.about-who-section {
+  padding: 5.5rem 2rem;
+  background-color: var(--color-bg-alt);
+}
+
+.about-who-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Text left, image right */
+.about-who-text     { order: 1; }
+.about-who-img-wrap { order: 2; }
+
+/* --- Right: Image --- */
+.about-who-img-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 3.5;
+}
+
+.about-who-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-who-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+/* --- Right: Text --- */
+.about-who-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+  color: var(--color-heading);
+}
+
+.about-who-body p {
+  font-size: 0.96rem;
+  line-height: 1.78;
+  color: var(--color-text);
+  margin: 0 0 0.9rem;
+}
+
+.about-who-body p strong {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+/* --- Checkmark list --- */
+.about-who-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-who-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.93rem;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+.about-who-list li i {
+  color: #22c55e;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ================================
+   Section 3: Our Story Timeline
+   ================================ */
+.about-story-section {
+  padding: 5rem 2rem 4rem;
+  background-color: var(--color-bg);
+}
+
+.about-story-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.about-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  text-align: center;
+  margin: 0 0 3.5rem;
+}
+
+/* ============================================================
+   Timeline: center vertical line, alternating L/R cards
+   ============================================================ */
+
+.tl {
+  position: relative;
+  padding: 0.5rem 0 1rem;
+}
+
+/* Center vertical line */
+.tl::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-primary) 6%,
+    var(--color-accent)  88%,
+    transparent 100%
+  );
+  z-index: 0;
+}
+
+/* --- Each item occupies one half --- */
+.tl-item {
+  position: relative;
+  width: 50%;
+  padding-bottom: 2.8rem;
+  /* scroll-reveal start state */
+  opacity: 0;
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.tl-item--left {
+  padding-right: 48px;
+  transform: translateX(-28px);
+}
+
+.tl-item--right {
+  margin-left: 50%;
+  padding-left: 48px;
+  transform: translateX(28px);
+}
+
+/* Revealed state (added by JS IntersectionObserver) */
+.tl-item.tl-reveal {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Dot on center line --- */
+.tl-dot {
+  position: absolute;
+  top: 22px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 3px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-primary);
+  z-index: 2;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tl-item--left  .tl-dot { right: -9px; }
+.tl-item--right .tl-dot { left:  -9px; }
+
+.tl-item:hover .tl-dot {
+  background: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent), 0 0 12px rgba(200,182,255,0.4);
+}
+
+/* --- Horizontal connector line: card edge → dot --- */
+.tl-item--left::after,
+.tl-item--right::before {
+  content: '';
+  position: absolute;
+  top: 30px; /* center of 18px dot at top:22px → 22+9-1 = 30 */
+  height: 2px;
+  width: 48px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+  z-index: 1;
+}
+
+.tl-item--left::after  { right: 0; }
+.tl-item--right::before { left: 0; background: linear-gradient(to left, var(--color-primary), var(--color-accent)); }
+
+/* ============================================================
+   Landscape Card: image left ~38%, text right
+   ============================================================ */
+.tl-card {
+  display: flex;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  min-height: 200px;
+}
+
+.tl-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tl-card-img {
+  width: 55%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.tl-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.tl-card:hover .tl-card-img img {
+  transform: scale(1.07);
+}
+
+.tl-card-body {
+  flex: 1;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.tl-year {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.tl-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.tl-card-desc {
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 900px) {
+  .about-who-inner {
+    gap: 2.5rem;
+  }
+
+  .about-who-heading {
+    font-size: 2.2rem;
+  }
+
+  .tl-year {
+    font-size: 1.25rem;
+  }
+
+  .tl-card-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-who-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .about-who-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-who-img-wrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .about-who-heading {
+    font-size: 1.9rem;
+  }
+
+  .about-story-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .about-section-title {
+    font-size: 1.9rem;
+  }
+
+  /* --- Mobile timeline: single column, line on left --- */
+  .tl::before {
+    left: 9px;
+  }
+
+  .tl-item,
+  .tl-item--left,
+  .tl-item--right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 44px;
+    padding-right: 0;
+    /* reset desktop transforms for correct reveal start */
+    transform: translateY(20px);
+  }
+
+  .tl-item.tl-reveal {
+    transform: translateY(0);
+  }
+
+  .tl-item--left  .tl-dot,
+  .tl-item--right .tl-dot {
+    left: 0;
+    right: auto;
+  }
+
+  /* Hide desktop horizontal connectors */
+  .tl-item--left::after,
+  .tl-item--right::before {
+    display: none;
+  }
+
+  /* Mobile card: stack vertically */
+  .tl-card {
+    flex-direction: column;
+  }
+
+  .tl-card-img {
+    width: 100%;
+    height: 160px;
+  }
+}
+

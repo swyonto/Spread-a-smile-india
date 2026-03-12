@@ -1,0 +1,274 @@
+/* ============================================
+   videoCarousel.css — Video Carousel Component
+   ============================================ */
+
+/* --- Outer wrapper --- */
+.vc {
+  position: relative;
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* --- Track (holds all slides side by side) --- */
+.vc-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+/* --- Individual slide --- */
+.vc-slide {
+  position: relative;
+  min-width: 100%;
+  height: 84vh;
+  max-height: 780px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+/* --- MP4 video fills the slide (cover) --- */
+.vc-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* --- YouTube iframe fills slide --- */
+.vc-yt-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.vc-yt {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* --- YouTube badge (bottom-left label) --- */
+.vc-yt-badge {
+  position: absolute;
+  bottom: 4.5rem;
+  left: 1.5rem;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.vc-yt-badge i {
+  color: #ff4444;
+  font-size: 0.9rem;
+}
+
+/* --- Unmute nudge (fades out after JS adds .vc-nudge--hidden) --- */
+.vc-unmute-nudge {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  white-space: nowrap;
+}
+
+.vc-nudge--hidden {
+  opacity: 0;
+}
+
+/* Hide nudge when on YouTube slide */
+.vc[data-yt-active] .vc-unmute-nudge {
+  display: none;
+}
+
+/* --- Bottom-right controls (sound toggle) --- */
+.vc-controls {
+  position: absolute;
+  bottom: 4.5rem;
+  right: 1.5rem;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vc-pause-btn,
+.vc-sound-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.22s ease, border-color 0.22s ease;
+}
+
+.vc-pause-btn:hover,
+.vc-sound-btn:hover {
+  background: rgba(0, 0, 0, 0.78);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* Hide both buttons on YouTube slides */
+.vc[data-yt-active] .vc-pause-btn,
+.vc[data-yt-active] .vc-sound-btn {
+  display: none;
+}
+
+/* --- Slide counter (top-right) --- */
+.vc-counter {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 12;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* --- Prev / Next navigation --- */
+.vc-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 1rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.vc-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.vc-nav:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.vc-nav--prev { left: 1.25rem; }
+.vc-nav--next { right: 1.25rem; }
+
+/* --- Dots --- */
+.vc-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 12;
+}
+
+.vc-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.38);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, width 0.3s ease, border-radius 0.3s ease;
+}
+
+.vc-dot.active {
+  background: #fff;
+  width: 28px;
+  border-radius: 5px;
+  border-color: #fff;
+}
+
+.vc-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.68);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .vc-slide {
+    height: 60vh;
+    max-height: 520px;
+  }
+
+  .vc-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .vc-slide {
+    height: 50vh;
+    max-height: 400px;
+  }
+
+  .vc-nav--prev { left: 0.6rem; }
+  .vc-nav--next { right: 0.6rem; }
+
+  .vc-counter {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .vc-controls {
+    bottom: 3.8rem;
+    right: 0.75rem;
+  }
+}

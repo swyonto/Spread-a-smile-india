@@ -1,0 +1,94 @@
+<%
+  /*
+   * videoCarousel.ejs — Dedicated video carousel for About page
+   *
+   * Locals:
+   *   vcId    {string} — unique ID for this instance
+   *   videos  {Array}  — array of video objects:
+   *     { type: 'mp4',     src, poster? }
+   *     { type: 'youtube', embedId }
+   *
+   * Videos autoplay muted on slide enter (browser policy).
+   * Sound toggle button lets user unmute after interaction.
+   * YouTube slides use autoplay=1&mute=1 via iframe src injection.
+   * Video end → auto-advance to next slide.
+   * ImageKit tr=q-70 on mp4 URLs for bandwidth optimisation.
+   */
+  const _vcId   = locals.vcId   || 'vid-carousel';
+  const _videos = locals.videos || [];
+%>
+
+<div class="vc" id="<%= _vcId %>" data-vc>
+
+  <!-- Track -->
+  <div class="vc-track">
+    <% _videos.forEach(function(v, i) { %>
+    <div class="vc-slide<%= v.type === 'youtube' ? ' vc-slide--yt' : '' %>" data-index="<%= i %>">
+
+      <% if (v.type === 'mp4') { %>
+        <video
+          class="vc-video"
+          src="<%= v.src %>"
+          <% if (v.poster) { %>poster="<%= v.poster %>"<% } %>
+          playsinline
+          muted
+          preload="<%= i === 0 ? 'metadata' : 'none' %>"
+        ></video>
+
+      <% } else if (v.type === 'youtube') { %>
+        <div class="vc-yt-wrap">
+          <iframe
+            class="vc-yt"
+            data-embedid="<%= v.embedId %>"
+            title="Video <%= i + 1 %>"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- YouTube cannot be unmuted via JS; sound icon is hidden for this slide -->
+        <div class="vc-yt-badge" aria-hidden="true">
+          <i class="fa-brands fa-youtube"></i> YouTube
+        </div>
+      <% } %>
+
+    </div>
+    <% }); %>
+  </div>
+
+  <!-- Sound nudge — fades out after 3s -->
+  <div class="vc-unmute-nudge" aria-hidden="true">
+    <i class="fa-solid fa-volume-xmark"></i>
+    <span>Tap to unmute</span>
+  </div>
+
+  <!-- Bottom-right controls -->
+  <div class="vc-controls">
+    <button class="vc-pause-btn" aria-label="Pause / Play video" title="Pause / Play">
+      <i class="fa-solid fa-pause"></i>
+    </button>
+    <button class="vc-sound-btn" aria-label="Toggle sound" title="Toggle sound">
+      <i class="fa-solid fa-volume-xmark"></i>
+    </button>
+  </div>
+
+  <!-- Slide counter (top-right) -->
+  <div class="vc-counter" aria-live="polite">
+    <span class="vc-counter-current">1</span> / <span class="vc-counter-total"><%= _videos.length %></span>
+  </div>
+
+  <!-- Prev / Next -->
+  <button class="vc-nav vc-nav--prev" aria-label="Previous video">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button class="vc-nav vc-nav--next" aria-label="Next video">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+  <!-- Dots -->
+  <div class="vc-dots">
+    <% _videos.forEach(function(_, i) { %>
+    <button class="vc-dot <%= i === 0 ? 'active' : '' %>" data-index="<%= i %>" aria-label="Go to video <%= i + 1 %>"></button>
+    <% }); %>
+  </div>
+
+</div>
