@@ -56,9 +56,9 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(150deg,
-    var(--color-dark-band)     0%,
-    var(--color-dark-band)     45%,
-    var(--color-dark-band-mid) 100%
+    var(--color-bg-alt)  0%,
+    var(--color-bg-alt)  45%,
+    var(--color-bg)      100%
   );
   padding: clamp(110px, 14vw, 160px) 2rem clamp(60px, 8vw, 90px);
   text-align: center;
@@ -100,14 +100,14 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.4rem, 6vw, 4.2rem);
   font-weight: 700;
-  color: var(--color-dark-band-text);
+  color: var(--color-heading);
   line-height: 1.15;
   margin: 0 0 1.1rem;
 }
 
 .impact-hero-sub {
   font-size: clamp(0.95rem, 2vw, 1.1rem);
-  color: var(--color-dark-band-muted);
+  color: var(--color-text-muted);
   max-width: 540px;
   margin: 0 auto 3rem;
   line-height: 1.7;
@@ -141,7 +141,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.5rem, 5vw, 3.6rem);
   font-weight: 700;
-  color: var(--color-dark-band-text);
+  color: var(--color-heading);
   line-height: 1;
 }
 
@@ -159,14 +159,14 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-dark-band-muted);
+  color: var(--color-text-muted);
   margin: 0;
 }
 
 .stat-divider {
   width: 1px;
   height: 48px;
-  background: var(--color-dark-band-faint);
+  background: var(--color-border);
   flex-shrink: 0;
 }
 
@@ -634,9 +634,9 @@
 .impact-cta-section {
   padding: clamp(60px, 8vw, 100px) 2rem;
   background: linear-gradient(150deg,
-    var(--color-dark-band)     0%,
-    var(--color-dark-band-mid) 60%,
-    var(--color-dark-band)     100%
+    var(--color-bg-alt) 0%,
+    var(--color-bg)     60%,
+    var(--color-bg-alt) 100%
   );
   text-align: center;
   position: relative;
@@ -648,7 +648,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 60% 40%,
-    var(--color-dark-band-faint) 0%,
+    var(--color-border) 0%,
     transparent 65%
   );
   pointer-events: none;
@@ -675,14 +675,14 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.9rem, 4.5vw, 3rem);
   font-weight: 700;
-  color: var(--color-dark-band-text);
+  color: var(--color-heading);
   margin: 0 0 0.9rem;
   line-height: 1.2;
 }
 
 .impact-cta-sub {
   font-size: clamp(0.92rem, 1.8vw, 1.05rem);
-  color: var(--color-dark-band-muted);
+  color: var(--color-text-muted);
   max-width: 500px;
   margin: 0 auto 2.2rem;
   line-height: 1.7;
@@ -720,12 +720,12 @@
 }
 
 .impact-cta-btn--secondary {
-  background: var(--color-dark-band-faint);
-  color: var(--color-dark-band-text);
-  border: 1px solid var(--color-dark-band-muted);
+  background: var(--color-secondary);
+  color: var(--color-heading);
+  border: 1px solid var(--color-border);
 }
 
 .impact-cta-btn--secondary:hover {
-  background: var(--color-dark-band-faint);
+  background: var(--color-secondary);
   transform: translateY(-3px);
 }
