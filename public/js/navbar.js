@@ -80,4 +80,13 @@
     }
   });
 
+  // Close mobile menu when a dropdown item link is tapped
+  document.querySelectorAll('.dropdown-menu a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth <= 900) {
+        closeMenu();
+      }
+    });
+  });
+
 })();

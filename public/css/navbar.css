@@ -243,11 +243,13 @@ button.nav-link::after {
   background: rgba(0, 0, 0, 0.45);
   z-index: 998;
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--transition);
 }
 
 .nav-overlay.active {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* ============================================
@@ -273,6 +275,7 @@ button.nav-link::after {
     box-shadow: var(--shadow-lg);
     padding: 5rem 1.5rem 2rem;
     z-index: 999;
+    overflow-x: hidden;
     overflow-y: auto;
     transition: right 0.35s ease;
   }
@@ -298,6 +301,9 @@ button.nav-link::after {
     position: static;
     transform: none;
     left: unset;
+    margin-top: 0;
+    width: 100%;
+    min-width: unset;
     box-shadow: none;
     border: none;
     border-radius: 0;
@@ -305,7 +311,7 @@ button.nav-link::after {
     background: transparent;
     opacity: 1;
     visibility: visible;
-    pointer-events: all;
+    pointer-events: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -314,6 +320,8 @@ button.nav-link::after {
 
   .nav-dropdown.open .dropdown-menu {
     max-height: 300px;
+    pointer-events: all;
+        transform: translateX(0) translateY(0);
   }
 
   .dropdown-menu li a {
@@ -338,5 +346,6 @@ button.nav-link::after {
 
   .navbar-logo {
     height: 36px;
+    width: 36px;
   }
 }

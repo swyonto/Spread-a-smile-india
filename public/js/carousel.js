@@ -165,6 +165,27 @@
       if (!videoPlaying) startAutoplay();
     }, { passive: true });
 
+    // --- Mouse drag ---
+    var mouseStartX = 0;
+    var isDragging  = false;
+
+    carousel.addEventListener('mousedown', function (e) {
+      mouseStartX = e.clientX;
+      isDragging  = true;
+      if (!videoPlaying) stopAutoplay();
+    });
+
+    // Prevent browser's native image-drag from interfering
+    carousel.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+    document.addEventListener('mouseup', function (e) {
+      if (!isDragging) return;
+      isDragging = false;
+      var diff = mouseStartX - e.clientX;
+      if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+      if (!videoPlaying) startAutoplay();
+    });
+
     // --- Keyboard navigation ---
     carousel.setAttribute('tabindex', '0');
     carousel.addEventListener('keydown', function (e) {

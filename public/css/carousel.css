@@ -27,7 +27,7 @@
 /* --- Individual Slides --- */
 .carousel-slide {
   position: relative;
-  min-width: 100%;
+  width: 98.5vw;
   height: 85vh;
   max-height: 720px;
   overflow: hidden;
@@ -245,6 +245,13 @@
 
   .carousel-heading { font-size: 1.15rem; }
 
-  /* Hide arrow buttons on very small screens; swipe is enough */
-  .carousel-btn { display: none; }
+  /* Smaller arrow buttons on very small screens */
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .carousel-btn--prev { left: 0.4rem; }
+  .carousel-btn--next { right: 0.4rem; }
 }
