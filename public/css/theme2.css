@@ -11,50 +11,51 @@
 
 /* --- Light Theme (default) --- */
 [data-theme="light"] {
-  --color-primary:    #f97316;          /* vivid orange             */
-  --color-accent:     #eab308;          /* golden yellow            */
-  --color-highlight:  #fb923c;          /* light orange             */
+  --color-primary:    #ee853f;          /* Spread A Smile Orange    */
+  --color-secondary:  #ffc56f;          /* secondary brand color    */
+  --color-accent:     #ec4f78;          /* warm pink                */
+  --color-tertiary:   #ed463a;          /* tertiary brand color     */
+  --color-highlight:  #ed463a;          /* highlight brand tone     */
   --color-bg:         #fffbeb;          /* warm yellow-white        */
   --color-bg-alt:     #fef3c7;          /* light amber              */
-  --color-secondary:  #fde68a;          /* soft yellow              */
 
-  --color-text:       #1c1400;          /* deep warm black          */
-  --color-text-muted: #92620a;          /* dark golden-brown        */
-  --color-heading:    #1c1400;
+  --color-text:       #1c0c00;          /* deep warm black          */
+  --color-text-muted: #363636;          /* dark golden-brown        */
+  --color-heading:    #2a1d00;
 
   --color-nav-bg:     #ffffff;
   --color-nav-text:   #1c1400;
-  --color-nav-hover:  #f97316;
-  --color-nav-border: #fcd34d;
+  --color-nav-hover:  #ee853f;
+  --color-nav-border: #ffc56f;
 
   --color-footer-bg:            #ffffff;
   --color-footer-text:          #1c1400;
-  --color-footer-link:          #92400e;
-  --color-footer-tagline:       rgba(146, 64, 14,  0.70);
-  --color-footer-bottom:        rgba(146, 64, 14,  0.50);
-  --color-footer-divider:       rgba(249, 115, 22, 0.12);
-  --color-footer-social-bg:     rgba(249, 115, 22, 0.08);
-  --color-footer-social-border: rgba(249, 115, 22, 0.20);
+  --color-footer-link:          #ed463a;
+  --color-footer-tagline:       rgba(237, 70, 58,  0.70);
+  --color-footer-bottom:        rgba(237, 70, 58,  0.50);
+  --color-footer-divider:       rgba(236, 79, 120, 0.12);
+  --color-footer-social-bg:     rgba(236, 79, 120, 0.08);
+  --color-footer-social-border: rgba(236, 79, 120, 0.20);
 
   --color-carousel-heading: #fffbeb;
-  --color-carousel-sub:     #fde68a;
+  --color-carousel-sub:     #ffc56f;
 
   --color-card-bg:     #ffffff;
   --color-card-shadow: rgba(0, 0, 0, 0.07);
 
-  --color-border:   #fcd34d;
-  --color-divider:  #fcd34d;
+  --color-border:   #ffc56f;
+  --color-divider:  #ffc56f;
 
-  --color-btn-bg:    #f97316;
+  --color-btn-bg:    #ee853f;
   --color-btn-text:  #ffffff;
-  --color-btn-hover: #ea6c0a;
+  --color-btn-hover: #ed463a;
 
   /* Dark-band sections (hero, CTA — always inverted) */
   --color-dark-band:       #1a0f00;
   --color-dark-band-mid:   #5c3000;
   --color-dark-band-text:  #fffbeb;
-  --color-dark-band-muted: rgba(253, 230, 138, 0.70);
-  --color-dark-band-faint: rgba(249, 115, 22,  0.15);
+  --color-dark-band-muted: rgba(255, 197, 111, 0.70);
+  --color-dark-band-faint: rgba(236, 79, 120, 0.15);
 
   --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.07);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
@@ -69,33 +70,34 @@
 
 /* --- Dark Theme --- */
 [data-theme="dark"] {
-  --color-primary:    #fb923c;          /* bright orange            */
-  --color-accent:     #facc15;          /* bright yellow            */
-  --color-highlight:  #fbbf24;          /* amber                    */
-  --color-bg:         #1a1000;          /* deep warm dark           */
-  --color-bg-alt:     #2a1c00;          /* slightly lighter         */
-  --color-secondary:  #5c3d00;          /* muted amber-dark         */
+  --color-primary:    #ee853f;          /* Spread A Smile Orange    */
+  --color-secondary:  #ffc56f;          /* secondary brand color    */
+  --color-accent:     #ec4f78;          /* warm pink                */
+  --color-tertiary:   #ed463a;          /* tertiary brand color     */
+  --color-highlight:  #ed463a;          /* highlight brand tone     */
+  --color-bg:         #131313;          /* deep warm dark           */
+  --color-bg-alt:     #1d1d1d;          /* slightly lighter         */
 
   --color-text:       #fffbeb;          /* warm off-white           */
-  --color-text-muted: #c49a3c;          /* muted gold               */
+  --color-text-muted: #dddddd;          /* muted gold               */
   --color-heading:    #fffbeb;
 
-  --color-nav-bg:     #2a1c00;
+  --color-nav-bg:     #212121;
   --color-nav-text:   #fffbeb;
-  --color-nav-hover:  #fb923c;
+  --color-nav-hover:  #ee853f;
   --color-nav-border: #3d2800;
 
   --color-footer-bg:            #0f0900;
-  --color-footer-text:          #fb923c;
-  --color-footer-link:          rgba(251, 146, 60, 0.65);
-  --color-footer-tagline:       rgba(251, 146, 60, 0.50);
-  --color-footer-bottom:        rgba(251, 146, 60, 0.35);
+  --color-footer-text:          #ee853f;
+  --color-footer-link:          rgba(238, 133, 63, 0.65);
+  --color-footer-tagline:       rgba(238, 133, 63, 0.50);
+  --color-footer-bottom:        rgba(238, 133, 63, 0.35);
   --color-footer-divider:       rgba(255, 255, 255, 0.07);
   --color-footer-social-bg:     rgba(255, 255, 255, 0.07);
   --color-footer-social-border: rgba(255, 255, 255, 0.12);
 
-  --color-carousel-heading: #fffbeb;
-  --color-carousel-sub:     #fde68a;
+  --color-carousel-heading: #ff9d33;
+  --color-carousel-sub:     #ffc56f;
 
   --color-card-bg:     #2a1c00;
   --color-card-shadow: rgba(0, 0, 0, 0.40);
@@ -103,16 +105,16 @@
   --color-border:   #3d2800;
   --color-divider:  #3d2800;
 
-  --color-btn-bg:    #fb923c;
+  --color-btn-bg:    #ee853f;
   --color-btn-text:  #1a1000;
-  --color-btn-hover: #f97316;
+  --color-btn-hover: #ed463a;
 
   /* Dark-band sections (hero, CTA — always inverted) */
   --color-dark-band:       #0f0900;
   --color-dark-band-mid:   #3d2000;
   --color-dark-band-text:  #fffbeb;
-  --color-dark-band-muted: rgba(253, 230, 138, 0.65);
-  --color-dark-band-faint: rgba(249, 115, 22,  0.12);
+  --color-dark-band-muted: rgba(255, 197, 111, 0.65);
+  --color-dark-band-faint: rgba(236, 79, 120, 0.12);
 
   --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.30);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);

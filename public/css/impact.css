@@ -13,10 +13,19 @@
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  background: var(--color-secondary);
+  background: var(--impact-chip-bg);
   border: 1px solid var(--color-border);
   color: var(--color-primary);
   margin-bottom: 0.9rem;
+}
+
+/* Lighter chip background for icon badges on impact cards/slides */
+[data-theme="light"] {
+  --impact-chip-bg: #fffdfd;
+}
+
+[data-theme="dark"] {
+  --impact-chip-bg: #f2edf8;
 }
 
 .impact-section-inner {
@@ -354,7 +363,7 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--color-primary);
-  background: var(--color-secondary);
+  background: var(--impact-chip-bg);
   border: 1px solid var(--color-border);
   padding: 0.3em 0.75em;
   border-radius: 100px;
@@ -531,7 +540,7 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--color-primary);
-  background: var(--color-secondary);
+  background: var(--impact-chip-bg);
   border: 1px solid var(--color-border);
   padding: 0.32em 0.8em;
   border-radius: 100px;

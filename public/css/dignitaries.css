@@ -2,6 +2,15 @@
    dignitaries.css — Ambassadors & Recognition
    ============================================ */
 
+/* Lighter chip background for icon badges */
+[data-theme="light"] {
+  --dignitary-badge-bg: #fffdfd;
+}
+
+[data-theme="dark"] {
+  --dignitary-badge-bg: #f2edf8;
+}
+
 /* ---- Hero ---- */
 .dg-hero {
   background: var(--color-bg-alt);
@@ -219,7 +228,7 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--color-primary);
-  background: var(--color-secondary);
+  background: var(--dignitary-badge-bg);
   border: 1px solid var(--color-border);
   padding: 0.28em 0.75em;
   border-radius: 100px;
