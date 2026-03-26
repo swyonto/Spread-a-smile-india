@@ -1,64 +1,57 @@
 /* ============================================
-   theme3.css — Teal #03b5aa palette
-   Fresh, clean, trustworthy.
-
-   HOW TO SWITCH:
-   In views/partials/head.ejs, replace:
-     <link rel="stylesheet" href="/css/theme.css" />
-   with:
-     <link rel="stylesheet" href="/css/theme3.css" />
+   theme.css — Light / Dark CSS Variables
    ============================================ */
 
 /* --- Light Theme (default) --- */
 [data-theme="light"] {
-  --color-primary:    #03b5aa;          /* brand teal               */
-  --color-accent:     #00897b;          /* deeper teal-green        */
-  --color-highlight:  #26c6da;          /* light cyan               */
-  --color-bg:         #e8fdfb;          /* very light teal tint     */
-  --color-bg-alt:     #b2f0ed;          /* light teal               */
-  --color-secondary:  #80e8e3;          /* medium teal              */
+  --color-primary:    #c8b6ff;
+  --color-accent:     #b8c0ff;
+  --color-highlight:  #bbd0ff;
+  --color-bg:         #f5f0ff;
+  --color-bg-alt:     #e7c6ff;
+  --color-secondary:  #ffd6ff;
 
-  --color-text:       #00292b;          /* deep teal-black          */
-  --color-text-muted: #2e7d78;          /* muted teal               */
-  --color-heading:    #00292b;
+  --color-text:       #1a1a2e;
+  --color-text-muted: #555577;
+  --color-heading:    #1a1a2e;
 
   --color-nav-bg:     #ffffff;
-  --color-nav-text:   #00292b;
-  --color-nav-hover:  #03b5aa;
-  --color-nav-border: #80e8e3;
+  --color-nav-text:   #1a1a2e;
+  --color-nav-hover:  #c8b6ff;
+  --color-nav-border: #e0d4f7;
 
-  --color-footer-bg:            #ffffff;
-  --color-footer-text:          #00292b;
-  --color-footer-link:          #006461;
-  --color-footer-tagline:       rgba(0,  100, 97, 0.70);
-  --color-footer-bottom:        rgba(0,  100, 97, 0.50);
-  --color-footer-divider:       rgba(3,  181, 170, 0.12);
-  --color-footer-social-bg:     rgba(3,  181, 170, 0.08);
-  --color-footer-social-border: rgba(3,  181, 170, 0.20);
+  --color-footer-bg:  #ffffff;
+  --color-footer-text: #1a1a2e;
+  --color-footer-link: #4a3870;
+  --color-footer-tagline: rgba(74, 56, 112, 0.7);
+  --color-footer-bottom: rgba(74, 56, 112, 0.5);
+  --color-footer-divider: rgba(100, 80, 160, 0.12);
+  --color-footer-social-bg: rgba(100, 80, 160, 0.08);
+  --color-footer-social-border: rgba(100, 80, 160, 0.18);
 
-  --color-carousel-heading: #e8fdfb;
-  --color-carousel-sub:     #80e8e3;
+  --color-carousel-heading: #EDE9FE;
+  --color-carousel-sub:     #C4B5FD;
 
-  --color-card-bg:     #ffffff;
-  --color-card-shadow: rgba(0, 0, 0, 0.07);
+  --color-card-bg:    #ffffff;
+  --color-card-shadow: rgba(0, 0, 0, 0.08);
 
-  --color-border:   #80e8e3;
-  --color-divider:  #80e8e3;
+  --color-border:     #ddd0f5;
+  --color-divider:    #e0d4f7;
 
-  --color-btn-bg:    #03b5aa;
-  --color-btn-text:  #ffffff;
-  --color-btn-hover: #00897b;
+  --color-btn-bg:     #c8b6ff;
+  --color-btn-text:   #1a1a2e;
+  --color-btn-hover:  #b8c0ff;
 
   /* Dark-band sections (hero, CTA — always inverted) */
-  --color-dark-band:       #001d1c;
-  --color-dark-band-mid:   #014b48;
-  --color-dark-band-text:  #e8fdfb;
-  --color-dark-band-muted: rgba(128, 232, 227, 0.70);
-  --color-dark-band-faint: rgba(3,   181, 170, 0.15);
+  --color-dark-band:       #0d0c1a;
+  --color-dark-band-mid:   #2d1b69;
+  --color-dark-band-text:  #f5f0ff;
+  --color-dark-band-muted: rgba(200, 182, 255, 0.70);
+  --color-dark-band-faint: rgba(192, 132, 252, 0.15);
 
-  --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.07);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -69,54 +62,54 @@
 
 /* --- Dark Theme --- */
 [data-theme="dark"] {
-  --color-primary:    #05d8cc;          /* bright teal (light mode of #03b5aa) */
-  --color-accent:     #00bfa5;          /* bright teal-green        */
-  --color-highlight:  #4dd9d0;          /* lighter cyan             */
-  --color-bg:         #001d1c;          /* deep teal dark           */
-  --color-bg-alt:     #002c2a;          /* slightly lighter         */
-  --color-secondary:  #014b48;          /* muted deep teal          */
+  --color-primary:    #9d8cdf;
+  --color-accent:     #7b84cc;
+  --color-highlight:  #7a9bbf;
+  --color-bg:         #12111f;
+  --color-bg-alt:     #1c1b30;
+  --color-secondary:  #3b2e4a;
 
-  --color-text:       #e8fdfb;          /* teal off-white           */
-  --color-text-muted: #6ecdc8;          /* muted teal               */
-  --color-heading:    #e8fdfb;
+  --color-text:       #e8e0f5;
+  --color-text-muted: #9990b8;
+  --color-heading:    #f0eaff;
 
-  --color-nav-bg:     #002c2a;
-  --color-nav-text:   #e8fdfb;
-  --color-nav-hover:  #05d8cc;
-  --color-nav-border: #014b48;
+  --color-nav-bg:     #1c1b30;
+  --color-nav-text:   #e8e0f5;
+  --color-nav-hover:  #9d8cdf;
+  --color-nav-border: #2e2b45;
 
-  --color-footer-bg:            #000e0d;
-  --color-footer-text:          #05d8cc;
-  --color-footer-link:          rgba(5,  216, 204, 0.65);
-  --color-footer-tagline:       rgba(5,  216, 204, 0.50);
-  --color-footer-bottom:        rgba(5,  216, 204, 0.35);
-  --color-footer-divider:       rgba(255, 255, 255, 0.07);
-  --color-footer-social-bg:     rgba(255, 255, 255, 0.07);
+  --color-footer-bg:  #0d0c1a;
+  --color-footer-text: #c8b6ff;
+  --color-footer-link: rgba(200, 182, 255, 0.65);
+  --color-footer-tagline: rgba(200, 182, 255, 0.5);
+  --color-footer-bottom: rgba(200, 182, 255, 0.35);
+  --color-footer-divider: rgba(255, 255, 255, 0.08);
+  --color-footer-social-bg: rgba(255, 255, 255, 0.08);
   --color-footer-social-border: rgba(255, 255, 255, 0.12);
 
-  --color-carousel-heading: #e8fdfb;
-  --color-carousel-sub:     #80e8e3;
+  --color-carousel-heading: #F5F0FF;
+  --color-carousel-sub:     #DDD6FE;
 
-  --color-card-bg:     #002c2a;
-  --color-card-shadow: rgba(0, 0, 0, 0.40);
+  --color-card-bg:    #1c1b30;
+  --color-card-shadow: rgba(0, 0, 0, 0.35);
 
-  --color-border:   #014b48;
-  --color-divider:  #014b48;
+  --color-border:     #2e2b45;
+  --color-divider:    #2e2b45;
 
-  --color-btn-bg:    #05d8cc;
-  --color-btn-text:  #001d1c;
-  --color-btn-hover: #03b5aa;
+  --color-btn-bg:     #9d8cdf;
+  --color-btn-text:   #12111f;
+  --color-btn-hover:  #7b84cc;
 
   /* Dark-band sections (hero, CTA — always inverted) */
-  --color-dark-band:       #000e0d;
-  --color-dark-band-mid:   #013532;
-  --color-dark-band-text:  #e8fdfb;
-  --color-dark-band-muted: rgba(128, 232, 227, 0.65);
-  --color-dark-band-faint: rgba(3,   181, 170, 0.12);
+  --color-dark-band:       #080611;
+  --color-dark-band-mid:   #1e1250;
+  --color-dark-band-text:  #f0eaff;
+  --color-dark-band-muted: rgba(200, 182, 255, 0.65);
+  --color-dark-band-faint: rgba(192, 132, 252, 0.12);
 
-  --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.30);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.55);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -124,3 +117,4 @@
 
   --transition: 0.3s ease;
 }
+
