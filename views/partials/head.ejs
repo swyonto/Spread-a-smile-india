@@ -1,6 +1,22 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title><%= title %></title>
+<meta name="description" content="<%= typeof description !== 'undefined' ? description : 'Spread Smile India is a registered NGO transforming lives through education, health, and vocational empowerment since 2005.' %>" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="<%= title %>" />
+<meta property="og:description" content="<%= typeof description !== 'undefined' ? description : 'Spread Smile India is a registered NGO transforming lives through education, health, and vocational empowerment since 2005.' %>" />
+<meta property="og:image" content="https://ik.imagekit.io/l15cczdgu/Assets/logo.webp?updatedAt=1761388991377" />
+<meta property="og:url" content="https://spreadasmileindia.org<%= typeof urlPath !== 'undefined' ? urlPath : '' %>" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="<%= title %>" />
+<meta property="twitter:description" content="<%= typeof description !== 'undefined' ? description : 'Spread Smile India is a registered NGO transforming lives through education, health, and vocational empowerment since 2005.' %>" />
+<meta property="twitter:image" content="https://ik.imagekit.io/l15cczdgu/Assets/logo.webp?updatedAt=1761388991377" />
+
+<link rel="canonical" href="https://spreadasmileindia.org<%= typeof urlPath !== 'undefined' ? urlPath : '' %>" />
 
 <!-- Theme Lock: Prevent Flash of White on Load -->
 <script>

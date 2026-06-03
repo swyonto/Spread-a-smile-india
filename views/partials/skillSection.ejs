@@ -1,0 +1,39 @@
+<section id="<%= section.id %>" class="skill-band<%= section.alt ? ' skill-band--alt' : '' %>" data-program-section="<%= section.id %>">
+  <div class="container">
+    
+    <div class="skill-band__heading">
+      <h2 class="skills-section-title-large"><%= section.title %></h2>
+      <% if (section.intro) { %>
+        <p class="skills-section-intro-text"><%= section.intro %></p>
+      <% } %>
+    </div>
+
+    <article class="skill-main-card program-reveal">
+      <div class="skill-main-card__media">
+        <img src="<%= section.main.image %>" alt="<%= section.main.alt %>" loading="lazy" />
+      </div>
+      <div class="skill-main-card__content">
+        <p class="skills-main-desc"><%= section.main.text %></p>
+
+        <% if (section.main.points && section.main.points.length) { %>
+          <ul class="skill-points">
+            <% section.main.points.forEach((point) => { %>
+              <li><i class="fa-solid fa-check"></i> <span><%= point %></span></li>
+            <% }) %>
+          </ul>
+        <% } %>
+      </div>
+    </article>
+
+    <% if (section.cards && section.cards.length) { %>
+      <div class="skill-images-grid">
+        <% section.cards.forEach((card) => { %>
+          <div class="skill-image-card program-reveal">
+            <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+
+  </div>
+</section>

@@ -3,13 +3,7 @@
    DATA — edit here to add / update cards & slides
 ═══════════════════════════════════════════════ */
 
-const stats = [
-  { target: 500,  label: 'Lives Impacted'    },
-  { target: 300,  label: 'Children in School' },
-  { target: 200,   label: 'Women Empowered'    },
-  { target: 70,   label: 'Job Placements'     },
-  { target: 20,    label: 'Years of Service'   }
-];
+
 
 const transformCards = [
   {
@@ -87,6 +81,24 @@ const stories = [
     quote:       '"When Maya first came to us, she was severely malnourished and her family hadn\'t eaten a proper meal in days. Our health and nutrition team worked with her family for months. Today she dances, laughs, and is the most energetic child in her class."',
     programIcon: 'fa-solid fa-heart-pulse',
     programName: 'Health & Nutrition Program'
+  },
+  {
+    beforeImg:   'https://ik.imagekit.io/l15cczdgu/programs/education/academic/20251230_164855_eLpGfyFg0.jpg',
+    afterImg:    'https://ik.imagekit.io/l15cczdgu/programs/education/academic/20251230_165344_-qE_5qeNe.jpg',
+    name:        "Rohan's Journey",
+    ageLine:     'Age 11 · Joined 2022',
+    quote:       '"Rohan was selling toys at the Munirka signal when our team met him. He had never been inside a school. Within two years of intensive catch-up classes at our center, Rohan gained secondary fluency and was admitted directly to 4th grade in a government school. Today, he ranks second in his class and wants to be a science teacher."',
+    programIcon: 'fa-solid fa-graduation-cap',
+    programName: 'Education Program'
+  },
+  {
+    beforeImg:   'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/women%20Empowerment%20slide%20inage',
+    afterImg:    'https://ik.imagekit.io/l15cczdgu/timeline/2015.JPG',
+    name:        "Savitri's Self-Reliance",
+    ageLine:     'Mother of 3 · Joined 2023',
+    quote:       '"As a mother struggling to support three children with no stable income, Savitri joined our Tailoring Unit. She spent 8 months learning stitching and embroidery. Today, she runs a small tailoring business from her home, earning a regular monthly income. She can now comfortably fund her children\'s schooling and nutritional needs."',
+    programIcon: 'fa-solid fa-scissors',
+    programName: 'Vocational Tailoring'
   }
 ];
 %>
@@ -109,25 +121,12 @@ const stories = [
       <div class="impact-hero-inner">
 
         <span class="impact-tag-pill">Our Impact</span>
-        <h1 class="impact-hero-heading">Lives Transformed Through Care & Education</h1>
+        <h1 class="impact-hero-heading">Lives Impacted Through Education </h1>
         <p class="impact-hero-sub">
          Real Stories. Real Change.
         </p>
 
-        <div class="impact-stats-row">
-          <% stats.forEach(function(stat, i) { %>
-            <div class="stat-box">
-              <div class="stat-num-wrap">
-                <span class="stat-num" data-target="<%= stat.target %>">0</span>
-                <span class="stat-plus">+</span>
-              </div>
-              <p class="stat-lbl"><%= stat.label %></p>
-            </div>
-            <% if (i < stats.length - 1) { %>
-              <div class="stat-divider"></div>
-            <% } %>
-          <% }); %>
-        </div>
+
 
       </div>
       <div class="hero-blob hero-blob-1"></div>

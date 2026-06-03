@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/timeline.css" />
+</head>
+<body>
+
+  <%- include('../partials/navbar') %>
+
+  <% const years = Object.keys(timelineData); %>
+
+  <main class="timeline-page">
+    
+    <!-- Hero Header -->
+    <section class="timeline-hero">
+      <div class="timeline-hero__glow timeline-hero__glow--one"></div>
+      <div class="timeline-hero__glow timeline-hero__glow--two"></div>
+      <div class="container timeline-hero__inner">
+        <p class="timeline-eyebrow">Our Journey</p>
+        <h1>Journey Through TimeLine  </h1>
+        <p class="timeline-hero__lead">
+          Explore Spread a Smile India's milestones and journey year-by-year. Scroll down to travel through our history, or select a year from the navigation to skip directly to that chapter.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Layout Container -->
+    <section class="timeline-layout-section">
+      <div class="container">
+        <div class="timeline-layout-grid">
+          
+          <!-- Left: Sticky Timeline Navigation -->
+          <aside class="timeline-sidebar">
+            <div class="timeline-track-wrap">
+              <div class="timeline-track-line"></div>
+              <div class="timeline-track-nodes" id="timelineNodes">
+                <% years.forEach((year, index) => { %>
+                  <button 
+                    class="timeline-node <%= index === 0 ? 'is-active' : '' %>" 
+                    type="button" 
+                    data-year="<%= year %>"
+                    aria-label="Skip to year <%= year %>"
+                  >
+                    <span class="timeline-node__dot-wrap">
+                      <span class="timeline-node__dot"></span>
+                    </span>
+                    <span class="timeline-node__label"><%= year %></span>
+                  </button>
+                <% }) %>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right: Scrollable Years Content Stack -->
+          <div class="timeline-scroll-content" id="timelineScrollContent">
+            <% years.forEach((year, index) => { %>
+              <% const data = timelineData[year]; %>
+              <section class="timeline-year-section <%= index === 0 ? 'is-active-section' : '' %>" id="year-<%= year %>" data-year="<%= year %>">
+                
+                <!-- Year Header Block (Heading first, then Badge with Year) -->
+                <div class="timeline-year-header">
+                  <h2 class="timeline-year-heading"><%= data.title %></h2>
+                  <span class="timeline-badge-pill"><%= data.badge %> <%= year %></span>
+                </div>
+
+                <!-- Year Gallery Block (Stacked at bottom) -->
+                <div class="timeline-year-gallery">
+                  <div class="timeline-gallery-grid">
+                    <% if (data.gallery && data.gallery.length) { %>
+                      <% data.gallery.forEach((item) => { %>
+                        <div class="timeline-gallery-item" data-src="<%= item.src %>" data-caption="<%= item.caption %>">
+                          <div class="timeline-gallery-item__loader">
+                            <span class="loader-spinner"></span>
+                          </div>
+                          <img 
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+                            data-lazy="<%= item.src %>" 
+                            alt="<%= item.caption %>" 
+                            class="lazy-image" 
+                          />
+                          <div class="timeline-gallery-item__overlay">
+                            <p><%= item.caption %></p>
+                          </div>
+                        </div>
+                      <% }) %>
+                    <% } else { %>
+                      <p class="timeline-no-media">No media available for this period.</p>
+                    <% } %>
+                  </div>
+                </div>
+
+              </section>
+            <% }) %>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal for Zooming Images -->
+  <div class="timeline-lightbox" id="timelineLightbox" aria-hidden="true" role="dialog">
+    <div class="timeline-lightbox__backdrop" id="lightboxCloseBackdrop"></div>
+    
+    <div class="timeline-lightbox__dialog">
+      <button class="timeline-lightbox__close" id="lightboxCloseBtn" type="button" aria-label="Close image">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="timeline-lightbox__media-wrap">
+        <img id="lightboxImg" src="" alt="Zoomed view" />
+      </div>
+      
+      <div class="timeline-lightbox__caption-bar">
+        <p id="lightboxCaption">Caption details here...</p>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/timeline.js"></script>
+</body>
+</html>

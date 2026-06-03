@@ -179,9 +179,11 @@ button.nav-link::after {
   color: var(--color-primary);
 }
 
-.dropdown-menu li a i {
+.dropdown-menu li a i,
+.dropdown-menu li a svg {
   font-size: 0.8rem;
   width: 14px;
+  height: 14px;
   color: var(--color-primary);
 }
 

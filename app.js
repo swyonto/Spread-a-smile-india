@@ -7,6 +7,9 @@ const aboutRouter = require('./routes/about');
 const programsRouter = require('./routes/programs');
 const impactRouter = require('./routes/impact');
 const dignitariesRouter = require('./routes/dignitaries');
+const skillsRouter = require('./routes/skills');
+const covidRouter = require('./routes/covid');
+const timelineRouter = require('./routes/timeline');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,6 +27,10 @@ app.use('/about', aboutRouter);
 app.use('/programs', programsRouter);
 app.use('/impact', impactRouter);
 app.use('/dignitaries', dignitariesRouter);
+app.use('/skill-development', skillsRouter);
+app.use('/covid', covidRouter);
+app.use('/timeline', timelineRouter);
+app.get('/timezone', (req, res) => res.redirect('/timeline'));
 
 // 404 handler
 app.use((req, res) => {
