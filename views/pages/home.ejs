@@ -1,160 +1,122 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <%- include('../partials/head') %>
-  <link rel="stylesheet" href="/css/carousel.css" />
-  <link rel="stylesheet" href="/css/cards.css" />
-  <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/carousel.css" />
+    <link rel="stylesheet" href="/css/cards.css" />
+    <link rel="stylesheet" href="/css/home.css" />
 </head>
+
 <body>
 
   <%- include('../partials/navbar') %>
 
-  <main>
+    <main>
 
-    <!-- ======================================
+      <!-- ======================================
          Section 1: Hero Carousel
          ====================================== -->
-    <%- include('../partials/carousel', {
-      carouselId: 'heroCarousel',
-      slides: [
-        {
-          type: 'image',
-          src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/image%207.jpg?updatedAt=1773644101961',
-          alt: '  Transforming Lives Through Education',
-          heading: ' 20 Years of Transforming Lives Through Education',
-          subheading: 'Helping destitute street children move from streets to classrooms since 2005.'
-        },
-        {
-          type: 'image',
-          src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/women%20Empowerment%20slide%20inage',
-          alt: 'Empowering Women',
-          heading: 'Empowering Women',
-          subheading: 'Strengthening communities through skill development and financial independence.'
-        },
-        {
-          type: 'video',
-          src: 'assets/landing page/tedxtalk.mp4',
-          alt: 'TEDx Talk',
-          heading: 'TEDx Talk — Sangita Mehra',
-          subheading: 'Sharing lived stories of resilience, education, and hope.'
-        }
-      ]
-    }) %>
+      <%- include('../partials/carousel', { carouselId: 'heroCarousel' , slides: [ { type: 'image' ,
+        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/image%207.jpg?updatedAt=1773644101961' ,
+        alt: '  Transforming Lives Through Education' , heading: ' 20 Years of Transforming Lives Through Education' ,
+        subheading: 'Helping destitute street children move from streets to classrooms since 2005.' }, { type: 'image' ,
+        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/women%20Empowerment%20slide%20inage' ,
+        alt: 'Empowering Women' , heading: 'Empowering Women' ,
+        subheading: 'Strengthening communities through skill development and financial independence.' }, { type: 'video'
+        , src: 'assets/landing page/tedxtalk.mp4' , alt: 'TEDx Talk' , heading: 'TEDx Talk — Sangita Mehra' ,
+        subheading: 'Sharing lived stories of resilience, education, and hope.' } ] }) %>
 
-    <!-- ======================================
+        <!-- ======================================
          Section 2: What We Do — Image Cards
          ====================================== -->
-    <section class="home-cards-section">
-      <div class="section-header">
-        <h2>20 Years of Impact</h2>
-        <p> Childhood is not meant to be survived — it’s meant to be celebrated.</p>
-      </div>
-      <div class="home-cards-grid">
-        <%- include('../partials/imageCard', {
-          image:   'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg',
-          heading: 'Education',
-          link:    '/programs#program-education'
-        }) %>
-      
-        <%- include('../partials/imageCard', {
-          image:   'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg',
-          heading: 'Health',
-          link:    '/programs#program-health'
-        }) %>
-        <%- include('../partials/imageCard', {
-          image:   'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/nutrition%20card%20image?updatedAt=1773393015064',
-          heading: 'Nutrition & Celebrations',
-          link:    '/programs#program-nutrition'
-        }) %>
-          <%- include('../partials/imageCard', {
-          image:   'assets/landing page/skilldev.jpg',
-          heading: 'Skill Development',
-          link:    '/programs#program-computer'
-        }) %>
-      </div>
-    </section>
+        <section class="home-cards-section">
+          <div class="section-header">
+            <h2>20 Years of Impact</h2>
+            <p> Childhood is not meant to be survived — it’s meant to be celebrated.</p>
+          </div>
+          <div class="home-cards-grid">
+            <%- include('../partials/imageCard', {
+              image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg' ,
+              heading: 'Education' , link: '/programs#program-education' }) %>
 
-    <!-- ======================================
+              <%- include('../partials/imageCard', {
+                image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg' , heading: 'Health' ,
+                link: '/programs#program-health' }) %>
+                <%- include('../partials/imageCard', {
+                  image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/nutrition%20card%20image?updatedAt=1773393015064'
+                  , heading: 'Nutrition & Celebrations' , link: '/programs#program-nutrition' }) %>
+                  <%- include('../partials/imageCard', { image: 'assets/landing page/skilldev.jpg' ,
+                    heading: 'Skill Development' , link: '/programs#program-computer' }) %>
+          </div>
+        </section>
+
+        <!-- ======================================
          Section 3: Know About Us — Page Cards
          ====================================== -->
-    <section class="home-explore-section">
-      <div class="section-header">
-        <h2>Know About Us</h2>
-        <p>Transforming lives, one child at a time. For over two decades, we've been the bridge between despair and hope for Delhi's street children.</p>
-      </div>
-      <div class="home-explore-grid">
-        <%- include('../partials/pageCard', {
-          title:       'About Us',
-          description: '20 years of journey, impact, and hope , transforming lives of street children in Delhi.',
-          link:        '/about',
-          image:       'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/20250419_170209.jpg',
-          icon:        'fa-solid fa-heart'
-        }) %>
-        <%- include('../partials/pageCard', {
-          title:       'Our Programs',
-          description: 'Education, health, nutrition, computer literacy and community celebrations.',
-          link:        '/programs',
-          image:       'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/20260123_180658.jpg',
-          icon:        'fa-solid fa-seedling'
-        }) %>
-        <%- include('../partials/pageCard', {
-          title:       'Our Impact',
-          description: 'Sharing lived stories of resilience, education, and hope.',
-          link:        '/impact',
-          image:       'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/image.png?updatedAt=1773397384285',
-          icon:        'fa-solid fa-chart-line'
-        }) %>
-        <%- include('../partials/pageCard', {
-          title:       'Dignitaries',
-          description: 'We are honored by the support and recognition from distinguished individuals who believe in our mission to transform lives.',
-          link:        '/dignitaries',
-          image:       'assets/ambassadors/ambassador2.jpeg',
-          icon:        'fa-solid fa-user-tie'
-        }) %>
-      </div>
-    </section>
+        <section class="home-explore-section">
+          <div class="section-header">
+            <h2>Know About Us</h2>
+            <p>Transforming lives, one child at a time. For over two decades, we've been the bridge between despair and
+              hope for Delhi's street children.</p>
+          </div>
+          <div class="home-explore-grid">
+            <%- include('../partials/pageCard', { title: 'About Us' ,
+              description: '20 years of journey, impact, and hope , transforming lives of street children in Delhi.' ,
+              link: '/about' ,
+              image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/20250419_170209.jpg' ,
+              icon: 'fa-solid fa-heart' }) %>
+              <%- include('../partials/pageCard', { title: 'Our Programs' ,
+                description: 'Education, health, nutrition, computer literacy and community celebrations.' ,
+                link: '/programs' ,
+                image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/20260123_180658.jpg' ,
+                icon: 'fa-solid fa-seedling' }) %>
+                <%- include('../partials/pageCard', { title: 'Our Impact' ,
+                  description: 'Sharing lived stories of resilience, education, and hope.' , link: '/impact' ,
+                  image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/image.png?updatedAt=1773397384285'
+                  , icon: 'fa-solid fa-chart-line' }) %>
+                  <%- include('../partials/pageCard', { title: 'Dignitaries' ,
+                    description: 'We are honored by the support and recognition from distinguished individuals who believe in our mission to transform lives.'
+                    , link: '/dignitaries' , image: 'assets/ambassadors/ambassador2.jpeg' , icon: 'fa-solid fa-user-tie'
+                    }) %>
+          </div>
+        </section>
 
-    <!-- ======================================
+        <!-- ======================================
          Section 4: Mission — Text + Image
          ====================================== -->
-    <%#
-    ======================================
-    Section 3: Mission — Text + Image
-    (commented out — uncomment when ready)
-    ======================================
-    <section class="home-mission-section">
-      <div class="mission-text-col">
-        <span class="mission-eyebrow">Our Mission</span>
-        <h2>From Streets to Classrooms</h2>
-        <p>
-          Since 2005, Spread Smile India has worked at the grassroots to create lasting change.
-          We help destitute street children and their families access education, healthcare,
-          nutrition, and skill-based empowerment — breaking cycles of poverty one life at a time.
-        </p>
-        <ul class="mission-points">
-          <li><i class="fa-solid fa-circle-check"></i> Supporting underprivileged children across 7+ Delhi traffic signals</li>
-          <li><i class="fa-solid fa-circle-check"></i> Enabling women towards financial independence</li>
-          <li><i class="fa-solid fa-circle-check"></i> Equipping youth with life and skill-based learning</li>
-          <li><i class="fa-solid fa-circle-check"></i> Free computer education and certification</li>
-        </ul>
-        <a href="/about" class="mission-btn">Learn About Us <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="mission-image-col">
-        <img
-          src="https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0541.jpg"
-          alt="Our mission in action"
-          loading="lazy"
-        />
-      </div>
-    </section>
-    %>
+        <%#======================================Section 3: Mission — Text + Image (commented out — uncomment when
+          ready)======================================<section class="home-mission-section">
+          <div class="mission-text-col">
+            <span class="mission-eyebrow">Our Mission</span>
+            <h2>From Streets to Classrooms</h2>
+            <p>
+              Since 2005, Spread Smile India has worked at the grassroots to create lasting change.
+              We help destitute street children and their families access education, healthcare,
+              nutrition, and skill-based empowerment — breaking cycles of poverty one life at a time.
+            </p>
+            <ul class="mission-points">
+              <li><i class="fa-solid fa-circle-check"></i> Supporting underprivileged children across 7+ Delhi traffic
+                signals</li>
+              <li><i class="fa-solid fa-circle-check"></i> Enabling women towards financial independence</li>
+              <li><i class="fa-solid fa-circle-check"></i> Equipping youth with life and skill-based learning</li>
+              <li><i class="fa-solid fa-circle-check"></i> Free computer education and certification</li>
+            </ul>
+            <a href="/about" class="mission-btn">Learn About Us <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="mission-image-col">
+            <img src="https://ik.imagekit.io/l15cczdgu/transformation/IMG-20251126-WA0541.jpg"
+              alt="Our mission in action" loading="lazy" />
+          </div>
+          </section>
+          %>
 
-  </main>
+    </main>
 
-  <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
 
-  <script src="/js/theme.js"></script>
-  <script src="/js/carousel.js"></script>
+      <script src="/js/theme.js"></script>
+      <script src="/js/carousel.js"></script>
 </body>
+
 </html>

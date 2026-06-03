@@ -118,3 +118,68 @@
   --transition: 0.3s ease;
 }
 
+
+
+
+
+/* ============================================
+   theme.css — Light / Dark CSS Variables
+   ============================================ */
+
+/* --- Light Theme (default) ---
+[data-theme="light"] {
+  --color-primary:    #c8b6ff;
+  --color-accent:     #b8c0ff;
+  --color-highlight:  #bbd0ff;
+  --color-bg:         #f5f0ff;
+  --color-bg-alt:     #e7c6ff;
+  --color-secondary:  #ffd6ff;
+
+  --color-text:       #1a1a2e;
+  --color-text-muted: #555577;
+  --color-heading:    #1a1a2e;
+
+  --color-nav-bg:     #ffffff;
+  --color-nav-text:   #1a1a2e;
+  --color-nav-hover:  #c8b6ff;
+  --color-nav-border: #e0d4f7;
+
+  --color-footer-bg:  #ffffff;
+  --color-footer-text: #1a1a2e;
+  --color-footer-link: #4a3870;
+  --color-footer-tagline: rgba(74, 56, 112, 0.7);
+  --color-footer-bottom: rgba(74, 56, 112, 0.5);
+  --color-footer-divider: rgba(100, 80, 160, 0.12);
+  --color-footer-social-bg: rgba(100, 80, 160, 0.08);
+  --color-footer-social-border: rgba(100, 80, 160, 0.18);
+
+  --color-carousel-heading: #EDE9FE;
+  --color-carousel-sub:     #C4B5FD;
+
+  --color-card-bg:    #ffffff;
+  --color-card-shadow: rgba(0, 0, 0, 0.08);
+
+  --color-border:     #ddd0f5;
+  --color-divider:    #e0d4f7;
+
+  --color-btn-bg:     #c8b6ff;
+  --color-btn-text:   #1a1a2e;
+  --color-btn-hover:  #b8c0ff;
+
+  /* Dark-band sections (hero, CTA — always inverted) */
+  /* --color-dark-band:       #0d0c1a;
+  --color-dark-band-mid:   #2d1b69;
+  --color-dark-band-text:  #f5f0ff;
+  --color-dark-band-muted: rgba(200, 182, 255, 0.70);
+  --color-dark-band-faint: rgba(192, 132, 252, 0.15);
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --transition: 0.3s ease;
+} */ 

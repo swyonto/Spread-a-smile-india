@@ -1,57 +1,59 @@
 /* ============================================
-   theme.css — Light / Dark CSS Variables
+   theme3.css — Deep Teal & Warm Golden-Yellow NGO Theme
+   Trustworthy, professional, compassionate, and hopeful.
    ============================================ */
 
 /* --- Light Theme (default) --- */
 [data-theme="light"] {
-  --color-primary:    #c8b6ff;
-  --color-accent:     #b8c0ff;
-  --color-highlight:  #bbd0ff;
-  --color-bg:         #f5f0ff;
-  --color-bg-alt:     #e7c6ff;
-  --color-secondary:  #ffd6ff;
+  --color-primary:    #23c2a7;          /* Deep Teal (trust & care) */
+  --color-secondary:  #14b8a6;          /* Teal/Turquoise (healing) */
+  --color-accent:     #0bf5e9;          /* Hopeful Gold/Yellow      */
+  --color-tertiary:   #e0f2fe;          /* Calming Sky Blue         */
+  --color-highlight:  #0bf5ca;          /* Accent / Highlight Brand */
+  --color-bg:         #f4f8f9;          /* Clean Slate White        */
+  --color-bg-alt:     #e2ebed;          /* Soft Slate Blue-grey     */
 
-  --color-text:       #1a1a2e;
-  --color-text-muted: #555577;
-  --color-heading:    #1a1a2e;
+  --color-text:       #111c24;          /* Deep Slate Black         */
+  --color-text-muted: #4b5e6b;          /* Muted Slate Gray         */
+  --color-heading:    #0a1218;          /* Dark Slate Heading       */
 
   --color-nav-bg:     #ffffff;
-  --color-nav-text:   #1a1a2e;
-  --color-nav-hover:  #c8b6ff;
-  --color-nav-border: #e0d4f7;
+  --color-nav-text:   #111c24;
+  --color-nav-hover:  #0d7e8a;
+  --color-nav-border: #e2ebed;
 
-  --color-footer-bg:  #ffffff;
-  --color-footer-text: #1a1a2e;
-  --color-footer-link: #4a3870;
-  --color-footer-tagline: rgba(74, 56, 112, 0.7);
-  --color-footer-bottom: rgba(74, 56, 112, 0.5);
-  --color-footer-divider: rgba(100, 80, 160, 0.12);
-  --color-footer-social-bg: rgba(100, 80, 160, 0.08);
-  --color-footer-social-border: rgba(100, 80, 160, 0.18);
+  --color-footer-bg:            #ffffff;
+  --color-footer-text:          #111c24;
+  --color-footer-link:          #4b5e6b;
+  --color-footer-tagline:       rgba(13, 126, 138, 0.70);
+  --color-footer-bottom:        rgba(13, 126, 138, 0.50);
+  --color-footer-divider:       rgba(20, 184, 166, 0.15);
+  --color-footer-social-bg:     rgba(20, 184, 166, 0.08);
+  --color-footer-social-border: rgba(20, 184, 166, 0.20);
 
-  --color-carousel-heading: #EDE9FE;
-  --color-carousel-sub:     #C4B5FD;
+  --color-carousel-heading: #ffffff;
+  --color-carousel-sub:     #e0f2fe;
 
-  --color-card-bg:    #ffffff;
-  --color-card-shadow: rgba(0, 0, 0, 0.08);
+  --color-card-bg:     #ffffff;
+  --color-card-shadow: rgba(13, 126, 138, 0.06);
 
-  --color-border:     #ddd0f5;
-  --color-divider:    #e0d4f7;
+  --color-border:     #e2ebed;
+  --color-divider:    #e2ebed;
 
-  --color-btn-bg:     #c8b6ff;
-  --color-btn-text:   #1a1a2e;
-  --color-btn-hover:  #b8c0ff;
+  --color-btn-bg:    #0d7e8a;
+  --color-btn-text:  #ffffff;
+  --color-btn-hover: #14b8a6;
 
   /* Dark-band sections (hero, CTA — always inverted) */
-  --color-dark-band:       #0d0c1a;
-  --color-dark-band-mid:   #2d1b69;
-  --color-dark-band-text:  #f5f0ff;
-  --color-dark-band-muted: rgba(200, 182, 255, 0.70);
-  --color-dark-band-faint: rgba(192, 132, 252, 0.15);
+  --color-dark-band:       #0a1218;
+  --color-dark-band-mid:   #12232e;
+  --color-dark-band-text:  #f4f8f9;
+  --color-dark-band-muted: rgba(224, 242, 254, 0.70);
+  --color-dark-band-faint: rgba(20, 184, 166, 0.15);
 
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+  --shadow-sm: 0 2px 8px  rgba(13, 126, 138, 0.08);
+  --shadow-md: 0 4px 16px rgba(13, 126, 138, 0.12);
+  --shadow-lg: 0 8px 32px rgba(13, 126, 138, 0.16);
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -62,54 +64,55 @@
 
 /* --- Dark Theme --- */
 [data-theme="dark"] {
-  --color-primary:    #9d8cdf;
-  --color-accent:     #7b84cc;
-  --color-highlight:  #7a9bbf;
-  --color-bg:         #12111f;
-  --color-bg-alt:     #1c1b30;
-  --color-secondary:  #3b2e4a;
+  --color-primary:    #14b8a6;          /* Teal/Turquoise (healing) */
+  --color-secondary:  #0d7e8a;          /* Deep Teal                */
+  --color-accent:     #0bf5a3;          /* Hopeful Gold/Yellow      */
+  --color-tertiary:   #e0f2fe;          /* Calming Sky Blue         */
+  --color-highlight:  #0bf590;          /* Accent / Highlight Brand */
+  --color-bg:         #0b0f12;          /* Deep Dark Obsidian Slate */
+  --color-bg-alt:     #121b22;          /* Lighter Slate Navy Dark  */
 
-  --color-text:       #e8e0f5;
-  --color-text-muted: #9990b8;
-  --color-heading:    #f0eaff;
+  --color-text:       #f0f4f8;          /* Ice Slate White          */
+  --color-text-muted: #8fa1b0;          /* Muted Ice Gray           */
+  --color-heading:    #ffffff;          /* Pure White               */
 
-  --color-nav-bg:     #1c1b30;
-  --color-nav-text:   #e8e0f5;
-  --color-nav-hover:  #9d8cdf;
-  --color-nav-border: #2e2b45;
+  --color-nav-bg:     #121b22;
+  --color-nav-text:   #f0f4f8;
+  --color-nav-hover:  #14b8a6;
+  --color-nav-border: #1c2833;
 
-  --color-footer-bg:  #0d0c1a;
-  --color-footer-text: #c8b6ff;
-  --color-footer-link: rgba(200, 182, 255, 0.65);
-  --color-footer-tagline: rgba(200, 182, 255, 0.5);
-  --color-footer-bottom: rgba(200, 182, 255, 0.35);
-  --color-footer-divider: rgba(255, 255, 255, 0.08);
-  --color-footer-social-bg: rgba(255, 255, 255, 0.08);
+  --color-footer-bg:            #080c0f;
+  --color-footer-text:          #8fa1b0;
+  --color-footer-link:          #14b8a6;
+  --color-footer-tagline:       rgba(20, 184, 166, 0.70);
+  --color-footer-bottom:        rgba(20, 184, 166, 0.50);
+  --color-footer-divider:       rgba(255, 255, 255, 0.08);
+  --color-footer-social-bg:     rgba(255, 255, 255, 0.08);
   --color-footer-social-border: rgba(255, 255, 255, 0.12);
 
-  --color-carousel-heading: #F5F0FF;
-  --color-carousel-sub:     #DDD6FE;
+  --color-carousel-heading: #ffffff;
+  --color-carousel-sub:     #14b8a6;
 
-  --color-card-bg:    #1c1b30;
-  --color-card-shadow: rgba(0, 0, 0, 0.35);
+  --color-card-bg:     #121b22;
+  --color-card-shadow: rgba(0, 0, 0, 0.40);
 
-  --color-border:     #2e2b45;
-  --color-divider:    #2e2b45;
+  --color-border:     #1c2833;
+  --color-divider:    #1c2833;
 
-  --color-btn-bg:     #9d8cdf;
-  --color-btn-text:   #12111f;
-  --color-btn-hover:  #7b84cc;
+  --color-btn-bg:    #14b8a6;
+  --color-btn-text:  #0b0f12;
+  --color-btn-hover: #0d7e8a;
 
   /* Dark-band sections (hero, CTA — always inverted) */
-  --color-dark-band:       #080611;
-  --color-dark-band-mid:   #1e1250;
-  --color-dark-band-text:  #f0eaff;
-  --color-dark-band-muted: rgba(200, 182, 255, 0.65);
-  --color-dark-band-faint: rgba(192, 132, 252, 0.12);
+  --color-dark-band:       #080c0f;
+  --color-dark-band-mid:   #121b22;
+  --color-dark-band-text:  #f0f4f8;
+  --color-dark-band-muted: rgba(240, 244, 248, 0.70);
+  --color-dark-band-faint: rgba(20, 184, 166, 0.12);
 
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+  --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.55);
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -117,4 +120,3 @@
 
   --transition: 0.3s ease;
 }
-

@@ -136,7 +136,7 @@
    content: '';
    position: absolute;
    inset: 0;
-   background: linear-gradient(180deg, transparent 15%, color-mix(in srgb, var(--color-heading) 55%, transparent));
+   /* background: linear-gradient(180deg, transparent 15%, color-mix(in srgb, var(--color-heading) 55%, transparent)); */
 }
 
 .programs-overview__image img {
@@ -412,6 +412,7 @@ body.program-video-open {
 }
 
 @media (max-width: 620px) {
+
    .programs-overview__grid,
    .program-support-grid {
       grid-template-columns: 1fr;

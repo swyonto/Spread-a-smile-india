@@ -1,65 +1,60 @@
 /* ============================================
-   theme2.css — Golden Yellow & Orange palette
-   Warm, joyful, energetic.
-
-   HOW TO SWITCH:
-   In views/partials/head.ejs, replace:
-     <link rel="stylesheet" href="/css/theme.css" />
-   with:
-     <link rel="stylesheet" href="/css/theme2.css" />
+   theme2.css — Warm Pastel Sunset Theme
+   Joyful, comforting, warm, and friendly.
+   Based on the palette: #FCC6FF, #FFE6C9, #FFC785, #FFA09B
    ============================================ */
 
 /* --- Light Theme (default) --- */
 [data-theme="light"] {
-  --color-primary:    #ee853f;          /* Spread A Smile Orange    */
-  --color-secondary:  #ffc56f;          /* secondary brand color    */
-  --color-accent:     #ec4f78;          /* warm pink                */
-  --color-tertiary:   #ed463a;          /* tertiary brand color     */
-  --color-highlight:  #ed463a;          /* highlight brand tone     */
-  --color-bg:         #fffbeb;          /* warm yellow-white        */
-  --color-bg-alt:     #fef3c7;          /* light amber              */
+  --color-primary:    #FFA09B;          /* Soft Coral Pink          */
+  --color-secondary:  #FFC785;          /* Warm Peach / Apricot     */
+  --color-accent:     #FCC6FF;          /* Soft Pink Lavender       */
+  --color-tertiary:   #FFE6C9;          /* Pale Cream               */
+  --color-highlight:  #FFA09B;          /* Highlight Brand Tone     */
+  --color-bg:         #fffaf5;          /* Warm Cream-white         */
+  --color-bg-alt:     #ffeeda;          /* Soft Apricot-cream       */
 
-  --color-text:       #1c0c00;          /* deep warm black          */
-  --color-text-muted: #363636;          /* dark golden-brown        */
-  --color-heading:    #2a1d00;
+  --color-text:       #2e1c18;          /* Deep Cocoa Black         */
+  --color-text-muted: #6b5650;          /* Muted Chocolate Brown    */
+  --color-heading:    #24110d;          /* Dark Espresso Brown      */
 
   --color-nav-bg:     #ffffff;
-  --color-nav-text:   #1c1400;
-  --color-nav-hover:  #ee853f;
-  --color-nav-border: #ffc56f;
+  --color-nav-text:   #2e1c18;
+  --color-nav-hover:  #FFA09B;
+  --color-nav-border: #ffeeda;
 
   --color-footer-bg:            #ffffff;
-  --color-footer-text:          #1c1400;
-  --color-footer-link:          #ed463a;
-  --color-footer-tagline:       rgba(237, 70, 58,  0.70);
-  --color-footer-bottom:        rgba(237, 70, 58,  0.50);
-  --color-footer-divider:       rgba(236, 79, 120, 0.12);
-  --color-footer-social-bg:     rgba(236, 79, 120, 0.08);
-  --color-footer-social-border: rgba(236, 79, 120, 0.20);
+  --color-footer-text:          #2e1c18;
+  --color-footer-link:          #6b5650;
+  --color-footer-tagline:       rgba(46, 28, 24, 0.70);
+  --color-footer-bottom:        rgba(46, 28, 24, 0.50);
+  --color-footer-divider:       rgba(255, 160, 155, 0.15);
+  --color-footer-social-bg:     rgba(255, 160, 155, 0.08);
+  --color-footer-social-border: rgba(255, 160, 155, 0.20);
 
-  --color-carousel-heading: #fffbeb;
-  --color-carousel-sub:     #ffc56f;
+  --color-carousel-heading: #ffffff;
+  --color-carousel-sub:     #FFE6C9;
 
   --color-card-bg:     #ffffff;
-  --color-card-shadow: rgba(0, 0, 0, 0.07);
+  --color-card-shadow: rgba(255, 199, 133, 0.12);
 
-  --color-border:   #ffc56f;
-  --color-divider:  #ffc56f;
+  --color-border:   #ffeeda;
+  --color-divider:  #ffeeda;
 
-  --color-btn-bg:    #ee853f;
+  --color-btn-bg:    #FFA09B;
   --color-btn-text:  #ffffff;
-  --color-btn-hover: #ed463a;
+  --color-btn-hover: #FFC785;
 
   /* Dark-band sections (hero, CTA — always inverted) */
-  --color-dark-band:       #1a0f00;
-  --color-dark-band-mid:   #5c3000;
-  --color-dark-band-text:  #fffbeb;
-  --color-dark-band-muted: rgba(255, 197, 111, 0.70);
-  --color-dark-band-faint: rgba(236, 79, 120, 0.15);
+  --color-dark-band:       #24110d;
+  --color-dark-band-mid:   #442721;
+  --color-dark-band-text:  #fffaf5;
+  --color-dark-band-muted: rgba(255, 238, 218, 0.70);
+  --color-dark-band-faint: rgba(252, 198, 255, 0.15);
 
-  --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.07);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
+  --shadow-sm: 0 2px 8px  rgba(255, 199, 133, 0.15);
+  --shadow-md: 0 4px 16px rgba(255, 199, 133, 0.20);
+  --shadow-lg: 0 8px 32px rgba(255, 199, 133, 0.25);
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -70,51 +65,51 @@
 
 /* --- Dark Theme --- */
 [data-theme="dark"] {
-  --color-primary:    #ee853f;          /* Spread A Smile Orange    */
-  --color-secondary:  #ffc56f;          /* secondary brand color    */
-  --color-accent:     #ec4f78;          /* warm pink                */
-  --color-tertiary:   #ed463a;          /* tertiary brand color     */
-  --color-highlight:  #ed463a;          /* highlight brand tone     */
-  --color-bg:         #131313;          /* deep warm dark           */
-  --color-bg-alt:     #1d1d1d;          /* slightly lighter         */
+  --color-primary:    #FFA09B;          /* Soft Coral Pink          */
+  --color-secondary:  #FFC785;          /* Warm Peach / Apricot     */
+  --color-accent:     #FCC6FF;          /* Soft Pink Lavender       */
+  --color-tertiary:   #FFE6C9;          /* Pale Cream               */
+  --color-highlight:  #FFC785;          /* Highlight Brand Tone     */
+  --color-bg:         #0e0f14;          /* Deep Obsidian Charcoal   */
+  --color-bg-alt:     #171923;          /* Lighter Charcoal Slate   */
 
-  --color-text:       #fffbeb;          /* warm off-white           */
-  --color-text-muted: #dddddd;          /* muted gold               */
-  --color-heading:    #fffbeb;
+  --color-text:       #f5f6fa;          /* Soft Clean White         */
+  --color-text-muted: #9eafc2;          /* Muted Blue-grey          */
+  --color-heading:    #ffffff;          /* Pure White               */
 
-  --color-nav-bg:     #212121;
-  --color-nav-text:   #fffbeb;
-  --color-nav-hover:  #ee853f;
-  --color-nav-border: #3d2800;
+  --color-nav-bg:     #171923;
+  --color-nav-text:   #f5f6fa;
+  --color-nav-hover:  #FFA09B;
+  --color-nav-border: #222636;
 
-  --color-footer-bg:            #0f0900;
-  --color-footer-text:          #ee853f;
-  --color-footer-link:          rgba(238, 133, 63, 0.65);
-  --color-footer-tagline:       rgba(238, 133, 63, 0.50);
-  --color-footer-bottom:        rgba(238, 133, 63, 0.35);
-  --color-footer-divider:       rgba(255, 255, 255, 0.07);
-  --color-footer-social-bg:     rgba(255, 255, 255, 0.07);
+  --color-footer-bg:            #090a0f;
+  --color-footer-text:          #9eafc2;
+  --color-footer-link:          #FFA09B;
+  --color-footer-tagline:       rgba(255, 160, 155, 0.70);
+  --color-footer-bottom:        rgba(255, 160, 155, 0.50);
+  --color-footer-divider:       rgba(255, 255, 255, 0.08);
+  --color-footer-social-bg:     rgba(255, 255, 255, 0.08);
   --color-footer-social-border: rgba(255, 255, 255, 0.12);
 
-  --color-carousel-heading: #ff9d33;
-  --color-carousel-sub:     #ffc56f;
+  --color-carousel-heading: #ffffff;
+  --color-carousel-sub:     #FFC785;
 
-  --color-card-bg:     #2a1c00;
+  --color-card-bg:     #171923;
   --color-card-shadow: rgba(0, 0, 0, 0.40);
 
-  --color-border:   #3d2800;
-  --color-divider:  #3d2800;
+  --color-border:   #222636;
+  --color-divider:  #222636;
 
-  --color-btn-bg:    #ee853f;
-  --color-btn-text:  #1a1000;
-  --color-btn-hover: #ed463a;
+  --color-btn-bg:    #FFA09B;
+  --color-btn-text:  #0e0f14;
+  --color-btn-hover: #FFC785;
 
   /* Dark-band sections (hero, CTA — always inverted) */
-  --color-dark-band:       #0f0900;
-  --color-dark-band-mid:   #3d2000;
-  --color-dark-band-text:  #fffbeb;
-  --color-dark-band-muted: rgba(255, 197, 111, 0.65);
-  --color-dark-band-faint: rgba(236, 79, 120, 0.12);
+  --color-dark-band:       #090a0f;
+  --color-dark-band-mid:   #171923;
+  --color-dark-band-text:  #f5f6fa;
+  --color-dark-band-muted: rgba(245, 246, 250, 0.70);
+  --color-dark-band-faint: rgba(252, 198, 255, 0.12);
 
   --shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.30);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
