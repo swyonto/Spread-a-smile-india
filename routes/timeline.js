@@ -285,19 +285,19 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/timeline/IMG20240204174640.heic',
+        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador4.jpg',
         caption: 'H.E. Ambassador Omar Lisandro visiting and playing with our students, 2024.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'assets/ambassadors/ambassador1.jpeg',
+        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador1.jpeg',
         caption: 'Shri Kiren Rijiju interacting with Sangita Mehra.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'assets/ambassadors/ambassador3.jpeg',
+        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador3.jpeg',
         caption: 'With H.E. Pattarat Hongtong, Ambassador of Thailand.',
         aspect: 'square'
       }
@@ -315,20 +315,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/timeline/2025.jpg',
-        caption: 'Children smiling during their class at the Munirka center, 2025.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_1.jpg',
+        caption: 'Health screening and checkup camp.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/celebrations/zoo%20park.jpg',
-        caption: 'Field trip outing group photo at the National Zoo Park.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_2.jpg',
+        caption: 'Frontline child diagnostic checks.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419',
-        caption: 'Students showcasing candle making creations.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_3.jpg',
+        caption: 'Pediatric care and consultation camps.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/tailoring/tailoring_2.jpg',
+        caption: 'Students practicing dress designs in the tailoring lab.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/tailoring/tailoring_3.jpg',
+        caption: 'Mothers drafting custom garment pattern cuttings.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/candle/candle_1.jpg',
+        caption: 'Showcasing decorative wax candles and gel molds.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/spoken_english/spoken_english_1.jpg',
+        caption: 'Spoken English group interaction games.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/dance/dance_1.jpg',
+        caption: 'Joyful cultural folk dance practice session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/arts/art_1.jpg',
+        caption: 'Painting classes and origami creations.',
         aspect: 'square'
       }
     ]
