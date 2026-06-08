@@ -15,21 +15,57 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/image%209.jpg',
-        caption: 'First class session on the streets of Delhi, 2005.',
+        src: 'https://ik.imagekit.io/l15cczdgu/art/art_1.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/image.png?updatedAt=1773397384285',
-        caption: 'Sangita Mehra introducing basic alphabet writing to street children.',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_1.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_2.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
         aspect: 'square'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/education/education%201.jpeg',
-        caption: 'Gathering children under trees to build a learning routine.',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_3.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_4.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
         aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/dance/dance_1.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/spoken_english/spoken_english_1.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/spoken_english/spoken_english_2.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/spoken_english/spoken_english_3.jpg',
+        caption: 'Humble Beginnings on the Street - community outreach session.',
+        aspect: 'square'
       }
     ]
   },
@@ -45,20 +81,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/image%208.jpg',
-        caption: 'First batch of students sitting in order in our park classroom, 2008.',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_2.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg',
-        caption: 'National holiday celebrations under an open sky.',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_3.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/education/education%202.jpeg',
-        caption: 'Volunteers helping children with reading skills.',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_4.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_5.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_6.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_7.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_8.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/women/women_1.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_1.jpg',
+        caption: 'First Open-Air Classrooms - community outreach session.',
         aspect: 'square'
       }
     ]
@@ -75,21 +147,57 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/nutrition%20card%20image?updatedAt=1773393015064',
-        caption: 'Serving morning meals to students before classes.',
-        aspect: 'square'
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_10.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
+        aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/nutrition/image%202.jpg',
-        caption: 'Weekly fresh fruit distribution drive.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_11.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/nutrition/nutrition-1767865195461_zdhiieEsx.jpg',
-        caption: 'Lunch session with high-nutrient pulses and rice.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_12.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_13.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
         aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_14.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_15.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_16.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_17.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_18.jpg',
+        caption: 'Integrating Nutrition & Basic Support - community outreach session.',
+        aspect: 'square'
       }
     ]
   },
@@ -105,20 +213,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/timeline/2012.JPG',
-        caption: 'Our team member reviewing health records during a general camp.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_19.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health-1767865132657_RW9g8QISfn.jpg',
-        caption: 'Doctors conducting eye screenings for primary students.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_2.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/image%201.jpg',
-        caption: 'Regular diagnostic checks in the temporary health booth.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_20.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_21.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_22.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_23.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_24.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_25.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_26.jpg',
+        caption: 'Holistic Health & Medical Checkups - community outreach session.',
         aspect: 'square'
       }
     ]
@@ -135,20 +279,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/20250419_170209.jpg',
-        caption: 'Mothers gathering for our monthly awareness session on education.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_27.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/education/academic/20251230_165344_-qE_5qeNe.jpg',
-        caption: 'Formal school students showing their brand new textbook kits.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_28.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/education/academic/20251230_164855_eLpGfyFg0.jpg',
-        caption: 'Primary school student focusing on math homework.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_29.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_3.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_30.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_4.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_5.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_6.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_7.jpg',
+        caption: 'Community Empowerment & Enrollment Drives - community outreach session.',
         aspect: 'square'
       }
     ]
@@ -165,20 +345,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/timeline/2015.JPG',
-        caption: 'Our first batch of tailoring graduates learning dress designs.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_8.jpg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/women%20Empowerment%20slide%20inage',
-        caption: 'A student working on modern tailoring pattern cutting.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_9.jpg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/education/skill/20250502_153536_2qk1Ls_Ci.jpg',
-        caption: 'Mothers sharing ideas for festival embroidery designs.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_1.jpg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_2.jpg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_3.jpg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_4.jpg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_5.jpg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_6.jpg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador1.jpeg',
+        caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
         aspect: 'square'
       }
     ]
@@ -195,20 +411,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/timeline/2024.jpg?updatedAt=1773477013527',
-        caption: 'Group photo of our extended street community at a signal, 2018.',
+        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador2.jpeg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/transformation/story1.jpg',
-        caption: 'A child begging at a signal, before joining our learning ranks.',
+        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador3.jpeg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/transformation/story1.1.jpg',
-        caption: 'The same child attending primary class and smiling, showing hope.',
+        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador4.jpg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/letter4.jpg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/art/art_1.jpg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_1.jpg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_2.jpg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_3.jpg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_4.jpg',
+        caption: 'Building a Strong Signal Community - community outreach session.',
         aspect: 'square'
       }
     ]
@@ -225,20 +477,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/nutrition/nutrition-1767865195461_zdhiieEsx.jpg',
-        caption: 'Frontline relief dry ration distribution lines in Delhi slums.',
+        src: 'https://ik.imagekit.io/l15cczdgu/dance/dance_1.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/image%203.jpg',
-        caption: 'Checking temperatures and providing medical-grade safety masks.',
+        src: 'https://ik.imagekit.io/l15cczdgu/spoken_english/spoken_english_1.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/image%201.jpg',
-        caption: 'Organizing vaccine registration camps in our local center.',
+        src: 'https://ik.imagekit.io/l15cczdgu/spoken_english/spoken_english_2.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/spoken_english/spoken_english_3.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_2.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_3.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_4.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_5.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_6.jpg',
+        caption: 'Pandemic Response & Relief Operations - community outreach session.',
         aspect: 'square'
       }
     ]
@@ -255,20 +543,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%200.jpg',
-        caption: 'Opening day of the digital learning center, 2021.',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_7.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%203.jpg',
-        caption: 'Students practicing typing layout on computer systems.',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_8.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%201.jpg',
-        caption: 'MS PowerPoint presentations built by our students.',
+        src: 'https://ik.imagekit.io/l15cczdgu/women/women_1.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_1.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_10.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_11.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_12.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_13.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_14.jpg',
+        caption: 'Setting up the Digital Literacy Lab - community outreach session.',
         aspect: 'square'
       }
     ]
@@ -285,20 +609,56 @@ const timelineData = {
     gallery: [
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador4.jpg',
-        caption: 'H.E. Ambassador Omar Lisandro visiting and playing with our students, 2024.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_15.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador1.jpeg',
-        caption: 'Shri Kiren Rijiju interacting with Sangita Mehra.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_16.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/ambassadors/ambassador3.jpeg',
-        caption: 'With H.E. Pattarat Hongtong, Ambassador of Thailand.',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_17.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_18.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_19.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_2.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
+        aspect: 'square'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_20.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
+        aspect: 'wide'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_21.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
+        aspect: 'tall'
+      },
+      {
+        type: 'image',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_22.jpg',
+        caption: 'High Recognition & Growing Impact - community outreach session.',
         aspect: 'square'
       }
     ]
@@ -333,43 +693,43 @@ const timelineData = {
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/tailoring/tailoring_2.jpg',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_2.jpg',
         caption: 'Students practicing dress designs in the tailoring lab.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/tailoring/tailoring_3.jpg',
+        src: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_3.jpg',
         caption: 'Mothers drafting custom garment pattern cuttings.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/candle/candle_1.jpg',
+        src: 'https://ik.imagekit.io/l15cczdgu/candle/candle_1.jpg',
         caption: 'Showcasing decorative wax candles and gel molds.',
         aspect: 'square'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/spoken_english/spoken_english_1.jpg',
+        src: 'https://ik.imagekit.io/l15cczdgu/spoken_english/spoken_english_1.jpg',
         caption: 'Spoken English group interaction games.',
         aspect: 'wide'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/dance/dance_1.jpg',
+        src: 'https://ik.imagekit.io/l15cczdgu/dance/dance_1.jpg',
         caption: 'Joyful cultural folk dance practice session.',
         aspect: 'tall'
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/skill_development/arts/art_1.jpg',
+        src: 'https://ik.imagekit.io/l15cczdgu/art/art_1.jpg',
         caption: 'Painting classes and origami creations.',
         aspect: 'square'
       }
     ]
   }
-};
+};;;;
 
 // GET /timeline page
 router.get('/', (req, res) => {
