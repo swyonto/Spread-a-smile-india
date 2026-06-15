@@ -163,7 +163,10 @@
     document.querySelectorAll('.celeb-photo-item').forEach((item) => {
       item.addEventListener('click', () => {
         const img = item.querySelector('img');
-        if (img) openLightbox(img.src, img.alt);
+        if (img) {
+          const highres = img.getAttribute('data-highres') || img.src;
+          openLightbox(highres, img.alt);
+        }
       });
     });
 

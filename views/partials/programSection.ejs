@@ -12,7 +12,7 @@
 
     <article class="program-main-card program-reveal">
       <div class="program-main-card__media">
-        <img src="<%= section.main.image %>" alt="<%= section.main.alt %>" loading="lazy" />
+        <img src="<%= getOptimizedImg(section.main.image, 'w-800,q-80') %>" alt="<%= section.main.alt %>" loading="lazy" />
       </div>
       <div class="program-main-card__content">
         <% if (section.main.tag) { %>
@@ -36,7 +36,7 @@
         <% if (card.type === 'video') { %>
           <article class="program-support-card program-support-card--video program-reveal" data-video-trigger data-video-src="<%= card.videoSrc %>" data-video-title="<%= card.videoTitle || card.title %>">
             <div class="program-support-card__media">
-              <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
+              <img src="<%= getOptimizedImg(card.image, 'w-500,q-80') %>" alt="<%= card.alt %>" loading="lazy" />
               <span class="program-card__play"><i class="fa-solid fa-play"></i></span>
             </div>
             <div class="program-support-card__content">
@@ -50,7 +50,7 @@
         <% } else { %>
           <article class="program-support-card<%= card.tall ? ' program-support-card--tall' : '' %> program-reveal">
             <div class="program-support-card__media">
-              <img src="<%= card.image %>" alt="<%= card.alt %>" loading="lazy" />
+              <img src="<%= getOptimizedImg(card.image, 'w-500,q-80') %>" alt="<%= card.alt %>" loading="lazy" />
             </div>
             <div class="program-support-card__content">
               <% if (card.tag) { %>

@@ -14,6 +14,23 @@ const timelineRouter = require('./routes/timeline');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// ImageKit optimization helper
+app.locals.getOptimizedImg = function(url, tr) {
+  if (!url) return '';
+  if (!url.includes('ik.imagekit.io')) return url; // Keep non-ImageKit URLs as is
+  
+  const hasQuery = url.includes('?');
+  if (hasQuery) {
+    if (url.includes('tr=')) {
+      return url.replace(/tr=[^&]+/, 'tr=' + tr);
+    } else {
+      return url + '&tr=' + tr;
+    }
+  } else {
+    return url + '?tr=' + tr;
+  }
+};
+
 // View engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));

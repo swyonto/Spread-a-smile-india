@@ -3,8 +3,8 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.render('pages/celebrations', {
-    title: 'COVID-19 Relief Operations | Spread Smile India',
-    description: 'Explore Spread Smile India\'s frontline humanitarian relief efforts, dry ration distributions, vaccination support, and hygiene aids during the COVID-19 pandemic.',
+    title: 'Joyful Celebrations & Festivals | Spread Smile India',
+    description: 'Explore how Spread Smile India celebrates festivals like Diwali, Christmas, and Holi, and organizes sports days, movie nights, and birthdays for street children.',
     urlPath: '/celebrations'
   });
 });

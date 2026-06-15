@@ -69,13 +69,13 @@
                   <div class="timeline-gallery-grid">
                     <% if (data.gallery && data.gallery.length) { %>
                       <% data.gallery.forEach((item) => { %>
-                        <div class="timeline-gallery-item" data-src="<%= item.src %>" data-caption="<%= item.caption %>">
+                        <div class="timeline-gallery-item" data-src="<%= getOptimizedImg(item.src, 'w-1200,q-85') %>" data-caption="<%= item.caption %>">
                           <div class="timeline-gallery-item__loader">
                             <span class="loader-spinner"></span>
                           </div>
                           <img 
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-                            data-lazy="<%= item.src %>" 
+                            data-lazy="<%= getOptimizedImg(item.src, 'w-450,q-80') %>" 
                             alt="<%= item.caption %>" 
                             class="lazy-image" 
                           />
