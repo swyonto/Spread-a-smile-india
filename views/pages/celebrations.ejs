@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <%- include('../partials/head') %>
+  <link rel="stylesheet" href="/css/celebrations.css" />
+</head>
+
+<body>
+
+  <%- include('../partials/navbar') %>
+
+  <main class="celeb-page">
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="celeb-hero">
+      <div class="celeb-hero__bg"></div>
+      <div class="celeb-hero__glow celeb-hero__glow--a"></div>
+      <div class="celeb-hero__glow celeb-hero__glow--b"></div>
+      <div class="celeb-hero__inner">
+        <p class="celeb-eyebrow">✨ Joy &amp; Belonging</p>
+        <h1>Celebrating Every Moment</h1>
+        <p class="celeb-hero__lead">
+          From Diwali lights to Christmas carols, Holi colours to birthday smiles — every celebration at
+          Spread a Smile India tells our children that they are seen, loved, and worth celebrating.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SIDEBAR + SCROLL CONTENT LAYOUT
+    ═══════════════════════════════════════════ -->
+    <section class="celeb-layout-section">
+      <div class="container">
+        <div class="celeb-layout-grid">
+
+          <!-- ── LEFT: Sticky Sidebar Navigation ── -->
+          <aside class="celeb-sidebar">
+            <div class="celeb-track-wrap">
+              <div class="celeb-track-line"></div>
+              <div class="celeb-track-nodes">
+
+                <button class="celeb-node is-active" data-festival="fest-diwali" style="--node-color:#f5c842">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-fire-flame-curved"></i></span></span>
+                  <span class="celeb-node__label">Diwali</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-christmas" style="--node-color:#ef4444">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-tree"></i></span></span>
+                  <span class="celeb-node__label">Christmas</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-holi" style="--node-color:#a855f7">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-palette"></i></span></span>
+                  <span class="celeb-node__label">Holi</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-independence" style="--node-color:#f97316">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-flag"></i></span></span>
+                  <span class="celeb-node__label">Independence</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-dussehra" style="--node-color:#2dd4bf">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-sun"></i></span></span>
+                  <span class="celeb-node__label">Dussehra</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-zoo" style="--node-color:#4ade80">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-paw"></i></span></span>
+                  <span class="celeb-node__label">Zoo Visit</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-sports" style="--node-color:#fb923c">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-medal"></i></span></span>
+                  <span class="celeb-node__label">Sports Day</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-movie" style="--node-color:#f4607a">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-film"></i></span></span>
+                  <span class="celeb-node__label">Movie Night</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-birthday" style="--node-color:#e879f9">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-cake-candles"></i></span></span>
+                  <span class="celeb-node__label">Birthdays</span>
+                </button>
+
+                <button class="celeb-node" data-festival="fest-cultural" style="--node-color:#38bdf8">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-masks-theater"></i></span></span>
+                  <span class="celeb-node__label">Cultural</span>
+                </button>
+
+              </div>
+            </div>
+          </aside>
+
+          <!-- ── RIGHT: Scrollable Festival Content ── -->
+          <div class="celeb-scroll-content">
+
+            <!-- ── DIWALI ─────────────────────────────── -->
+            <div class="celeb-festival-section" id="fest-diwali" style="--fest-color:#f5c842">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-fire-flame-curved"></i> Festival of Lights</span>
+                <h2 class="celeb-festival-title">Diwali</h2>
+                <p class="celeb-festival-desc">Every Diwali, our centres glow with diyas, rangoli, new clothes, and sweets — reminding every child that light always finds its way, no matter how dark the journey.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Diwali 2024 — Children with diyas" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Diwali 2024 — Rangoli and decorations" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Diwali 2024 — Celebration gathering" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Diwali 2024 — Sweets distribution" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Diwali 2023" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Diwali 2023 — Festivities" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Diwali 2023 — Group celebration" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg?tr=q-75" alt="Diwali 2023 — Children gathering" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Diwali 2022" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Diwali 2022 — Moments" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Diwali 2022 — Joy" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
+              </div>
+            </div>
+
+            <!-- ── CHRISTMAS ──────────────────────────── -->
+            <div class="celeb-festival-section" id="fest-christmas" style="--fest-color:#ef4444">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-tree"></i> Season of Giving</span>
+                <h2 class="celeb-festival-title">Christmas</h2>
+                <p class="celeb-festival-desc">Songs, decorations, Santa visits, and gift-giving — Christmas at our centre fills every child's heart with warmth, wonder, and the spirit of generosity.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989" alt="Christmas 2024 — Santa and children" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Christmas 2024 — Celebrations" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Christmas 2024 — Gifts" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Christmas 2024 — Carols" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989" alt="Christmas 2023" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Christmas 2023 — Joy" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Christmas 2023 — Event" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989" alt="Christmas 2022" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Christmas 2022 — Celebration" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Christmas 2022 — Program" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
+              </div>
+            </div>
+
+            <!-- ── HOLI ───────────────────────────────── -->
+            <div class="celeb-festival-section" id="fest-holi" style="--fest-color:#a855f7">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-palette"></i> Festival of Colours</span>
+                <h2 class="celeb-festival-title">Holi</h2>
+                <p class="celeb-festival-desc">Colours, water, laughter, and music — Holi at our centres is a riot of pure joy where every child gets to be carefree, colourful, and completely themselves.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Holi 2025 — Colour play" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2025</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Holi 2025 — Celebrations" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2025</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Holi 2025 — Festivities" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2025</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Holi 2025 — Fun" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2025</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Holi 2024" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Holi 2024 — Event" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Holi 2024 — Colours" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+              </div>
+            </div>
+
+            <!-- ── INDEPENDENCE DAY ───────────────────── -->
+            <div class="celeb-festival-section" id="fest-independence" style="--fest-color:#f97316">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-flag"></i> Pride of the Nation</span>
+                <h2 class="celeb-festival-title">Independence Day</h2>
+                <p class="celeb-festival-desc">Flag hoisting, patriotic songs, and marching with pride — our children learn what freedom truly means, and the responsibility that comes with it.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Independence Day 2024 — Flag hoisting" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Independence Day 2024 — March" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Independence Day 2024 — Cultural" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Independence Day 2024 — Assembly" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Independence Day 2023" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Independence Day 2023 — March" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg?tr=q-75" alt="Independence Day 2023 — Program" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+              </div>
+            </div>
+
+            <!-- ── DUSSEHRA ───────────────────────────── -->
+            <div class="celeb-festival-section" id="fest-dussehra" style="--fest-color:#2dd4bf">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-star-and-crescent"></i> Victory of Good</span>
+                <h2 class="celeb-festival-title">Dussehra</h2>
+                <p class="celeb-festival-desc">The triumph of good over evil — Dussehra celebrations teach our children the values of courage, righteousness, and the strength of community.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Dussehra 2024" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Dussehra 2024 — Cultural" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Dussehra 2024 — Celebration" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Dussehra 2024 — Festivity" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Dussehra 2023" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Dussehra 2023 — Event" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Dussehra 2023 — Program" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+              </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════
+                 SPECIAL / NON-YEARLY EVENTS
+            ══════════════════════════════════════════ -->
+
+            <!-- ── ZOO VISIT ──────────────────────────── -->
+            <div class="celeb-festival-section" id="fest-zoo" style="--fest-color:#4ade80">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-paw"></i> Wildlife Adventure</span>
+                <h2 class="celeb-festival-title">National Zoo Park Visit</h2>
+                <p class="celeb-festival-desc">An incredible day discovering lions, elephants, exotic birds, and reptiles — building wonder, curiosity, and unforgettable memories of nature and wildlife.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/zoo%20park.jpg" alt="Zoo Park Visit — Children exploring on Oct 15, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Oct 15, 2024</span>
+                    <span class="celeb-photo-summary">Exploring the wildlife park and seeing exotic animals.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Zoo Park Visit — Group photo on Oct 15, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Oct 15, 2024</span>
+                    <span class="celeb-photo-summary">Group photo of students and volunteers at the entrance.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Zoo Park Visit — Discovery on Oct 15, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Oct 15, 2024</span>
+                    <span class="celeb-photo-summary">Interactive outdoor learning session.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── SPORTS DAY ─────────────────────────── -->
+            <div class="celeb-festival-section" id="fest-sports" style="--fest-color:#fb923c">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-medal"></i> Teamwork &amp; Spirit</span>
+                <h2 class="celeb-festival-title">Sports Day</h2>
+                <p class="celeb-festival-desc">Races, tug-of-war, relay events, and award ceremonies — Sports Day teaches our children teamwork, resilience, and the thrill of friendly competition.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Sports Day — Races on Nov 10, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Nov 10, 2024</span>
+                    <span class="celeb-photo-summary">Running track events and sprint races.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Sports Day — Team events on Nov 10, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Nov 10, 2024</span>
+                    <span class="celeb-photo-summary">Cheering for teams during group activities.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Sports Day — Winners on Nov 10, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Nov 10, 2024</span>
+                    <span class="celeb-photo-summary">Celebrating medal winners on the podium.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── MOVIE NIGHT ────────────────────────── -->
+            <div class="celeb-festival-section" id="fest-movie" style="--fest-color:#f4607a">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-film"></i> Screen &amp; Stories</span>
+                <h2 class="celeb-festival-title">Movie Party Night</h2>
+                <p class="celeb-festival-desc">Popcorn, laughter, and big-screen stories — movie nights bring our children together in pure joy, stepping into worlds of adventure and imagination.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/movie%20party.jpg" alt="Movie Night — Big screen fun on Dec 05, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Dec 05, 2024</span>
+                    <span class="celeb-photo-summary">Cozy movie setup with snacks and popcorn.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Movie Night — Audience on Dec 05, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Dec 05, 2024</span>
+                    <span class="celeb-photo-summary">Watching animated adventures on a large projector screen.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Movie Night — Excitement on Dec 05, 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Dec 05, 2024</span>
+                    <span class="celeb-photo-summary">Smiles and cheers during the film screening.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── BIRTHDAYS ──────────────────────────── -->
+            <div class="celeb-festival-section" id="fest-birthday" style="--fest-color:#e879f9">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-cake-candles"></i> You Matter</span>
+                <h2 class="celeb-festival-title">Birthday Celebrations</h2>
+                <p class="celeb-festival-desc">Every child deserves to be celebrated on their birthday. Cake, songs, and the warmth of a community that remembers — because feeling special should not depend on where you were born.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Birthday celebrations — Cake cutting (Monthly Event)" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Monthly Event</span>
+                    <span class="celeb-photo-summary">Cutting the birthday cakes together.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Birthday celebrations — Group (Monthly Event)" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Monthly Event</span>
+                    <span class="celeb-photo-summary">Group birthday celebrations and sharing gifts.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Birthday celebrations — Songs (Monthly Event)" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Monthly Event</span>
+                    <span class="celeb-photo-summary">Singing and clapping for birthday wishes.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── CULTURAL PERFORMANCES ──────────────── -->
+            <div class="celeb-festival-section" id="fest-cultural" style="--fest-color:#38bdf8">
+              <div class="celeb-festival-header">
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-masks-theater"></i> Stage &amp; Voice</span>
+                <h2 class="celeb-festival-title">Cultural Performances</h2>
+                <p class="celeb-festival-desc">Dance, drama, singing, and spoken word — cultural programs give our children a stage, a voice, and the profound confidence that comes from being seen and applauded.</p>
+              </div>
+
+              <div class="celeb-photo-grid">
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Cultural — Dance performance on Jan 26, 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Jan 26, 2025</span>
+                    <span class="celeb-photo-summary">Traditional folk dance performance on stage.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Cultural — Drama on Jan 26, 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Jan 26, 2025</span>
+                    <span class="celeb-photo-summary">Interactive theatre and character roleplay by students.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Cultural — Singing on Jan 26, 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Jan 26, 2025</span>
+                    <span class="celeb-photo-summary">Singing group and solo musical performance.</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Cultural — Group act on Jan 26, 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-date">Jan 26, 2025</span>
+                    <span class="celeb-photo-summary">Grand finale and assembly of all participants.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /celeb-scroll-content -->
+        </div><!-- /celeb-layout-grid -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         BOTTOM IMAGE STRIP
+    ═══════════════════════════════════════════ -->
+    <div class="celeb-strip">
+      <div class="celeb-strip__item"><img src="https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989" alt="Christmas" loading="lazy" /></div>
+      <div class="celeb-strip__item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg" alt="Independence Day" loading="lazy" /></div>
+      <div class="celeb-strip__item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/movie%20party.jpg" alt="Movie Night" loading="lazy" /></div>
+      <div class="celeb-strip__item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/zoo%20park.jpg" alt="Zoo Park" loading="lazy" /></div>
+      <div class="celeb-strip__item"><img src="https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263" alt="Community event" loading="lazy" /></div>
+      <div class="celeb-strip__item"><img src="https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419" alt="Sports day" loading="lazy" /></div>
+      <div class="celeb-strip__item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80" alt="Community outing" loading="lazy" /></div>
+      <div class="celeb-strip__item"><img src="https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75" alt="Cultural program" loading="lazy" /></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         LIGHTBOX
+    ═══════════════════════════════════════════ -->
+    <div class="celeb-lightbox" id="celebLightbox">
+      <div class="celeb-lightbox__backdrop" id="celebLightboxBackdrop"></div>
+      <div class="celeb-lightbox__dialog">
+        <button class="celeb-lightbox__close" id="celebLightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="celeb-lightbox__img-wrap">
+          <img id="celebLightboxImg" alt="" />
+        </div>
+        <p class="celeb-lightbox__caption" id="celebLightboxCaption"></p>
+      </div>
+    </div>
+
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/celebrations.js"></script>
+</body>
+
+</html>

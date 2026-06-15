@@ -8,7 +8,7 @@ const programsRouter = require('./routes/programs');
 const impactRouter = require('./routes/impact');
 const dignitariesRouter = require('./routes/dignitaries');
 const skillsRouter = require('./routes/skills');
-const covidRouter = require('./routes/covid');
+const celebrationsRouter = require('./routes/celebrations');
 const timelineRouter = require('./routes/timeline');
 
 const app = express();
@@ -28,9 +28,10 @@ app.use('/programs', programsRouter);
 app.use('/impact', impactRouter);
 app.use('/dignitaries', dignitariesRouter);
 app.use('/skill-development', skillsRouter);
-app.use('/covid', covidRouter);
+app.use('/celebrations', celebrationsRouter);
 app.use('/timeline', timelineRouter);
 app.get('/timezone', (req, res) => res.redirect('/timeline'));
+app.get('/covid', (req, res) => res.redirect(301, '/programs#program-covid')); // permanent redirect to covid section
 
 // 404 handler
 app.use((req, res) => {

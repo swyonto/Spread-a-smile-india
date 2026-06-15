@@ -4,6 +4,25 @@ This document tracks pending tasks, content assets to gather, and technical impl
 
 ---
 
+## ✅ Completed Tasks
+
+- [x] **Home Page — Carousel Slide 2 Subheading**: Updated the "Women Empowerment" carousel slide subheading text (`views/pages/home.ejs`).
+- [x] **Programs Page — Health Section Heading**: Renamed "Healthcare & Wellness" → "Health" (`views/pages/programs.ejs`).
+- [x] **COVID Page → Programs Section**: Moved all COVID-19 pandemic content (6 gallery cards, featured video, 9 photo logs, 10-video reel grid, 8-image seamless grid) into `programs.ejs` as the `#program-covid` section — identical layout to the old standalone page.
+- [x] **Celebrations Program → Dedicated Route**: Replaced the old Celebrations program section in Programs with the COVID section; Celebrations is now a standalone page at `/celebrations` with festival tabs (Diwali, Christmas, Holi, Independence Day, Dussehra) + special events cards.
+- [x] **Navbar Updated**: COVID top-level link replaced with Celebrations (`/celebrations`); Programs dropdown Celebrations entry replaced with COVID-19 Relief (`#program-covid`).
+- [x] **Sitemap Updated**: `/covid` removed, `/celebrations` added with today's date.
+- [x] **`/covid` Redirect**: Old URL permanently redirects (301) to `/programs#program-covid` — semantically correct, no broken links.
+- [x] **PDF Generator**: Added Playwright script (`scratch/generate-pdf.js`) to capture all 8 pages as 16:9 landscape PDFs — run with `npm run pdf`.
+
+## 🔲 In Progress / Pending Dev Tasks
+
+- [ ] **Fix Timeline Page Headings**: Review and correct year headings on the Timeline page that are misaligned or incorrect.
+- [ ] **Celebrations Page — Scroll-Spy Sidebar**: Complete the celebrations page JS (`public/js/celebrations.js`) for the scroll-spy sidebar (sticky left on desktop, horizontal foldable strip on mobile) — festival sections scroll into view and active nav item updates automatically.
+- [ ] **Celebrations Page — Real Images**: Replace placeholder images in `views/pages/celebrations.ejs` with actual year-specific festival photos (Diwali 2022/23/24, Holi, Dussehra etc.) once received from Vicky Sir.
+
+---
+
 ## 📋 Content & Asset Checklist (Action Required)
 
 Please gather the following files and content blocks from the respective team members:
@@ -44,3 +63,4 @@ Here is the list of technical work left to finalize the deployment-ready website
 - [ ] **Configure Production Port**: Verify that `PORT` environment variables match hosting service parameters.
 - [ ] **SSL Configuration**: Force HTTPS redirection at the application or DNS proxy (e.g. Cloudflare) level to secure donation transactions.
 - [ ] **Host Node Application**: Deploy code to production servers (Vercel, Render, Heroku, or AWS EC2).
+
