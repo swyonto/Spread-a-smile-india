@@ -35,6 +35,37 @@ app.locals.getOptimizedImg = function(url, tr) {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// Trust proxy settings (essential for correct protocol/host behind Cloudflare/Render)
+app.enable('trust proxy');
+
+// Dynamic robots.txt
+app.get('/robots.txt', (req, res) => {
+  const host = req.get('host');
+  res.header('Content-Type', 'text/plain');
+  res.send(`User-agent: *\nDisallow:\n\nSitemap: https://${host}/sitemap.xml\n`);
+});
+
+// Dynamic sitemap.xml
+app.get('/sitemap.xml', (req, res) => {
+  const fs = require('fs');
+  const filePath = path.join(__dirname, 'public', 'sitemap.xml');
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).send('Error reading sitemap');
+    }
+    const host = req.get('host');
+    const dynamicSitemap = data.replace(/spreadasmileindia\.com/g, host).replace(/spreadasmileindia\.org/g, host);
+    res.header('Content-Type', 'application/xml');
+    res.send(dynamicSitemap);
+  });
+});
+
+// Middleware to set domain dynamically for views
+app.use((req, res, next) => {
+  res.locals.currentDomain = `https://${req.get('host')}`;
+  next();
+});
+
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -8,7 +8,7 @@
 <meta property="og:title" content="<%= title %>" />
 <meta property="og:description" content="<%= typeof description !== 'undefined' ? description : 'Spread Smile India is a registered NGO transforming lives through education, health, and vocational empowerment since 2005.' %>" />
 <meta property="og:image" content="https://ik.imagekit.io/l15cczdgu/Assets/logo.webp?updatedAt=1761388991377" />
-<meta property="og:url" content="https://spreadasmileindia.com<%= typeof urlPath !== 'undefined' ? urlPath : '' %>" />
+<meta property="og:url" content="<%= currentDomain %><%= typeof urlPath !== 'undefined' ? urlPath : '' %>" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -16,7 +16,7 @@
 <meta property="twitter:description" content="<%= typeof description !== 'undefined' ? description : 'Spread Smile India is a registered NGO transforming lives through education, health, and vocational empowerment since 2005.' %>" />
 <meta property="twitter:image" content="https://ik.imagekit.io/l15cczdgu/Assets/logo.webp?updatedAt=1761388991377" />
 
-<link rel="canonical" href="https://spreadasmileindia.com<%= typeof urlPath !== 'undefined' ? urlPath : '' %>" />
+<link rel="canonical" href="<%= currentDomain %><%= typeof urlPath !== 'undefined' ? urlPath : '' %>" />
 
 <!-- Theme Lock: Prevent Flash of White on Load -->
 <script>
