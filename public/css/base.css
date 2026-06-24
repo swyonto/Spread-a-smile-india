@@ -97,3 +97,10 @@ section {
   section { padding: 2.5rem 1rem; }
 }
 
+/* --- Utility classes --- */
+.text-yellow {
+  color: #ffd700; /* gold/yellow color */
+  font-weight: 600;
+}
+
+

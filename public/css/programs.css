@@ -381,6 +381,29 @@ body.program-video-open {
    overflow: hidden;
 }
 
+.program-band__intro p {
+   max-width: 46rem;
+   color: var(--color-text-muted);
+   font-size: 1.05rem;
+   margin-bottom: 1rem;
+}
+
+.program-band__intro p:last-child {
+   margin-bottom: 0;
+}
+
+.program-quote {
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 1.35rem;
+   font-style: italic;
+   color: var(--color-primary);
+   margin-bottom: 1.25rem;
+   max-width: 46rem;
+   line-height: 1.5;
+   border-left: 3px solid var(--color-primary);
+   padding-left: 1.25rem;
+}
+
 @media (max-width: 1180px) {
    .programs-overview__grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));

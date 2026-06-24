@@ -6,7 +6,9 @@
       <% } %>
       <h2><%= section.title %></h2>
       <% if (section.intro) { %>
-        <p><%= section.intro %></p>
+        <div class="program-band__intro">
+          <%- section.intro %>
+        </div>
       <% } %>
     </div>
 

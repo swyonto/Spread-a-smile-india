@@ -375,7 +375,7 @@ const timelineData = {
       },
       {
         type: 'image',
-        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_4.jpg',
+        src: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_5.jpg',
         caption: 'Launching the Tailoring & Skill Unit - community outreach session.',
         aspect: 'square'
       },
