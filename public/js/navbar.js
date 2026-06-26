@@ -61,12 +61,14 @@
     toggle.addEventListener('click', function (e) {
       // Only intercept clicks on mobile (hamburger menu is visible)
       if (window.innerWidth <= 900) {
-        e.preventDefault();
         const isOpen = dropdown.classList.contains('open');
-        // Close all others
-        dropdowns.forEach(d => d.classList.remove('open'));
-        if (!isOpen) dropdown.classList.add('open');
-        toggle.setAttribute('aria-expanded', !isOpen);
+        if (!isOpen) {
+          e.preventDefault();
+          // Close all others
+          dropdowns.forEach(d => d.classList.remove('open'));
+          dropdown.classList.add('open');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
       }
     });
   });

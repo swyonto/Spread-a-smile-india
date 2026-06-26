@@ -1,50 +1,45 @@
 <section id="<%= section.id %>" class="program-band<%= section.alt ? ' program-band--alt' : '' %>" data-program-section="<%= section.id %>">
   <div class="container">
     <% if (section.id === 'program-health') { %>
-      <!-- Card 1: Critical Care Cases & Health Camps in a Single Card -->
-      <div class="program-health-group-card">
-        
-        <!-- Header inside the card -->
-        <div class="health-group-header">
-          <% if (section.label) { %>
-            <p class="programs-kicker"><%= section.label %></p>
-          <% } %>
-          <h2><%= section.title %></h2>
-        </div>
-
-        <!-- Part 1: Critical Care Cases -->
-        <% const card1 = section.cards[0]; %>
-        <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card1.title %>" data-health-subcards="<%- JSON.stringify(card1.subCards || []).replace(/"/g, '&quot;') %>">
-          <div class="health-group-block__content">
-            <h3><%= card1.title %></h3>
-            <p><%= card1.text %></p>
-          </div>
-          <div class="health-group-block__media">
-            <img src="<%= getOptimizedImg(card1.image, 'w-1000,q-80') %>" alt="<%= card1.alt %>" loading="lazy" />
-          </div>
-        </div>
-
-        <!-- Spacer / Gap inside the card between Part 1 and Part 2 -->
-        <div class="health-group-spacer"></div>
-
-        <!-- Part 2: Health Camps -->
-        <% const card2 = section.cards[1]; %>
-        <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card2.title %>" data-health-subcards="<%- JSON.stringify(card2.subCards || []).replace(/"/g, '&quot;') %>">
-          <div class="health-group-block__content">
-            <h3><%= card2.title %></h3>
-            <p><%= card2.text %></p>
-          </div>
-          <div class="health-group-block__media">
-            <img src="<%= getOptimizedImg(card2.image, 'w-1000,q-80') %>" alt="<%= card2.alt %>" loading="lazy" />
-          </div>
-        </div>
-
+      <!-- Standard Heading outside the cards -->
+      <div class="program-band__heading">
+        <% if (section.label) { %>
+          <p class="programs-kicker"><%= section.label %></p>
+        <% } %>
+        <h2><%= section.title %></h2>
       </div>
 
-      <!-- Gap between the two cards -->
-      <div class="health-section-gap"></div>
+      <!-- Card 1: Critical Care Cases (Text Left, Image Right) -->
+      <% const card1 = section.cards[0]; %>
+      <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card1.title %>" data-health-subcards="<%- JSON.stringify(card1.subCards || []).replace(/"/g, '&quot;') %>">
+        <div class="health-group-block__content">
+          <h3><%= card1.title %></h3>
+          <p><%= card1.text %></p>
+        </div>
+        <div class="health-group-block__media">
+          <img src="<%= getOptimizedImg(card1.image, 'w-1000,q-80') %>" alt="<%= card1.alt %>" loading="lazy" />
+          <div class="health-hover-reveal">
+            <i class="fa-solid fa-hand-pointer"></i> Hover to reveal
+          </div>
+        </div>
+      </div>
 
-      <!-- Card 2: Healthcare Support (Standard Main Card layout) -->
+      <!-- Card 2: Health Camps (Image Left, Text Right) -->
+      <% const card2 = section.cards[1]; %>
+      <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card2.title %>" data-health-subcards="<%- JSON.stringify(card2.subCards || []).replace(/"/g, '&quot;') %>">
+        <div class="health-group-block__media">
+          <img src="<%= getOptimizedImg(card2.image, 'w-1000,q-80') %>" alt="<%= card2.alt %>" loading="lazy" />
+          <div class="health-hover-reveal">
+            <i class="fa-solid fa-hand-pointer"></i> Hover to reveal
+          </div>
+        </div>
+        <div class="health-group-block__content">
+          <h3><%= card2.title %></h3>
+          <p><%= card2.text %></p>
+        </div>
+      </div>
+
+      <!-- Card 3: Healthcare Support (Standard Main Card layout: Image Left, Text Right) -->
       <article class="program-main-card program-reveal">
         <div class="program-main-card__media">
           <img src="<%= getOptimizedImg(section.main.image, 'w-800,q-80') %>" alt="<%= section.main.alt %>" loading="lazy" />
