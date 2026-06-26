@@ -60,7 +60,10 @@
                 
                 <!-- Year Header Block -->
                 <div class="timeline-year-header">
-                  <h2 class="timeline-year-heading"><%= year.replace('-', ' - ') %> <%= data.badge %>: <%= data.title %></h2>
+                  <span class="timeline-year-number"><%= year.replace('-', ' - ') %></span>
+                  <h2 class="timeline-year-heading">
+                    <span class="timeline-year-badge"><%= data.badge %></span> &mdash; <%= data.title %>
+                  </h2>
                 </div>
 
                 <!-- Year Gallery Block (Stacked at bottom) -->
