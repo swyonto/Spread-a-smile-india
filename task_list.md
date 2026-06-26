@@ -4,6 +4,25 @@ This document tracks pending tasks, content assets to gather, and technical impl
 
 ---
 
+## 📅 Tomorrow's To-Do List (2026-06-25)
+
+### 1. Programs Page — Interactive Support Cards (Health Section)
+- [x] **On-Click Health Support Cards Functionality**:
+  - **Card 1: Critical Care Cases**: Click handling opens details modal displaying student image, title, and a 10-word issue description.
+  - **Card 2: Health Camps**: Click handling opens details modal displaying camp image, title, and a 10-word description.
+
+### 2. Audits & Page Checks
+- [ ] **Dignitaries Page**: Verify structure, links (like Wikipedia), and layout consistency.
+- [ ] **Timeline Page**: Verify alignment of year headings and responsive behavior.
+- [ ] **JS Integration**: Review and audit page-specific script files (`public/js/`) for error-free logic.
+
+### 3. Asset Sourcing & Enhancements
+- [ ] **Food Images**: Sourcing realistic food images from the web/ImageKit to replace current placeholders.
+- [ ] **Critical Care Records**: Gather patient/student images and recovery stories.
+- [ ] **Impact Stories**: Retrieve narrative details and beneficiary logs for the impact carousel slider.
+
+---
+
 ## ✅ Completed Tasks
 
 - [x] **Home Page — Carousel Slide 2 Subheading**: Updated the "Women Empowerment" carousel slide subheading text (`views/pages/home.ejs`).

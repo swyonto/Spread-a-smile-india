@@ -58,10 +58,9 @@
               <% const data = timelineData[year]; %>
               <section class="timeline-year-section <%= index === 0 ? 'is-active-section' : '' %>" id="year-<%= year %>" data-year="<%= year %>">
                 
-                <!-- Year Header Block (Badge with Year first, then Heading) -->
+                <!-- Year Header Block -->
                 <div class="timeline-year-header">
-                  <span class="timeline-badge-pill"><%= data.badge %> <%= year %></span>
-                  <h2 class="timeline-year-heading"><%= data.title %></h2>
+                  <h2 class="timeline-year-heading"><%= year.replace('-', ' - ') %> <%= data.badge %>: <%= data.title %></h2>
                 </div>
 
                 <!-- Year Gallery Block (Stacked at bottom) -->

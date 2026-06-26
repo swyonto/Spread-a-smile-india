@@ -118,8 +118,24 @@
 }
 
 /* Flip: letter left, photo right */
-.dg-card--flip .dg-card-photo { order: 2; }
-.dg-card--flip .dg-card-letter { order: 1; }
+.dg-card--flip .dg-card-photo {
+  order: 2;
+}
+
+.dg-card--flip .dg-card-letter {
+  order: 1;
+}
+
+/* Split card: text left, image right directly using letter slots */
+.dg-card--split {
+  grid-template-columns: 1fr 1fr;
+}
+
+.dg-card--split .dg-card-letter:first-child {
+  border-right: 1px solid var(--color-border);
+  align-items: stretch;
+  justify-content: center;
+}
 
 /* ---- Photo column ---- */
 .dg-card-photo {
@@ -270,11 +286,26 @@
 
   .dg-card {
     grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .dg-letter-frame {
+    height: 250px;
+  }
+
+  .dg-card--split .dg-card-letter:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
   }
 
   /* Reset flip on mobile — always photo on top */
-  .dg-card--flip .dg-card-photo { order: 1; }
-  .dg-card--flip .dg-card-letter { order: 2; }
+  .dg-card--flip .dg-card-photo {
+    order: 1;
+  }
+
+  .dg-card--flip .dg-card-letter {
+    order: 2;
+  }
 
   .dg-card-photo {
     min-height: 300px;

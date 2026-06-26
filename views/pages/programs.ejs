@@ -18,40 +18,53 @@
       text: 'We help children living on the streets and at traffic signals enroll in school and support their learning every day at school and at the Spread A Smile India centre.'
       , image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg?tr=q-80' ,
       alt: 'Children learning in a classroom' , points: ['Helping children take their first step into school', 'Daily learning support and encouragement'
-      , 'Uniforms, books, and everything needed for school','A safe space to learn and grow' ] }, cards: [ { tag: '3rd - 5th Grade' , title: 'Primary Education' ,
-      text: 'Building literacy, numeracy, and confidence through a strong academic foundation.' ,
+      , 'Uniforms, books, and everything needed for school','A safe space to learn and grow' ] }, cards: [ { title: 'Primary Education' ,
       image: 'https://ik.imagekit.io/l15cczdgu/programs/education/academic/20251230_164855_eLpGfyFg0.jpg?tr=q-80' ,
-      alt: 'Primary education' }, { tag: '6th - 8th Grade' , title: 'Middle School' ,
-      text: 'Advancing core subjects while introducing computer basics and stronger study habits.' ,
+      alt: 'Primary education' }, { title: 'Middle School' ,
       image: 'https://ik.imagekit.io/l15cczdgu/programs/education/academic/20251230_165344_-qE_5qeNe.jpg?tr=q-80' ,
-      alt: 'Middle school education' }, { type: 'video' , tag: 'Watch' , title: 'Learning in Action' ,
-      text: 'Open a quick video moment from the classroom and feel the learning energy.' ,
+      alt: 'Middle school education' }, { type: 'video' , title: 'Learning in Action' ,
       image: 'https://ik.imagekit.io/l15cczdgu/programs/education/education%201.jpeg' , alt: 'Education program video' ,
-      videoSrc, videoTitle: 'Education in Action' }, { type: 'video' , tag: 'Watch' , title: 'After School Support' ,
-      text: 'A second video card keeps the section lighter and more alive than a text-heavy block.' ,
+      videoSrc, videoTitle: 'Education in Action' }, { type: 'video' , title: 'After School Support' ,
       image: 'https://ik.imagekit.io/l15cczdgu/programs/education/education%202.jpeg' ,
       alt: 'After school support video' , videoSrc, videoTitle: 'After School Support' } ] }, { id: 'program-health' ,
-      label: 'Health' , title: 'Health & Wellbeing' ,
-      intro: 'Good health is essential for every child to learn, play, and thrive. Through regular health check-ups, screenings, vaccinations, and timely medical support, we help ensure children stay healthy and receive the care they need.'
-      , alt: true, main: { tag: 'Comprehensive Healthcare Solutions' ,
-      heading: 'Healthy Children, Brighter Futures' ,
-      text: 'Our health program combines monthly monitoring, specialized screening, emergency response partnerships, and emotional wellness support so problems are addressed early.'
-      , image: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_6.jpg' , alt: 'Healthcare team' , points:
-      ['Primary healthcare check-ups', 'Vision, dental, and blood screening' ,'Vaccinations and medical referrals', 'Emergency medical assistance when needed','Vaccination and mental health support' ]
-      }, cards: [ { tag: 'Primary Healthcare' , title: 'Routine Health Monitoring' ,
-      text: 'Monthly check-ups, growth tracking, and vital assessment build a strong preventive care system.' ,
+      label: 'Health' , title: 'Critical Care Cases & Health Camps' ,
+      intro: ''
+      , alt: true, reverseOrder: true, main: { tag: 'HEALTHCARE SUPPORT' ,
+      heading: 'Care When It Matters Most' ,
+      text: 'From vision screenings and TB awareness camps to emergency surgeries and specialist treatment, we stand by children and families through both everyday health needs and medical crises.'
+      , image: 'https://ik.imagekit.io/l15cczdgu/programs/health/kali.JPG' , alt: 'Healthcare team' , points:
+      [
+        'Health camps and community screenings',
+        'Vision, dental, blood, and TB screening',
+        'Medical referrals and specialist care',
+        'Emergency treatment and hospital support',
+        'Ongoing care for children with serious health conditions'
+      ]
+      }, cards: [ { tag: 'Helping individuals' , title: 'Critical Care Cases' ,
+      text: 'When children face serious health challenges, we help them access the treatment, care, and support they need to heal, recover, and return to childhood.' ,
       image: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_1.jpg?tr=q-80' ,
-      alt: 'Primary healthcare' }, { tag: 'Health Camps' , title: 'Health Camps' ,
-      text: 'Large camps extend care to children and families through strong healthcare partnerships.' ,
-      image: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_2.jpg' , alt: 'Health camp' }, { type: 'video' ,
-      tag: 'Watch' , title: 'Health Mission Day' ,
-      text: 'Open a quick program video to understand the urgency and the care infrastructure behind it.' ,
-      image: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_3.jpg' , alt: 'Health mission video' ,
-      videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/health/video3.mp4' ,
-      videoTitle: 'Healthcare & Wellness Program' }, { type: 'video' , tag: 'Watch' , title: 'Vision Care Campaign' ,
-      text: 'A second motion card works better here than a dense impact box.' ,
-      image: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_5.jpg' , alt: 'Vision care campaign video' ,
-      } ] }, { id: 'program-nutrition' , label: 'Nutrition' ,
+      alt: 'Primary healthcare', subCards: [
+        { title: 'Kushnedha', image: 'https://ik.imagekit.io/l15cczdgu/health/health_4.jpg?updatedAt=1780858298817', desc: 'Successfully recovered after surviving a severe school bus accident.' },
+        { title: 'Debu', image: 'https://ik.imagekit.io/l15cczdgu/health/health_2.jpg?updatedAt=1780858295260', desc: 'Treated and fully healed after a major truck collision.' },
+        { title: 'Noor', image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation3.jpg?updatedAt=1767690217713', desc: 'Successfully recovered after undergoing a critical kidney surgery.' },
+        { title: 'Kaali', image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?updatedAt=1767690217766', desc: 'Lifesaving surgery repaired severe stomach injuries from truck accident.' }
+      ] }, { tag: 'Health Camps' , title: 'Health Camps' ,
+      text: 'Large-scale camps bring doctors, screening, medicines, and care to children and communities, creating healthier futures.' ,
+      image: 'https://ik.imagekit.io/l15cczdgu/programs/health/health_2.jpg' , alt: 'Health camp', subCards: [
+        { title: 'Routine Pediatric Checkup', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_650068896_18095259467050285_330562733093641952_n.jpg?updatedAt=1782321499188', desc: 'Regular growth monitoring and pediatric assessments for slum children.' },
+        { title: 'Health Camp Screening', videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_AQODWZ1oOGQQKiKfNrPVSjTr-mQVOHXewi4g251FCCvBsdM7C_kv1KpEni60-XezPqIJuub9F8RsnoR1R7z4NZlQUJlBxVqJT3fyztc.mp4?updatedAt=1782321499454', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_657349785_18538795744071684_2226560286251511991_n.jpg?updatedAt=1782321499700', desc: 'On-site diagnostic testing and initial medical screenings in progress.' },
+        { title: 'Doctor Consultations', videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_AQMVhK_zuhHzam879VrnVzrqKjQiohAzLrEHp0SY-rz1h8bII-Rq7TWzJDLb8xVS6rFaTW0MT7VImzqAb4XRPBq3EtbSxVxfrURSLgg.mp4?updatedAt=1782321499439', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_654656330_18114155566592454_2746409888695346660_n.jpg?updatedAt=1782321499926', desc: 'Specialist doctors providing personalized consultations and prescription guidance.' },
+        { title: 'Vital Sign Checks', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_657349785_18538795744071684_2226560286251511991_n.jpg?updatedAt=1782321499700', desc: 'Monitoring pulse, blood pressure, and oxygen levels for all visitors.' },
+        { title: 'Medicine Distribution', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_654656330_18114155566592454_2746409888695346660_n.jpg?updatedAt=1782321499926', desc: 'Providing free prescribed medicines and multivitamins to beneficiaries.' },
+        { title: 'Emergency Response Training', videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_AQN7wLh7m1CwlXlxgZeRW6yKk2C0OtH_vsipjBmYdolbd04ImdQU1Rsuxpz3m64Y0RVOh6_9q0sFelRb1xvVq7gg_cc3baoaHYKtYJE.mp4?updatedAt=1782321500079', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_653053651_18106122430841557_4352078681356022539_n.jpg?updatedAt=1782321500057', desc: 'Educating families on first aid and handling critical situations.' },
+        { title: 'Dental Screening', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_653053651_18106122430841557_4352078681356022539_n.jpg?updatedAt=1782321500057', desc: 'Providing oral hygiene guidance and preventive dental checkups.' },
+        { title: 'Nutrition Guidance', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_652537034_18105603841851134_6621995959940863472_n.jpg?updatedAt=1782321500032', desc: 'Dietitians explaining nutrient intake and distributing health drinks.' },
+        { title: 'Vision Screening', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_657789669_18349980541208279_2464073723101765812_n.jpg?updatedAt=1782321500034', desc: 'Eye diagnostic camp providing free testing and corrective spectacles.' },
+        { title: 'Child Healthcare Awareness', videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_AQPxjNyutD3iYdtKl3Ct150gUwGI10NWyOrtbR2--pv-txipm7qlF5sLzuOJyIKvj1IfgTrXTXhoW8WHXSQwPHisxpRK2Hqgbj2HF18.mp4?updatedAt=1782321500179', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_652537034_18105603841851134_6621995959940863472_n.jpg?updatedAt=1782321500032', desc: 'Interactive workshop teaching proper handwashing and personal hygiene.' },
+        { title: 'General Wellness Check', videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_AQPCjvBnjhgsU2BgKCWKLaMW1z2OUY07P-ns4UrpsFcewIkcjqorGmjP3CKk80xb9qu9a_qlKcPgvneJBi2RWuzDHF0e1yv4HfPEOk8.mp4?updatedAt=1782321500243', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_657789669_18349980541208279_2464073723101765812_n.jpg?updatedAt=1782321500034', desc: 'Physicians analyzing common health ailments and prescribing remedies.' },
+        { title: 'Maternal Health Session', videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_AQMNxN19A9YwIvUzB2_RRx0Jru7H6qzPA5iK0fYQyfEbEx1BkLTCExB4zBGK1Fe9RyyAA5eTn_18QLj5dUyzxw.mp4?updatedAt=1782321502679', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_650068896_18095259467050285_330562733093641952_n.jpg?updatedAt=1782321499188', desc: 'Guidance sessions for mothers regarding infant nutrition and vaccines.' },
+        { title: 'Specialized Pediatric Care', videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_AQMlPHXYnxMpHASGhpLoQE9hkjfWyCU2o-57SIyU9NmqY_1jVBIufTHE2EYFcmdm1aGzzY1ISRKIV7Yoz7wsM5k.mp4?updatedAt=1782321504379', image: 'https://ik.imagekit.io/l15cczdgu/programs/health/camps/SnapInsta.to_657349785_18538795744071684_2226560286251511991_n.jpg?updatedAt=1782321499700', desc: 'Detailed physical screening to detect developmental delays early.' }
+      ] } ] }, { id: 'program-nutrition' , label: 'Nutrition' ,
       title: 'No Child Should Learn Hungry' ,
       intro: '<blockquote class="program-quote">"For many children, the meal they receive at Spread A Smile India is more than food—it is comfort, care, and the energy to keep learning."</blockquote><p>Many of the children who come to our centre after school arrive hungry. Every day, we serve fresh, hot meals and snacks, creating a space where children feel cared for, welcomed, and ready to learn.</p>'
       , main: { tag: 'Nutrition Program' , heading: 'Fresh Meals, Served with Care' ,
@@ -76,27 +89,27 @@
       title: 'Fruit Distribution Day' ,
       text: 'Seasonal fresh fruits are distributed daily to ensure children get essential micronutrients.' ,
       image: 'https://ik.imagekit.io/l15cczdgu/programs/nutrition/iamge%204.jpeg' , alt: 'Fruit distribution video' ,
-      videoSrc, videoTitle: 'Fruit Distribution Day' } ] }, { id: 'program-computer' , label: 'Computer Literacy' ,
-      title: 'Digital Skills for Tomorrow' ,
-      intro: 'On the old site, computer literacy lived inside education. Here it becomes its own section so visitors can clearly see the digital pathway from basic computer use to employable skills.'
-      , alt: true, main: { tag: 'Computer Course' , heading: 'Digital literacy that opens real options' ,
-      text: 'Students learn computer basics, typing, office tools, internet use, and creative software. The goal is not exposure alone, but confidence and employability.'
+      videoSrc, videoTitle: 'Fruit Distribution Day' } ] }, { id: 'program-computer' , label: 'COMPUTER EDUCATION' ,
+      title: 'From Learning to Leading' ,
+      intro: 'For many children, our computer lab is their first introduction to technology. What begins with learning basic computer skills grows into confidence, creativity, leadership, and new possibilities for the future., Photoshop, and web design, helping them build confidence and prepare for the future.'
+      , alt: true, main: { tag: 'COMPUTER CLASSES' , heading: 'Opening Doors to New Opportunities' ,
+      text: 'For many children, our computer lab is their first introduction to technology. What begins with learning how to use a computer grows into confidence, creativity, and valuable skills that help them succeed in school, explore new interests, and prepare for the future.'
       , image: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%200.jpg' , alt: 'Computer training lab'
-      , points: ['Computer basics and typing', 'MS Office and presentations' , 'Graphic design and digital projects' ]
-      }, cards: [ { tag: 'MS Office Suite' , title: 'Everyday Workplace Tools' ,
-      text: 'Word, Excel, and PowerPoint training prepares students for study and work environments.' ,
-      image: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%201.jpg' , alt: 'MS Office Suite' }, {
-      tag: 'Graphic Design' , title: 'Creative Software Skills' ,
-      text: 'Logo work, visual basics, and digital creativity broaden career possibilities.' ,
-      image: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%202.jpg' , alt: 'Graphic design training'
-      }, { type: 'video' , tag: 'Watch' , title: 'Digital Learning Lab' ,
-      text: 'Open a video card to bring motion into the section and break up the static gallery feel.' ,
-      image: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%203.jpg' , alt: 'Computer literacy video'
-      , videoSrc, videoTitle: 'Computer Literacy Program' }, { type: 'video' , tag: 'Watch' ,
-      title: 'Creative Project Time' ,
-      text: 'A second video keeps this section consistent with the new component system.' ,
+      , points: ['Computer basics and typing', 'MS Word, Excel, and PowerPoint', 'Graphic design and Photoshop', 'AI tools and web design']
+      }, cards: [ { tag: 'Computer Basics' , title: 'First Steps with Computers' ,
+      text: 'Many children use a computer for the first time in our lab, learning the skills needed for school and everyday life.' ,
+      image: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%201.jpg' , alt: 'First Steps with Computers' }, {
+      tag: 'MS Office Skills' , title: 'Building Digital Confidence' ,
+      text: 'Students develop practical skills through MS Office, internet research, presentations, and hands-on learning.' ,
+      image: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%202.jpg' , alt: 'Building Digital Confidence'
+      }, { type: 'video' , tag: 'Watch' , title: 'Creative & Technical Skills' ,
+      text: 'From graphic design and Photoshop to coding and web design, students explore new ways to create and innovate.' ,
+      image: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/image%203.jpg' , alt: 'Creative & Technical Skills'
+      , videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/firstbacth.mp4?updatedAt=1782320920788', videoTitle: 'Creative & Technical Skills' }, { type: 'video' , tag: 'Watch' ,
+      title: 'Students Become teachers.' ,
+      text: 'As their skills grow, many students return to help younger children learn, building confidence, leadership, and a spirit of giving back.' ,
       image: 'https://ik.imagekit.io/l15cczdgu/programs/education/skill/20250502_153536_2qk1Ls_Ci.jpg?tr=q-80' ,
-      alt: 'Creative project time video' , videoSrc, videoTitle: 'Creative Project Time' } ] } ]; %>
+      alt: 'Students Become Mentors' , videoSrc: 'https://ik.imagekit.io/l15cczdgu/programs/computer%20unit/secondbacth.mp4', videoTitle: 'Students Become Mentors' } ] } ]; %>
 
       <main class="programs-page">
 
@@ -203,15 +216,13 @@
                   <div class="covid-hero__glow covid-hero__glow--two"></div>
                   <div class="container covid-hero__inner">
                     <p class="covid-eyebrow">Relief Operations</p>
-                    <h2 style="font-size:clamp(2rem,5vw,3.5rem); font-weight:800; margin:0.5rem 0 1rem;">COVID-19
-                      Pandemic Response</h2>
+                    <h2 style="font-size:clamp(2rem,5vw,3.5rem); font-weight:800; margin:0.5rem 0 1rem;">No Family Left Behind</h2>
                     <p class="covid-hero__lead">
-                      During the unprecedented lockdowns and waves of the COVID-19 pandemic, Spread a Smile India
-                      mobilized
-                      immediate humanitarian aid to support thousands of daily-wage earners, street dwellers, and their
-                      families
-                      in Delhi NCR.
+                    When the COVID-19 lockdown brought daily life to a halt, many of the families we support lost their income overnight. Determined that no child should go hungry, our team worked throughout the lockdown to provide cooked meals, ration kits, masks, and essential supplies to children, families, daily wage workers, and vulnerable communities across Delhi.
                     </p>
+                    <blockquote class="program-quote" style="margin-top: 2rem; margin-bottom: 0;">
+                      "While the city was under lockdown, our commitment to children never stopped."
+                    </blockquote>
                   </div>
                 </section>
 
@@ -220,7 +231,7 @@
                   <div class="container">
                     <div class="covid-section-head">
                       <p class="covid-eyebrow">On-the-ground Gallery</p>
-                      <h2>Moments of Relief &amp; Hope</h2>
+                      <h2>Serving Through the Crisis</h2>
                       <p>A visual record of our team's frontline efforts in food distribution, medical camps, hygiene
                         support, and
                         vaccine mobilization.</p>
@@ -231,84 +242,72 @@
                       <div class="covid-card">
                         <div class="covid-card__media">
                           <img src="https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_2.jpg"
-                            alt="Dry Rations Distribution" loading="lazy" />
+                            alt="Ration Kits for Families" loading="lazy" />
                         </div>
                         <div class="covid-card__content">
                           <span class="covid-card__tag">Food Security</span>
-                          <h3>Dry Rations Distribution</h3>
-                          <p>Distributing monthly packages of rice, flour, pulses, oil, and spices to over 800 migrant
-                            families in
-                            Delhi slums.</p>
+                          <h3>Ration Kits for Families</h3>
+                          <p>Thousands of essential food items were distributed to families whose livelihoods were affected by the lockdown.</p>
                         </div>
                       </div>
 
                       <div class="covid-card">
                         <div class="covid-card__media">
                           <img src="https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_1.jpg"
-                            alt="Mask &amp; Sanitizer Distribution" loading="lazy" />
+                            alt="Masks &amp; Safety Support" loading="lazy" />
                         </div>
                         <div class="covid-card__content">
                           <span class="covid-card__tag">Hygiene Support</span>
-                          <h3>Masks &amp; Hygiene Kits</h3>
-                          <p>Providing children and mothers with hand sanitizers, soaps, and high-filtration washable
-                            face masks
-                            to prevent viral transmission.</p>
+                          <h3>Masks &amp; Safety Support</h3>
+                          <p>Our team distributed masks and hygiene supplies to help families stay protected during the pandemic.</p>
                         </div>
                       </div>
 
                       <div class="covid-card">
                         <div class="covid-card__media">
                           <img src="https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_3.jpg"
-                            alt="Vaccine Awareness Camps" loading="lazy" />
+                            alt="Meals for Hungry Families" loading="lazy" />
                         </div>
                         <div class="covid-card__content">
-                          <span class="covid-card__tag">Medical Awareness</span>
-                          <h3>Vaccination Mobilization</h3>
-                          <p>Partnering with local healthcare centers to register street dwellers on Government portals
-                            and
-                            hosting vaccine drives in our units.</p>
+                          <span class="covid-card__tag">Food Support</span>
+                          <h3>Meals for Hungry Families</h3>
+                          <p>Freshly cooked meals were prepared and distributed when families had little or no access to food.</p>
                         </div>
                       </div>
 
                       <div class="covid-card">
                         <div class="covid-card__media">
                           <img src="https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_4.jpg"
-                            alt="Water &amp; Cooked Food Deliveries" loading="lazy" />
+                            alt="Food on Wheels" loading="lazy" />
                         </div>
                         <div class="covid-card__content">
                           <span class="covid-card__tag">Emergency Delivery</span>
-                          <h3>Cooked Food &amp; Water Supply</h3>
-                          <p>Delivering fresh cooked meals and safe mineral water cans to communities near traffic
-                            signals cut off
-                            from supply chains.</p>
+                          <h3>Food on Wheels</h3>
+                          <p>With special movement permissions during lockdown, our team delivered food and essential supplies directly to communities in need.</p>
                         </div>
                       </div>
 
                       <div class="covid-card">
                         <div class="covid-card__media">
                           <img src="https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_5.jpg"
-                            alt="Home Study Material Kit Distribution" loading="lazy" />
+                            alt="Lockdown Learning Sessions" loading="lazy" />
                         </div>
                         <div class="covid-card__content">
                           <span class="covid-card__tag">Learning Continuity</span>
-                          <h3>Lockdown Study Kits</h3>
-                          <p>Distributing drawing pads, books, pencils, and educational worksheets to keep street
-                            children engaged
-                            and learning at home.</p>
+                          <h3>Lockdown Learning Sessions</h3>
+                          <p>Children continued learning through guided study sessions and educational support during school closures.</p>
                         </div>
                       </div>
 
                       <div class="covid-card">
                         <div class="covid-card__media">
                           <img src="https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_6.jpg"
-                            alt="Frontline Medical Checkups" loading="lazy" />
+                            alt="Reaching Those Most in Need" loading="lazy" />
                         </div>
                         <div class="covid-card__content">
-                          <span class="covid-card__tag">Healthcare</span>
-                          <h3>Frontline Health Screenings</h3>
-                          <p>Conducting outdoor temperature checks, pulse-oximeter screenings, and general diagnostics
-                            to catch
-                            symptoms early.</p>
+                          <span class="covid-card__tag">Community Support</span>
+                          <h3>Reaching Those Most in Need</h3>
+                          <p>From our students' families to daily wage workers, rickshaw pullers, and vulnerable communities, support reached far beyond our centre.</p>
                         </div>
                       </div>
 
@@ -325,18 +324,14 @@
                       <!-- Left: On-the-ground Video Player -->
                       <div class="covid-video-container">
                         <p class="covid-eyebrow">Featured Footage</p>
-                        <h2>Frontline Operations Footage</h2>
+                        <h2>COVID Relief in Action</h2>
                         <div class="covid-video-player-wrap">
                           <video src="https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_1.mp4" controls
                             poster="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_15.jpg', 'w-800,q-80') %>"
                             preload="metadata">
                           </video>
                         </div>
-                        <p class="covid-video-desc">On-the-ground video footage highlighting dry rations distribution,
-                          medical
-                          checkups, and hygiene mobilization drives conducted by our team in under-resourced settlements
-                          in Delhi
-                          NCR.</p>
+                        <p class="covid-video-desc">Watch how our team worked on the ground to deliver food, ration kits, masks, and support during one of the most challenging periods in recent history.</p>
                       </div>
 
                       <!-- Right: Small Squarish Cards (No Text) -->
@@ -459,12 +454,12 @@
                     </div>
                     <div class="covid-seamless-item">
                       <img
-                        src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_11.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                        src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/covid_19/covid_19_31.jpg?updatedAt=1780859372793', 'w-400,h-400,fo-auto,q-80') %>"
                         alt="Lockdown student study kits" loading="lazy" />
                     </div>
                     <div class="covid-seamless-item">
                       <img
-                        src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/covid/covid_19_12.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                        src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/covid_19/covid_19_32.jpg?updatedAt=1780859372744', 'w-400,h-400,fo-auto,q-80') %>"
                         alt="Frontline health screening" loading="lazy" />
                     </div>
                     <div class="covid-seamless-item">
@@ -494,6 +489,22 @@
           <p class="program-video-modal__label">Program Video</p>
           <h3 id="programVideoTitle">Program Story</h3>
           <video id="programVideoPlayer" controls playsinline preload="metadata"></video>
+        </div>
+      </div>
+
+      <div class="program-health-panel" id="programHealthPanel" aria-hidden="true">
+        <div class="program-health-panel__header">
+          <h2 id="healthPanelHeaderTitle">Health Program Details</h2>
+          <button class="program-health-panel__close" type="button" aria-label="Close" data-health-panel-close>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="program-health-panel__scroll">
+          <div class="container">
+            <div class="program-health-panel__grid" id="healthPanelGrid">
+              <!-- Dynamically populated cards -->
+            </div>
+          </div>
         </div>
       </div>
 

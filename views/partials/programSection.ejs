@@ -1,69 +1,201 @@
 <section id="<%= section.id %>" class="program-band<%= section.alt ? ' program-band--alt' : '' %>" data-program-section="<%= section.id %>">
   <div class="container">
-    <div class="program-band__heading">
-      <% if (section.label) { %>
-        <p class="programs-kicker"><%= section.label %></p>
-      <% } %>
-      <h2><%= section.title %></h2>
-      <% if (section.intro) { %>
-        <div class="program-band__intro">
-          <%- section.intro %>
+    <% if (section.id === 'program-health') { %>
+      <!-- Card 1: Critical Care Cases & Health Camps in a Single Card -->
+      <div class="program-health-group-card">
+        
+        <!-- Header inside the card -->
+        <div class="health-group-header">
+          <% if (section.label) { %>
+            <p class="programs-kicker"><%= section.label %></p>
+          <% } %>
+          <h2><%= section.title %></h2>
+        </div>
+
+        <!-- Part 1: Critical Care Cases -->
+        <% const card1 = section.cards[0]; %>
+        <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card1.title %>" data-health-subcards="<%- JSON.stringify(card1.subCards || []).replace(/"/g, '&quot;') %>">
+          <div class="health-group-block__content">
+            <h3><%= card1.title %></h3>
+            <p><%= card1.text %></p>
+          </div>
+          <div class="health-group-block__media">
+            <img src="<%= getOptimizedImg(card1.image, 'w-1000,q-80') %>" alt="<%= card1.alt %>" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Spacer / Gap inside the card between Part 1 and Part 2 -->
+        <div class="health-group-spacer"></div>
+
+        <!-- Part 2: Health Camps -->
+        <% const card2 = section.cards[1]; %>
+        <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card2.title %>" data-health-subcards="<%- JSON.stringify(card2.subCards || []).replace(/"/g, '&quot;') %>">
+          <div class="health-group-block__content">
+            <h3><%= card2.title %></h3>
+            <p><%= card2.text %></p>
+          </div>
+          <div class="health-group-block__media">
+            <img src="<%= getOptimizedImg(card2.image, 'w-1000,q-80') %>" alt="<%= card2.alt %>" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Gap between the two cards -->
+      <div class="health-section-gap"></div>
+
+      <!-- Card 2: Healthcare Support (Standard Main Card layout) -->
+      <article class="program-main-card program-reveal">
+        <div class="program-main-card__media">
+          <img src="<%= getOptimizedImg(section.main.image, 'w-800,q-80') %>" alt="<%= section.main.alt %>" loading="lazy" />
+        </div>
+        <div class="program-main-card__content">
+          <% if (section.main.tag) { %>
+            <span class="program-card__tag"><%= section.main.tag %></span>
+          <% } %>
+          <h3><%= section.main.heading %></h3>
+          <p><%= section.main.text %></p>
+
+          <% if (section.main.points && section.main.points.length) { %>
+            <ul class="program-points">
+              <% section.main.points.forEach((point) => { %>
+                <li><i class="fa-solid fa-check"></i> <%= point %></li>
+              <% }) %>
+            </ul>
+          <% } %>
+        </div>
+      </article>
+
+    <% } else { %>
+      <div class="program-band__heading">
+        <% if (section.label) { %>
+          <p class="programs-kicker"><%= section.label %></p>
+        <% } %>
+        <h2><%= section.title %></h2>
+        <% if (section.intro) { %>
+          <div class="program-band__intro">
+            <%- section.intro %>
+          </div>
+        <% } %>
+      </div>
+
+      <% if (section.reverseOrder) { %>
+        <div class="program-support-grid<%= section.cards.length === 2 ? ' program-support-grid--2-cols' : '' %>" style="margin-bottom: 2rem;">
+          <% section.cards.forEach((card) => { %>
+            <% if (card.type === 'video') { %>
+              <article class="program-support-card program-support-card--video program-reveal" data-video-trigger data-video-src="<%= card.videoSrc %>" data-video-title="<%= card.videoTitle || card.title %>">
+                <div class="program-support-card__media">
+                  <img src="<%= getOptimizedImg(card.image, 'w-500,q-80') %>" alt="<%= card.alt %>" loading="lazy" />
+                  <span class="program-card__play"><i class="fa-solid fa-play"></i></span>
+                </div>
+                <div class="program-support-card__content">
+                  <% if (card.tag) { %>
+                    <span class="program-card__tag"><%= card.tag %></span>
+                  <% } %>
+                  <h3><%= card.title %></h3>
+                  <% if (card.text) { %>
+                    <p><%= card.text %></p>
+                  <% } %>
+                </div>
+              </article>
+            <% } else { %>
+              <article class="program-support-card<%= card.tall ? ' program-support-card--tall' : '' %> program-reveal">
+                <div class="program-support-card__media">
+                   <img src="<%= getOptimizedImg(card.image, 'w-500,q-80') %>" alt="<%= card.alt %>" loading="lazy" />
+                </div>
+                <div class="program-support-card__content">
+                  <% if (card.tag) { %>
+                    <span class="program-card__tag"><%= card.tag %></span>
+                  <% } %>
+                  <h3><%= card.title %></h3>
+                  <% if (card.text) { %>
+                    <p><%= card.text %></p>
+                  <% } %>
+                </div>
+              </article>
+            <% } %>
+          <% }) %>
+        </div>
+
+        <article class="program-main-card program-reveal">
+          <div class="program-main-card__media">
+            <img src="<%= getOptimizedImg(section.main.image, 'w-800,q-80') %>" alt="<%= section.main.alt %>" loading="lazy" />
+          </div>
+          <div class="program-main-card__content">
+            <% if (section.main.tag) { %>
+              <span class="program-card__tag"><%= section.main.tag %></span>
+            <% } %>
+            <h3><%= section.main.heading %></h3>
+            <p><%= section.main.text %></p>
+
+            <% if (section.main.points && section.main.points.length) { %>
+              <ul class="program-points">
+                <% section.main.points.forEach((point) => { %>
+                  <li><i class="fa-solid fa-check"></i> <%= point %></li>
+                <% }) %>
+              </ul>
+            <% } %>
+          </div>
+        </article>
+      <% } else { %>
+        <article class="program-main-card program-reveal">
+          <div class="program-main-card__media">
+            <img src="<%= getOptimizedImg(section.main.image, 'w-800,q-80') %>" alt="<%= section.main.alt %>" loading="lazy" />
+          </div>
+          <div class="program-main-card__content">
+            <% if (section.main.tag) { %>
+              <span class="program-card__tag"><%= section.main.tag %></span>
+            <% } %>
+            <h3><%= section.main.heading %></h3>
+            <p><%= section.main.text %></p>
+
+            <% if (section.main.points && section.main.points.length) { %>
+              <ul class="program-points">
+                <% section.main.points.forEach((point) => { %>
+                  <li><i class="fa-solid fa-check"></i> <%= point %></li>
+                <% }) %>
+              </ul>
+            <% } %>
+          </div>
+        </article>
+
+        <div class="program-support-grid<%= section.cards.length === 2 ? ' program-support-grid--2-cols' : '' %>">
+          <% section.cards.forEach((card) => { %>
+            <% if (card.type === 'video') { %>
+              <article class="program-support-card program-support-card--video program-reveal" data-video-trigger data-video-src="<%= card.videoSrc %>" data-video-title="<%= card.videoTitle || card.title %>">
+                <div class="program-support-card__media">
+                  <img src="<%= getOptimizedImg(card.image, 'w-500,q-80') %>" alt="<%= card.alt %>" loading="lazy" />
+                  <span class="program-card__play"><i class="fa-solid fa-play"></i></span>
+                </div>
+                <div class="program-support-card__content">
+                  <% if (card.tag) { %>
+                    <span class="program-card__tag"><%= card.tag %></span>
+                  <% } %>
+                  <h3><%= card.title %></h3>
+                  <% if (card.text) { %>
+                    <p><%= card.text %></p>
+                  <% } %>
+                </div>
+              </article>
+            <% } else { %>
+              <article class="program-support-card<%= card.tall ? ' program-support-card--tall' : '' %> program-reveal">
+                <div class="program-support-card__media">
+                   <img src="<%= getOptimizedImg(card.image, 'w-500,q-80') %>" alt="<%= card.alt %>" loading="lazy" />
+                </div>
+                <div class="program-support-card__content">
+                  <% if (card.tag) { %>
+                    <span class="program-card__tag"><%= card.tag %></span>
+                  <% } %>
+                  <h3><%= card.title %></h3>
+                  <% if (card.text) { %>
+                    <p><%= card.text %></p>
+                  <% } %>
+                </div>
+              </article>
+            <% } %>
+          <% }) %>
         </div>
       <% } %>
-    </div>
-
-    <article class="program-main-card program-reveal">
-      <div class="program-main-card__media">
-        <img src="<%= getOptimizedImg(section.main.image, 'w-800,q-80') %>" alt="<%= section.main.alt %>" loading="lazy" />
-      </div>
-      <div class="program-main-card__content">
-        <% if (section.main.tag) { %>
-          <span class="program-card__tag"><%= section.main.tag %></span>
-        <% } %>
-        <h3><%= section.main.heading %></h3>
-        <p><%= section.main.text %></p>
-
-        <% if (section.main.points && section.main.points.length) { %>
-          <ul class="program-points">
-            <% section.main.points.forEach((point) => { %>
-              <li><i class="fa-solid fa-check"></i> <%= point %></li>
-            <% }) %>
-          </ul>
-        <% } %>
-      </div>
-    </article>
-
-    <div class="program-support-grid">
-      <% section.cards.forEach((card) => { %>
-        <% if (card.type === 'video') { %>
-          <article class="program-support-card program-support-card--video program-reveal" data-video-trigger data-video-src="<%= card.videoSrc %>" data-video-title="<%= card.videoTitle || card.title %>">
-            <div class="program-support-card__media">
-              <img src="<%= getOptimizedImg(card.image, 'w-500,q-80') %>" alt="<%= card.alt %>" loading="lazy" />
-              <span class="program-card__play"><i class="fa-solid fa-play"></i></span>
-            </div>
-            <div class="program-support-card__content">
-              <% if (card.tag) { %>
-                <span class="program-card__tag"><%= card.tag %></span>
-              <% } %>
-              <h3><%= card.title %></h3>
-              <p><%= card.text %></p>
-            </div>
-          </article>
-        <% } else { %>
-          <article class="program-support-card<%= card.tall ? ' program-support-card--tall' : '' %> program-reveal">
-            <div class="program-support-card__media">
-              <img src="<%= getOptimizedImg(card.image, 'w-500,q-80') %>" alt="<%= card.alt %>" loading="lazy" />
-            </div>
-            <div class="program-support-card__content">
-              <% if (card.tag) { %>
-                <span class="program-card__tag"><%= card.tag %></span>
-              <% } %>
-              <h3><%= card.title %></h3>
-              <p><%= card.text %></p>
-            </div>
-          </article>
-        <% } %>
-      <% }) %>
-    </div>
+    <% } %>
   </div>
 </section>
