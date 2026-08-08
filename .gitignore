@@ -2,6 +2,5 @@ node_modules
 temp
 .env
 scratch/
-events/
-**/events/
-public/assets/events/
+events
+*events
