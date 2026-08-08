@@ -60,7 +60,7 @@
 
     toggle.addEventListener('click', function (e) {
       // Only intercept clicks on mobile (hamburger menu is visible)
-      if (window.innerWidth <= 900) {
+      if (window.innerWidth <= 1000) {
         const isOpen = dropdown.classList.contains('open');
         if (!isOpen) {
           e.preventDefault();
@@ -75,7 +75,7 @@
 
   // Close dropdowns when clicking outside on desktop
   document.addEventListener('click', function (e) {
-    if (window.innerWidth > 900) {
+    if (window.innerWidth > 1000) {
       if (!e.target.closest('.nav-dropdown')) {
         dropdowns.forEach(d => d.classList.remove('open'));
       }
@@ -85,7 +85,7 @@
   // Close mobile menu when a dropdown item link is tapped
   document.querySelectorAll('.dropdown-menu a').forEach(function (link) {
     link.addEventListener('click', function () {
-      if (window.innerWidth <= 900) {
+      if (window.innerWidth <= 1000) {
         closeMenu();
       }
     });

@@ -396,16 +396,18 @@
    max-width: 44rem;
 }
 
-/* Video Grid styling (Vertical Cards) */
+/* Video Grid styling (Vertical Cards scaled down ~0.8) */
 .covid-video-grid {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 1.5rem;
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+   gap: 0.85rem;
+   max-width: 1040px;
+   margin: 0 auto;
 }
 
 .covid-video-card {
    position: relative;
-   border-radius: 1.5rem;
+   border-radius: 1rem;
    overflow: hidden;
    border: 1px solid var(--color-border);
    background: #000;
@@ -415,14 +417,15 @@
 }
 
 .covid-video-card:hover {
-   transform: translateY(-6px);
+   transform: translateY(-4px);
    box-shadow: var(--shadow-lg);
 }
 
 .covid-video-card__player {
    position: relative;
    width: 100%;
-   aspect-ratio: 9 / 16; /* Vertical Reels layout */
+   aspect-ratio: 9 / 13;
+   max-height: 250px;
    overflow: hidden;
 }
 

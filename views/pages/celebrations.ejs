@@ -12,9 +12,7 @@
 
   <main class="celeb-page">
 
-    <!-- ═══════════════════════════════════════════
-         HERO
-    ═══════════════════════════════════════════ -->
+    <!-- HERO -->
     <section class="celeb-hero">
       <div class="celeb-hero__bg"></div>
       <div class="celeb-hero__glow celeb-hero__glow--a"></div>
@@ -23,20 +21,18 @@
         <p class="celeb-eyebrow">✨ Joy &amp; Belonging</p>
         <h1>Celebrating Every Moment</h1>
         <p class="celeb-hero__lead">
-          From Diwali lights to Christmas carols, Holi colours to birthday smiles — every celebration at
+          From Diwali lights to Christmas carols, Holi colours to Republic &amp; Independence Day pride — every celebration at
           Spread a Smile India tells our children that they are seen, loved, and worth celebrating.
         </p>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         SIDEBAR + SCROLL CONTENT LAYOUT
-    ═══════════════════════════════════════════ -->
+    <!-- SIDEBAR + SCROLL CONTENT LAYOUT -->
     <section class="celeb-layout-section">
       <div class="container">
         <div class="celeb-layout-grid">
 
-          <!-- ── LEFT: Sticky Sidebar Navigation ── -->
+          <!-- LEFT: Sticky Sidebar Navigation -->
           <aside class="celeb-sidebar">
             <div class="celeb-track-wrap">
               <div class="celeb-track-line"></div>
@@ -59,17 +55,12 @@
 
                 <button class="celeb-node" data-festival="fest-independence" style="--node-color:#f97316">
                   <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-flag"></i></span></span>
-                  <span class="celeb-node__label">Independence</span>
+                  <span class="celeb-node__label">Independence Day</span>
                 </button>
 
-                <button class="celeb-node" data-festival="fest-dussehra" style="--node-color:#2dd4bf">
-                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-sun"></i></span></span>
-                  <span class="celeb-node__label">Dussehra</span>
-                </button>
-
-                <button class="celeb-node" data-festival="fest-zoo" style="--node-color:#4ade80">
-                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-paw"></i></span></span>
-                  <span class="celeb-node__label">Zoo Visit</span>
+                <button class="celeb-node" data-festival="fest-republic" style="--node-color:#2563eb">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-shield-halved"></i></span></span>
+                  <span class="celeb-node__label">Republic Day</span>
                 </button>
 
                 <button class="celeb-node" data-festival="fest-sports" style="--node-color:#fb923c">
@@ -77,329 +68,1443 @@
                   <span class="celeb-node__label">Sports Day</span>
                 </button>
 
-                <button class="celeb-node" data-festival="fest-movie" style="--node-color:#f4607a">
-                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-film"></i></span></span>
-                  <span class="celeb-node__label">Movie Night</span>
-                </button>
-
-                <button class="celeb-node" data-festival="fest-birthday" style="--node-color:#e879f9">
-                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-cake-candles"></i></span></span>
-                  <span class="celeb-node__label">Birthdays</span>
-                </button>
-
-                <button class="celeb-node" data-festival="fest-cultural" style="--node-color:#38bdf8">
-                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-masks-theater"></i></span></span>
-                  <span class="celeb-node__label">Cultural</span>
+                <button class="celeb-node" data-festival="fest-waterpark" style="--node-color:#38bdf8">
+                  <span class="celeb-node__dot-wrap"><span class="celeb-node__icon-box"><i class="fa-solid fa-water"></i></span></span>
+                  <span class="celeb-node__label">Water Park</span>
                 </button>
 
               </div>
             </div>
           </aside>
 
-          <!-- ── RIGHT: Scrollable Festival Content ── -->
+          <!-- RIGHT: Scrollable Festival Content -->
           <div class="celeb-scroll-content">
 
-            <!-- ── DIWALI ─────────────────────────────── -->
+            <!-- DIWALI -->
             <div class="celeb-festival-section" id="fest-diwali" style="--fest-color:#f5c842">
               <div class="celeb-festival-header">
                 <span class="celeb-festival-eyebrow"><i class="fa-solid fa-fire-flame-curved"></i> Festival of Lights</span>
-                <h2 class="celeb-festival-title">Diwali</h2>
-                <p class="celeb-festival-desc">Every Diwali, our centres glow with diyas, rangoli, new clothes, and sweets — reminding every child that light always finds its way, no matter how dark the journey.</p>
+                <h2 class="celeb-festival-title">Diwali Celebrations</h2>
+                <p class="celeb-festival-desc">Every Diwali, our centres glow with diyas, rangoli, new clothes, and sweets — reminding every child that light always finds its way.</p>
               </div>
 
               <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Diwali 2024 — Children with diyas" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Diwali 2024 — Rangoli and decorations" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Diwali 2024 — Celebration gathering" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Diwali 2024 — Sweets distribution" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Diwali 2023" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Diwali 2023 — Festivities" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Diwali 2023 — Group celebration" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Diwali 2023 — Children gathering" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Diwali 2022" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Diwali 2022 — Moments" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Diwali 2022 — Joy" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2024/20241028_175549.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2024/20241028_175549.jpg', 'w-1200,q-85') %>"
+                       alt="Diwali 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2023/20251018_171612.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2023/20251018_171612.jpg', 'w-1200,q-85') %>"
+                       alt="Diwali 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2022/IMG_20220406_192823.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2022/IMG_20220406_192823.jpg', 'w-1200,q-85') %>"
+                       alt="Diwali 2022" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2022</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2020/20241219_145952.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2020/20241219_145952.jpg', 'w-1200,q-85') %>"
+                       alt="Diwali 2020" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2020</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2019/IMG_20191026_172851.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2019/IMG_20191026_172851.jpg', 'w-1200,q-85') %>"
+                       alt="Diwali 2019" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2019</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2018/IMG_20180717_172912.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2018/IMG_20180717_172912.jpg', 'w-1200,q-85') %>"
+                       alt="Diwali 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2017/IMG_20171012_165433.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2017/IMG_20171012_165433.jpg', 'w-1200,q-85') %>"
+                       alt="Diwali 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2016/IMG-20161101-WA0011.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/Diwali/2016/IMG-20161101-WA0011.jpg', 'w-1200,q-85') %>"
+                       alt="Diwali 2016" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2016</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- ── CHRISTMAS ──────────────────────────── -->
+            <!-- CHRISTMAS -->
             <div class="celeb-festival-section" id="fest-christmas" style="--fest-color:#ef4444">
               <div class="celeb-festival-header">
                 <span class="celeb-festival-eyebrow"><i class="fa-solid fa-tree"></i> Season of Giving</span>
-                <h2 class="celeb-festival-title">Christmas</h2>
-                <p class="celeb-festival-desc">Songs, decorations, Santa visits, and gift-giving — Christmas at our centre fills every child's heart with warmth, wonder, and the spirit of generosity.</p>
+                <h2 class="celeb-festival-title">Christmas Celebrations</h2>
+                <p class="celeb-festival-desc">Songs, decorations, Santa visits, and gift-giving — Christmas at our centre fills every child's heart with warmth and joy.</p>
               </div>
 
               <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989', 'w-1200,q-85') %>" alt="Christmas 2024 — Santa and children" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Christmas 2024 — Celebrations" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Christmas 2024 — Gifts" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Christmas 2024 — Carols" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989', 'w-1200,q-85') %>" alt="Christmas 2023" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Christmas 2023 — Joy" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Christmas 2023 — Event" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989', 'w-1200,q-85') %>" alt="Christmas 2022" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Christmas 2022 — Celebration" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Christmas 2022 — Program" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2022</span></div></div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/19.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/19.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_095230.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_095230.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_111350.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_111350.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_121850.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_121850.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_130029.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_130029.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_130157.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_130157.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_171528.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_171528.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_172127.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/20251213_172127.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/59.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/59.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/6.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/6.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/73.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2025/73.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_104404.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_104404.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_115003.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_115003.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_115010.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_115010.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_122936.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_122936.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_152534.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_152534.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_154949.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2024/20241207_154949.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_105521.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_105521.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_130658.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_130658.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_133943.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_133943.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_140915.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_140915.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_164511.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2023/IMG_20231209_164511.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211217_144124.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211217_144124.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2021" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2021</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211218_105045.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211218_105045.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2021" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2021</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211218_143830.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211218_143830.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2021" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2021</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211218_163939.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211218_163939.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2021" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2021</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211218_171227.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2021/IMG_20211218_171227.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2021" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2021</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2020/IMG_20201225_095904.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2020/IMG_20201225_095904.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2020" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2020</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2020/IMG_20201225_100305.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2020/IMG_20201225_100305.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2020" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2020</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2020/IMG_20201230_120031.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2020/IMG_20201230_120031.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2020" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2020</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2018/IMG_20161224_142241.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2018/IMG_20161224_142241.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2018/IMG_20161224_142544.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Christmas/2018/IMG_20161224_142544.jpg', 'w-1200,q-85') %>"
+                       alt="Christmas 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- ── HOLI ───────────────────────────────── -->
+            <!-- HOLI -->
             <div class="celeb-festival-section" id="fest-holi" style="--fest-color:#a855f7">
               <div class="celeb-festival-header">
                 <span class="celeb-festival-eyebrow"><i class="fa-solid fa-palette"></i> Festival of Colours</span>
-                <h2 class="celeb-festival-title">Holi</h2>
-                <p class="celeb-festival-desc">Colours, water, laughter, and music — Holi at our centres is a riot of pure joy where every child gets to be carefree, colourful, and completely themselves.</p>
+                <h2 class="celeb-festival-title">Holi Celebrations</h2>
+                <p class="celeb-festival-desc">Colours, water, laughter, and music — Holi at our centres is a riot of pure joy where children play freely together.</p>
               </div>
 
               <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Holi 2025 — Colour play" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2025</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Holi 2025 — Celebrations" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2025</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Holi 2025 — Festivities" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2025</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Holi 2025 — Fun" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2025</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Holi 2024" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Holi 2024 — Event" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Holi 2024 — Colours" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2025/20250313_113112.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2025/20250313_113112.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2025/20250313_115204.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2025/20250313_115204.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2024/20240323_111711.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2024/20240323_111711.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2024/IMG20240323114049.heic', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2024/IMG20240323114049.heic', 'w-1200,q-85') %>"
+                       alt="Holi 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2023/IMG_20230307_134454.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2023/IMG_20230307_134454.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2023/IMG_20230307_135424.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2023/IMG_20230307_135424.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2023/IMG_20230307_135431.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2023/IMG_20230307_135431.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2023/IMG_20230307_135500.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2023/IMG_20230307_135500.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__1_.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__1_.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__2_.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__2_.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__3_.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__3_.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__1_.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__1_.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__2_.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__2_.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__3_.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Holi/2017/holi2017__3_.jpg', 'w-1200,q-85') %>"
+                       alt="Holi 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- ── INDEPENDENCE DAY ───────────────────── -->
+            <!-- INDEPENDENCE DAY -->
             <div class="celeb-festival-section" id="fest-independence" style="--fest-color:#f97316">
               <div class="celeb-festival-header">
                 <span class="celeb-festival-eyebrow"><i class="fa-solid fa-flag"></i> Pride of the Nation</span>
                 <h2 class="celeb-festival-title">Independence Day</h2>
-                <p class="celeb-festival-desc">Flag hoisting, patriotic songs, and marching with pride — our children learn what freedom truly means, and the responsibility that comes with it.</p>
+                <p class="celeb-festival-desc">Flag hoisting, patriotic songs, and marching with pride — celebrating national freedom and unity together.</p>
               </div>
 
               <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Independence Day 2024 — Flag hoisting" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Independence Day 2024 — March" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Independence Day 2024 — Cultural" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Independence Day 2024 — Assembly" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Independence Day 2023" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Independence Day 2023 — March" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/slide1_education.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Independence Day 2023 — Program" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2025/20250814_151429.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2025/20250814_151429.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2025/20250814_161831.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2025/20250814_161831.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2025/20250814_175016.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2025/20250814_175016.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2024/IMG-20240814-WA0037.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2024/IMG-20240814-WA0037.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2023/IMG_20230814_162337.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2023/IMG_20230814_162337.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2023/IMG_20230814_170939.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2023/IMG_20230814_170939.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2022/IMG_20220125_132540.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2022/IMG_20220125_132540.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2022" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2022</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2018/IMG_20180814_141512.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2018/IMG_20180814_141512.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2018/IMG_20180814_141611.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2018/IMG_20180814_141611.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2018/IMG_20180814_143004.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2018/IMG_20180814_143004.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2016/Picture_050.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2016/Picture_050.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2016" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2016</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2016/Picture_053.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2016/Picture_053.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2016" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2016</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2015/Picture_268.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2015/Picture_268.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2015" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2015</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2015/Picture_270.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Independence_Day/2015/Picture_270.jpg', 'w-1200,q-85') %>"
+                       alt="Independence Day 2015" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2015</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- ── DUSSEHRA ───────────────────────────── -->
-            <div class="celeb-festival-section" id="fest-dussehra" style="--fest-color:#2dd4bf">
+            <!-- REPUBLIC DAY -->
+            <div class="celeb-festival-section" id="fest-republic" style="--fest-color:#2563eb">
               <div class="celeb-festival-header">
-                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-star-and-crescent"></i> Victory of Good</span>
-                <h2 class="celeb-festival-title">Dussehra</h2>
-                <p class="celeb-festival-desc">The triumph of good over evil — Dussehra celebrations teach our children the values of courage, righteousness, and the strength of community.</p>
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-shield-halved"></i> Honor &amp; Heritage</span>
+                <h2 class="celeb-festival-title">Republic Day</h2>
+                <p class="celeb-festival-desc">Tricolour flag hoisting, cultural performances, and patriotic anthem choruses with our students and team.</p>
               </div>
 
               <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Dussehra 2024" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Dussehra 2024 — Cultural" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Dussehra 2024 — Celebration" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Dussehra 2024 — Festivity" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2024</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Dussehra 2023" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Dussehra 2023 — Event" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Dussehra 2023 — Program" loading="lazy" /><div class="celeb-photo-overlay"><span class="celeb-photo-year">2023</span></div></div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2026/20260123_173135.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2026/20260123_173135.jpg', 'w-1200,q-85') %>"
+                       alt="Republic Day 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2026/20260123_180654.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2026/20260123_180654.jpg', 'w-1200,q-85') %>"
+                       alt="Republic Day 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2025/20250125_161816.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2025/20250125_161816.jpg', 'w-1200,q-85') %>"
+                       alt="Republic Day 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2025/20250125_165524.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2025/20250125_165524.jpg', 'w-1200,q-85') %>"
+                       alt="Republic Day 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2025/20250125_172452.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Republic_Day/2025/20250125_172452.jpg', 'w-1200,q-85') %>"
+                       alt="Republic Day 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- ══════════════════════════════════════════
-                 SPECIAL / NON-YEARLY EVENTS
-            ══════════════════════════════════════════ -->
-
-            <!-- ── ZOO VISIT ──────────────────────────── -->
-            <div class="celeb-festival-section" id="fest-zoo" style="--fest-color:#4ade80">
-              <div class="celeb-festival-header">
-                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-paw"></i> Wildlife Adventure</span>
-                <h2 class="celeb-festival-title">National Zoo Park Visit</h2>
-                <p class="celeb-festival-desc">An incredible day discovering lions, elephants, exotic birds, and reptiles — building wonder, curiosity, and unforgettable memories of nature and wildlife.</p>
-              </div>
-
-              <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/zoo%20park.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/zoo%20park.jpg', 'w-1200,q-85') %>" alt="Zoo Park Visit — Children exploring on Oct 15, 2024" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Oct 15, 2024</span>
-                    <span class="celeb-photo-summary">Exploring the wildlife park and seeing exotic animals.</span>
-                  </div>
-                </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Zoo Park Visit — Group photo on Oct 15, 2024" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Oct 15, 2024</span>
-                    <span class="celeb-photo-summary">Group photo of students and volunteers at the entrance.</span>
-                  </div>
-                </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Zoo Park Visit — Discovery on Oct 15, 2024" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Oct 15, 2024</span>
-                    <span class="celeb-photo-summary">Interactive outdoor learning session.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ── SPORTS DAY ─────────────────────────── -->
+            <!-- SPORTS DAY -->
             <div class="celeb-festival-section" id="fest-sports" style="--fest-color:#fb923c">
               <div class="celeb-festival-header">
                 <span class="celeb-festival-eyebrow"><i class="fa-solid fa-medal"></i> Teamwork &amp; Spirit</span>
-                <h2 class="celeb-festival-title">Sports Day</h2>
-                <p class="celeb-festival-desc">Races, tug-of-war, relay events, and award ceremonies — Sports Day teaches our children teamwork, resilience, and the thrill of friendly competition.</p>
+                <h2 class="celeb-festival-title">Annual Sports Day</h2>
+                <p class="celeb-festival-desc">Races, tug-of-war, relay events, and medal ceremonies — Sports Day brings excitement, health, and team spirit.</p>
               </div>
 
               <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Sports Day — Races on Nov 10, 2024" loading="lazy" />
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2026/20260328_104657.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2026/20260328_104657.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2026" loading="lazy" />
                   <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Nov 10, 2024</span>
-                    <span class="celeb-photo-summary">Running track events and sprint races.</span>
+                    <span class="celeb-photo-year">2026</span>
                   </div>
                 </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Sports Day — Team events on Nov 10, 2024" loading="lazy" />
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2026/20260328_111428.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2026/20260328_111428.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2026" loading="lazy" />
                   <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Nov 10, 2024</span>
-                    <span class="celeb-photo-summary">Cheering for teams during group activities.</span>
+                    <span class="celeb-photo-year">2026</span>
                   </div>
                 </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Sports Day — Winners on Nov 10, 2024" loading="lazy" />
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2026/20260328_130204.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2026/20260328_130204.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2026" loading="lazy" />
                   <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Nov 10, 2024</span>
-                    <span class="celeb-photo-summary">Celebrating medal winners on the podium.</span>
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2026/IMG_20260328_155059.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2026/IMG_20260328_155059.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2025/20250324_120127.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2025/20250324_120127.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2025/20250324_120347.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2025/20250324_120347.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240127_113924.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240127_113924.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240127_115446.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240127_115446.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240127_124409.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240127_124409.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_095618.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_095618.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_115930.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_115930.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_115933.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_115933.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_132555.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_132555.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_140734.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_140734.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_145035.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_145035.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_161440.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2024/IMG_20240211_161440.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG20231221125248.heic', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG20231221125248.heic', 'w-1200,q-85') %>"
+                       alt="Sports Day 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG_20231221_114437.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG_20231221_114437.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG_20231221_120221.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG_20231221_120221.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG_20231221_130209.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG_20231221_130209.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG_20231221_131214.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2023/IMG_20231221_131214.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2017/IMG_20171006_091429.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2017/IMG_20171006_091429.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2017/IMG_20171006_091502.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2017/IMG_20171006_091502.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2017/IMG_20171006_105357.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/sports_Day/2017/IMG_20171006_105357.jpg', 'w-1200,q-85') %>"
+                       alt="Sports Day 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- ── MOVIE NIGHT ────────────────────────── -->
-            <div class="celeb-festival-section" id="fest-movie" style="--fest-color:#f4607a">
+            <!-- WATER PARK -->
+            <div class="celeb-festival-section" id="fest-waterpark" style="--fest-color:#38bdf8">
               <div class="celeb-festival-header">
-                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-film"></i> Screen &amp; Stories</span>
-                <h2 class="celeb-festival-title">Movie Party Night</h2>
-                <p class="celeb-festival-desc">Popcorn, laughter, and big-screen stories — movie nights bring our children together in pure joy, stepping into worlds of adventure and imagination.</p>
+                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-water"></i> Summer Excursion</span>
+                <h2 class="celeb-festival-title">Water Park Outings</h2>
+                <p class="celeb-festival-desc">Splashing pools, water slides, and summer treats — thrilling annual water park trips for our children across the years.</p>
               </div>
 
               <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/movie%20party.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/movie%20party.jpg', 'w-1200,q-85') %>" alt="Movie Night — Big screen fun on Dec 05, 2024" loading="lazy" />
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161008.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161008.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
                   <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Dec 05, 2024</span>
-                    <span class="celeb-photo-summary">Cozy movie setup with snacks and popcorn.</span>
+                    <span class="celeb-photo-year">2026</span>
                   </div>
                 </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Movie Night — Audience on Dec 05, 2024" loading="lazy" />
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161026.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161026.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
                   <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Dec 05, 2024</span>
-                    <span class="celeb-photo-summary">Watching animated adventures on a large projector screen.</span>
+                    <span class="celeb-photo-year">2026</span>
                   </div>
                 </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Movie Night — Excitement on Dec 05, 2024" loading="lazy" />
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161240.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161240.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
                   <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Dec 05, 2024</span>
-                    <span class="celeb-photo-summary">Smiles and cheers during the film screening.</span>
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161536.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161536.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161701.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_161701.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163022.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163022.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163032.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163032.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163059.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163059.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163425.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163425.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163623.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2026/20260629_163623.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2026" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2026</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_121053.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_121053.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_124942.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_124942.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_124950.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_124950.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_130710.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_130710.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_132117.mp4', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_132117.mp4', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_133113.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_133113.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_133120.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_133120.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_134727.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_134727.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_134809.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2025/20250628_134809.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2025" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2025</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240513-WA0099.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240513-WA0099.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240513-WA0100.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240513-WA0100.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240513-WA0110.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240513-WA0110.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0043.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0043.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0052.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0052.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0053.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0053.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0061.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0061.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0091.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0091.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0107.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2024/IMG-20240518-WA0107.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2024" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2024</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_142713.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_142713.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_143454.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_143454.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_143626.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_143626.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_144259.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_144259.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_144309.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_144309.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_144323.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_144323.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_152123.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_152123.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_152255.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_152255.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_152308.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_152308.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_152337.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_152337.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_153315.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2023/IMG_20230607_153315.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2023" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2023</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2018/IMG-20180711-WA0062.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2018/IMG-20180711-WA0062.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2018/IMG-20180712-WA0032.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2018/IMG-20180712-WA0032.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2018/IMG-20180712-WA0042.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2018/IMG-20180712-WA0042.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2018/IMG-20180713-WA0043__2_.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2018/IMG-20180713-WA0043__2_.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2018" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2018</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_133621__1_.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_133621__1_.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_133621.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_133621.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_133658.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_133658.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_145810.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_145810.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_151950.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_151950.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_152331.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_152331.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_163507.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_163507.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_164757.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_164757.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_165124.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2017/IMG_20171023_165124.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2017" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2017</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2015/IMG_0558.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2015/IMG_0558.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2015" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2015</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2015/IMG_0564.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2015/IMG_0564.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2015" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2015</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2014/IMG_5741.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2014/IMG_5741.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2014" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2014</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2014/IMG_5742.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2014/IMG_5742.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2014" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2014</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2014/IMG_5743.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2014/IMG_5743.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2014" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2014</span>
+                  </div>
+                </div>
+                <div class="celeb-photo-item">
+                  <img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2014/Picture_124.jpg', 'w-400,h-400,fo-auto,q-80') %>"
+                       data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/events/Water_Park/2014/Picture_124.jpg', 'w-1200,q-85') %>"
+                       alt="Water Park Outing 2014" loading="lazy" />
+                  <div class="celeb-photo-overlay">
+                    <span class="celeb-photo-year">2014</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- ── BIRTHDAYS ──────────────────────────── -->
-            <div class="celeb-festival-section" id="fest-birthday" style="--fest-color:#e879f9">
-              <div class="celeb-festival-header">
-                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-cake-candles"></i> You Matter</span>
-                <h2 class="celeb-festival-title">Birthday Celebrations</h2>
-                <p class="celeb-festival-desc">Every child deserves to be celebrated on their birthday. Cake, songs, and the warmth of a community that remembers — because feeling special should not depend on where you were born.</p>
-              </div>
+          </div>
 
-              <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Birthday celebrations — Cake cutting (Monthly Event)" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Monthly Event</span>
-                    <span class="celeb-photo-summary">Cutting the birthday cakes together.</span>
-                  </div>
-                </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-1200,q-85') %>" alt="Birthday celebrations — Group (Monthly Event)" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Monthly Event</span>
-                    <span class="celeb-photo-summary">Group birthday celebrations and sharing gifts.</span>
-                  </div>
-                </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Birthday celebrations — Songs (Monthly Event)" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Monthly Event</span>
-                    <span class="celeb-photo-summary">Singing and clapping for birthday wishes.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ── CULTURAL PERFORMANCES ──────────────── -->
-            <div class="celeb-festival-section" id="fest-cultural" style="--fest-color:#38bdf8">
-              <div class="celeb-festival-header">
-                <span class="celeb-festival-eyebrow"><i class="fa-solid fa-masks-theater"></i> Stage &amp; Voice</span>
-                <h2 class="celeb-festival-title">Cultural Performances</h2>
-                <p class="celeb-festival-desc">Dance, drama, singing, and spoken word — cultural programs give our children a stage, a voice, and the profound confidence that comes from being seen and applauded.</p>
-              </div>
-
-              <div class="celeb-photo-grid">
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-1200,q-85') %>" alt="Cultural — Dance performance on Jan 26, 2025" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Jan 26, 2025</span>
-                    <span class="celeb-photo-summary">Traditional folk dance performance on stage.</span>
-                  </div>
-                </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-1200,q-85') %>" alt="Cultural — Drama on Jan 26, 2025" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Jan 26, 2025</span>
-                    <span class="celeb-photo-summary">Interactive theatre and character roleplay by students.</span>
-                  </div>
-                </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-1200,q-85') %>" alt="Cultural — Singing on Jan 26, 2025" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Jan 26, 2025</span>
-                    <span class="celeb-photo-summary">Singing group and solo musical performance.</span>
-                  </div>
-                </div>
-                <div class="celeb-photo-item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" data-highres="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-1200,q-85') %>" alt="Cultural — Group act on Jan 26, 2025" loading="lazy" />
-                  <div class="celeb-photo-overlay">
-                    <span class="celeb-photo-date">Jan 26, 2025</span>
-                    <span class="celeb-photo-summary">Grand finale and assembly of all participants.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div><!-- /celeb-scroll-content -->
-        </div><!-- /celeb-layout-grid -->
+        </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         BOTTOM IMAGE STRIP
-    ═══════════════════════════════════════════ -->
-    <div class="celeb-strip">
-      <div class="celeb-strip__item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/festival/chrimas_MitvY5q8q.jpg?updatedAt=1767701878989', 'w-400,h-400,fo-auto,q-80') %>" alt="Christmas" loading="lazy" /></div>
-      <div class="celeb-strip__item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/image%205.jpg', 'w-400,h-400,fo-auto,q-80') %>" alt="Independence Day" loading="lazy" /></div>
-      <div class="celeb-strip__item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/movie%20party.jpg', 'w-400,h-400,fo-auto,q-80') %>" alt="Movie Night" loading="lazy" /></div>
-      <div class="celeb-strip__item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/zoo%20park.jpg', 'w-400,h-400,fo-auto,q-80') %>" alt="Zoo Park" loading="lazy" /></div>
-      <div class="celeb-strip__item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/programs/celebrations/outside%20event.jpg?updatedAt=1773482001263', 'w-400,h-400,fo-auto,q-80') %>" alt="Community event" loading="lazy" /></div>
-      <div class="celeb-strip__item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/8.jpg?updatedAt=1773396969419', 'w-400,h-400,fo-auto,q-80') %>" alt="Sports day" loading="lazy" /></div>
-      <div class="celeb-strip__item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation2.jpg?tr=q-80', 'w-400,h-400,fo-auto,q-80') %>" alt="Community outing" loading="lazy" /></div>
-      <div class="celeb-strip__item"><img src="<%= getOptimizedImg('https://ik.imagekit.io/l15cczdgu/transformation/transformation4.jpg?tr=q-75', 'w-400,h-400,fo-auto,q-80') %>" alt="Cultural program" loading="lazy" /></div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════
-         LIGHTBOX
-    ═══════════════════════════════════════════ -->
-    <div class="celeb-lightbox" id="celebLightbox">
-      <div class="celeb-lightbox__backdrop" id="celebLightboxBackdrop"></div>
-      <div class="celeb-lightbox__dialog">
-        <button class="celeb-lightbox__close" id="celebLightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-        <div class="celeb-lightbox__img-wrap">
-          <img id="celebLightboxImg" alt="" />
-        </div>
-        <p class="celeb-lightbox__caption" id="celebLightboxCaption"></p>
-      </div>
-    </div>
-
   </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="celeb-lightbox" id="celebLightbox">
+    <div class="celeb-lightbox__backdrop" id="lightboxBackdrop"></div>
+    <div class="celeb-lightbox__dialog">
+      <button class="celeb-lightbox__close" id="lightboxClose" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <img src="" id="lightboxImg" alt="Enlarged celebration photo" />
+      <div class="celeb-lightbox__caption" id="lightboxCaption"></div>
+    </div>
+  </div>
 
   <%- include('../partials/footer') %>
 
-  <script src="/js/theme.js"></script>
-  <script src="/js/celebrations.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const nodes = document.querySelectorAll('.celeb-node');
+      const sections = document.querySelectorAll('.celeb-festival-section');
+
+      // Click node to smooth scroll
+      nodes.forEach(node => {
+        node.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = node.getAttribute('data-festival');
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      const sidebar = document.querySelector('.celeb-sidebar');
+
+      function centerActiveNodeInSidebar(activeNode) {
+        if (!sidebar || !activeNode) return;
+        const nodeOffset = activeNode.offsetTop;
+        const nodeHeight = activeNode.clientHeight;
+        const sidebarHeight = sidebar.clientHeight;
+        const targetTop = nodeOffset - (sidebarHeight / 2) + (nodeHeight / 2);
+        sidebar.scrollTo({
+          top: Math.max(0, targetTop),
+          behavior: 'smooth'
+        });
+      }
+
+      // Active tab updating automatically when scrolling (ScrollSpy)
+      const observerOptions = {
+        root: null,
+        rootMargin: '-15% 0px -55% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const activeId = entry.target.getAttribute('id');
+            nodes.forEach(node => {
+              if (node.getAttribute('data-festival') === activeId) {
+                if (!node.classList.contains('is-active')) {
+                  node.classList.add('is-active');
+                  centerActiveNodeInSidebar(node);
+                }
+              } else {
+                node.classList.remove('is-active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => observer.observe(section));
+
+      // Lightbox Modal trigger
+      const lightbox = document.getElementById('celebLightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+
+      document.querySelectorAll('.celeb-photo-item img').forEach(img => {
+        img.addEventListener('click', () => {
+          const highres = img.getAttribute('data-highres') || img.src;
+          const alt = img.getAttribute('alt') || 'Celebration Photo';
+          lightboxImg.src = highres;
+          lightboxCaption.textContent = alt;
+          lightbox.classList.add('is-open');
+        });
+      });
+
+      const closeLightbox = () => lightbox.classList.remove('is-open');
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+    });
+  </script>
+
 </body>
 
 </html>

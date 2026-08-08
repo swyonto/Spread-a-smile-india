@@ -91,23 +91,27 @@
    overflow-x: auto;
    padding: 0.75rem 0.5rem 1.5rem;
    margin: 0 -0.5rem;
-   scrollbar-width: none; /* Hide scrollbar for seamless loop */
+   scrollbar-width: none;
+   /* Hide scrollbar for seamless loop */
    -webkit-overflow-scrolling: touch;
    cursor: grab;
    user-select: none;
 }
 
 .skills-overview__grid.enable-snap {
-   scroll-snap-type: x mandatory; /* Enable snap on pause/interaction */
+   scroll-snap-type: x mandatory;
+   /* Enable snap on pause/interaction */
 }
 
 .skills-overview__grid::-webkit-scrollbar {
-   display: none; /* Hide scrollbar in Chrome/Safari */
+   display: none;
+   /* Hide scrollbar in Chrome/Safari */
 }
 
 .skills-overview__grid.grabbing {
    cursor: grabbing;
-   scroll-snap-type: none !important; /* Disable snap when dragging */
+   scroll-snap-type: none !important;
+   /* Disable snap when dragging */
 }
 
 .skills-overview__card {
@@ -231,7 +235,8 @@
 .skill-main-card {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   height: 20rem; /* Fixed height to keep cards visually consistent regardless of image aspect ratios */
+   height: 20rem;
+   /* Fixed height to keep cards visually consistent regardless of image aspect ratios */
    margin-bottom: 1.5rem;
    border: 1px solid var(--color-border);
    border-radius: 1.5rem;
@@ -326,10 +331,11 @@
 @media (max-width: 860px) {
    .skill-main-card {
       grid-template-columns: 1fr;
-      height: auto; /* Allow auto height on stacked mobile screens */
+      height: auto;
+      /* Allow auto height on stacked mobile screens */
       min-height: auto;
    }
-   
+
    .skill-main-card__media {
       aspect-ratio: 1.6 / 1;
    }
@@ -354,3 +360,5 @@
    }
 }
 
+}
+}

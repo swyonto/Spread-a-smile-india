@@ -103,10 +103,12 @@
 ──────────────────────────────────────────────────────── */
 .celeb-sidebar {
   position: sticky;
-  top: 100px;
-  max-height: calc(100vh - 140px);
+  top: 120px;
+  max-height: calc(100vh - 160px);
   overflow-y: auto; overflow-x: hidden;
   scrollbar-width: none;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
   padding-right: .5rem;
   z-index: 10;
 }

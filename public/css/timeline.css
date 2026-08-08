@@ -396,7 +396,7 @@
    display: none;
    align-items: center;
    justify-content: center;
-   padding: 1.5rem;
+   padding: 1rem;
 }
 
 .timeline-lightbox.is-open {
@@ -406,34 +406,36 @@
 .timeline-lightbox__backdrop {
    position: absolute;
    inset: 0;
-   background: rgba(0, 0, 0, 0.88);
-   backdrop-filter: blur(8px);
+   background: rgba(0, 0, 0, 0.90);
+   backdrop-filter: blur(10px);
    cursor: zoom-out;
 }
 
 .timeline-lightbox__dialog {
    position: relative;
    z-index: 2;
-   max-width: 900px;
-   width: 100%;
+   max-width: 92vw;
+   width: fit-content;
+   max-height: 92vh;
    display: flex;
    flex-direction: column;
-   border-radius: 1.5rem;
+   border-radius: 1.25rem;
    overflow: hidden;
-   background-color: #000;
-   box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+   background-color: #0b0c10;
+   border: 1px solid rgba(255, 255, 255, 0.12);
+   box-shadow: 0 24px 60px rgba(0,0,0,0.7);
    animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .timeline-lightbox__close {
    position: absolute;
-   top: 1rem;
-   right: 1rem;
+   top: 0.75rem;
+   right: 0.75rem;
    width: 2.75rem;
    height: 2.75rem;
    border-radius: 50%;
-   border: none;
-   background: rgba(255, 255, 255, 0.15);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   background: rgba(0, 0, 0, 0.6);
    color: #fff;
    font-size: 1.2rem;
    cursor: pointer;
@@ -444,36 +446,41 @@
 }
 
 .timeline-lightbox__close:hover {
-   background: rgba(255, 255, 255, 0.25);
-   transform: scale(1.05);
+   background: rgba(255, 255, 255, 0.3);
+   transform: scale(1.08);
 }
 
 .timeline-lightbox__media-wrap {
    width: 100%;
-   max-height: 70vh;
-   background-color: #000;
+   max-height: 84vh;
+   background-color: #0b0c10;
    display: flex;
    align-items: center;
    justify-content: center;
    overflow: hidden;
+   padding: 0.75rem 0.75rem 0;
 }
 
 .timeline-lightbox__media-wrap img {
    max-width: 100%;
-   max-height: 70vh;
+   max-height: 84vh;
+   width: auto;
+   height: auto;
    object-fit: contain;
+   border-radius: 0.5rem;
 }
 
 .timeline-lightbox__caption-bar {
-   background-color: rgba(20, 20, 20, 0.95);
-   padding: 1.5rem;
+   background-color: #0b0c10;
+   padding: 1rem 1.25rem;
    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .timeline-lightbox__caption-bar p {
-   color: rgba(255, 255, 255, 0.9);
+   color: rgba(255, 255, 255, 0.92);
    font-size: 0.95rem;
-   line-height: 1.5;
+   font-weight: 500;
+   line-height: 1.4;
    margin: 0;
    text-align: center;
 }

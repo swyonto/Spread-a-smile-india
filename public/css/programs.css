@@ -8,7 +8,7 @@
 
 .programs-hero {
    position: relative;
-   padding: 8rem 0 4.5rem;
+   padding: 5rem 0 3rem;
    background:
       radial-gradient(circle at 15% 20%, rgba(200, 182, 255, 0.28), transparent 32%),
       radial-gradient(circle at 82% 12%, rgba(184, 192, 255, 0.24), transparent 28%),
@@ -30,18 +30,18 @@
 }
 
 .programs-hero__glow--one {
-   top: 5rem;
+   top: 3rem;
    left: -4rem;
-   width: 14rem;
-   height: 14rem;
+   width: 12rem;
+   height: 12rem;
    background: rgba(184, 192, 255, 0.35);
 }
 
 .programs-hero__glow--two {
-   top: 2rem;
+   top: 1.5rem;
    right: -3rem;
-   width: 16rem;
-   height: 16rem;
+   width: 14rem;
+   height: 14rem;
    background: rgba(255, 214, 255, 0.26);
 }
 
@@ -50,11 +50,11 @@
 .program-video-modal__label {
    display: inline-flex;
    align-items: center;
-   gap: 0.55rem;
-   margin-bottom: 0.9rem;
+   gap: 0.5rem;
+   margin-bottom: 0.75rem;
    font-family: 'Cinzel', serif;
-   font-size: 0.82rem;
-   letter-spacing: 0.16em;
+   font-size: 0.78rem;
+   letter-spacing: 0.15em;
    text-transform: uppercase;
    color: var(--color-primary);
 }
@@ -63,7 +63,7 @@
 .programs-kicker::before,
 .program-video-modal__label::before {
    content: '';
-   width: 2.5rem;
+   width: 2rem;
    height: 1px;
    background: currentColor;
    opacity: 0.55;
@@ -71,17 +71,17 @@
 
 .programs-hero h1 {
    max-width: none;
-   font-size: clamp(3rem, 8vw, 5.6rem);
-   line-height: 0.95;
-   margin-bottom: 1.25rem;
+   font-size: clamp(2.4rem, 5vw, 4rem);
+   line-height: 0.98;
+   margin-bottom: 1rem;
 }
 
 .programs-hero__lead,
 .programs-section-head p,
 .program-band__heading p {
-   max-width: 46rem;
+   max-width: 42rem;
    color: var(--color-text-muted);
-   font-size: 1.05rem;
+   font-size: 0.95rem;
 }
 
 .programs-overview {
@@ -89,28 +89,33 @@
 }
 
 .programs-section-head {
-   margin-bottom: 2rem;
+   max-width: 1140px;
+   margin: 0 auto 1.5rem;
 }
 
 .programs-section-head h2,
 .program-band__heading h2 {
-   font-size: clamp(2.2rem, 4vw, 3.4rem);
-   margin-bottom: 0.8rem;
+   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+   margin-bottom: 0.6rem;
    white-space: nowrap;
 }
 
 .programs-overview__grid {
    display: grid;
    grid-template-columns: repeat(5, minmax(0, 1fr));
-   gap: 1rem;
+   gap: 0.65rem;
+   width: 100%;
+   max-width: 1140px;
+   margin: 0 auto;
 }
 
 .programs-overview__card {
    display: flex;
    flex-direction: column;
    overflow: hidden;
+   min-width: 0;
    border: 1px solid var(--color-border);
-   border-radius: 1.5rem;
+   border-radius: 0.9rem;
    background: var(--color-card-bg);
    box-shadow: var(--shadow-sm);
    text-align: left;
@@ -120,7 +125,7 @@
 .programs-overview__card:hover,
 .programs-overview__card:focus-visible,
 .programs-overview__card.is-active {
-   transform: translateY(-6px);
+   transform: translateY(-4px);
    box-shadow: var(--shadow-lg);
    border-color: var(--color-primary);
 }
@@ -129,6 +134,7 @@
    position: relative;
    display: block;
    aspect-ratio: 4 / 3;
+   max-height: 160px;
    overflow: hidden;
 }
 
@@ -136,7 +142,6 @@
    content: '';
    position: absolute;
    inset: 0;
-   /* background: linear-gradient(180deg, transparent 15%, color-mix(in srgb, var(--color-heading) 55%, transparent)); */
 }
 
 .programs-overview__image img {
@@ -148,34 +153,34 @@
 
 .programs-overview__card:hover .programs-overview__image img,
 .programs-overview__card:focus-visible .programs-overview__image img {
-   transform: scale(1.06);
+   transform: scale(1.05);
 }
 
 .programs-overview__body {
    display: grid;
-   gap: 0.45rem;
-   padding: 1rem 1rem 1.15rem;
+   gap: 0.25rem;
+   padding: 0.65rem 0.75rem 0.8rem;
 }
 
 .programs-overview__body i {
-   font-size: 1rem;
+   font-size: 0.82rem;
    color: var(--color-primary);
 }
 
 .programs-overview__body strong {
-   font-size: 1.25rem;
+   font-size: 1.02rem;
    font-family: 'Cormorant Garamond', serif;
    color: var(--color-heading);
 }
 
 .programs-overview__body small {
    color: var(--color-text-muted);
-   font-size: 0.9rem;
-   line-height: 1.5;
+   font-size: 0.78rem;
+   line-height: 1.38;
 }
 
 .program-band {
-   padding: 4.5rem 0;
+   padding: 3rem 0;
 }
 
 .program-band--alt {
@@ -185,14 +190,17 @@
 }
 
 .program-band__heading {
-   margin-bottom: 2rem;
+   margin-bottom: 1.5rem;
+   max-width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .program-main-card,
 .program-support-card {
    overflow: hidden;
    border: 1px solid var(--color-border);
-   border-radius: 1.5rem;
+   border-radius: 1.25rem;
    background: var(--color-card-bg);
    box-shadow: var(--shadow-sm);
 }
@@ -200,8 +208,11 @@
 .program-main-card {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   min-height: 25rem;
+   min-height: 16rem;
    margin-bottom: 1rem;
+   max-width: 1140px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .program-main-card__media,
@@ -218,6 +229,11 @@
    object-fit: cover;
 }
 
+.program-support-card__media {
+   aspect-ratio: 4 / 3;
+   max-height: 185px;
+}
+
 .program-support-card__media img {
    width: 100%;
    height: 100%;
@@ -228,8 +244,8 @@
 .program-support-card__content {
    display: flex;
    flex-direction: column;
-   gap: 0.85rem;
-   padding: 1.5rem;
+   gap: 0.55rem;
+   padding: 1.1rem;
 }
 
 .program-main-card__content {
@@ -237,18 +253,22 @@
 }
 
 .program-main-card__content h3 {
-   font-size: clamp(2rem, 3vw, 2.8rem);
+   font-size: clamp(1.4rem, 2.2vw, 1.9rem);
 }
 
 .program-main-card__content p,
 .program-support-card__content p {
    color: var(--color-text-muted);
+   font-size: 0.86rem;
 }
 
 .program-support-grid {
    display: grid;
    grid-template-columns: repeat(4, minmax(0, 1fr));
-   gap: 1rem;
+   gap: 0.75rem;
+   max-width: 1140px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .program-support-grid--2-cols {
@@ -421,15 +441,7 @@ body.program-video-open {
    padding-left: 1.25rem;
 }
 
-@media (max-width: 1180px) {
-   .programs-overview__grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-   }
 
-   .program-support-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-   }
-}
 
 @media (max-width: 860px) {
    .programs-hero {
