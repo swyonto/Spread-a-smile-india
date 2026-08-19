@@ -55,7 +55,7 @@
     }
   });
 
-  var zoomables = document.querySelectorAll('.dg-letter-frame.zoomable');
+  var zoomables = document.querySelectorAll('.zoomable');
   zoomables.forEach(function (el) {
     el.addEventListener('click', function () {
       openLightbox(el.getAttribute('data-lightbox-src'), el.getAttribute('data-lightbox-caption'));

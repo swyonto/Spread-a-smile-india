@@ -246,6 +246,41 @@
   font-style: italic;
 }
 
+/* ---- Photo Frame (For dignitaries without letter / dual photo showcase) ---- */
+.dg-photo-frame {
+  width: 100%;
+  flex: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dg-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dg-photo-frame:hover img {
+  transform: scale(1.04);
+}
+
+.dg-photo-frame.zoomable {
+  cursor: zoom-in;
+}
+
+.dg-photo-frame.zoomable:hover .dg-zoom-icon {
+  opacity: 1;
+}
+
 /* ---- Visit info block (card 4 and beyond with visit context) ---- */
 .dg-visit-info {
   width: 100%;
