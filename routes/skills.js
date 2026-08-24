@@ -5,15 +5,21 @@ router.get('/', (req, res) => {
   const sections = [
     {
       id: 'skill-tailoring',
-      title: 'Tailoring Unit',
-      intro: 'Empowering women and adolescent girls with professional stitching and handloom design skills.',
+      title: 'Tailoring & Livelihood',
+      intro: 'We help women and young girls learn tailoring and stitching skills that can give them a way to earn, support their families, and become more financially independent.',
       main: {
-        tag: 'Vocational Training',
-        heading: 'Sewing dreams into reality',
-        text: 'Our tailoring unit provides vocational training in fabric cutting, machine operations, garment stitching, and traditional embroidery. It enables participants to start home micro-enterprises or secure stable employment in apparel design.',
+        tag: 'LEARNING TO EARN',
+        heading: 'A Skill, A Chance, A New Beginning',
+        text: 'At Spread A Smile India, women learn practical skills such as cutting, stitching, embroidery, and sewing. With these skills, they can take up work, stitch for others, or start earning from home.',
         image: 'https://ik.imagekit.io/l15cczdgu/tailoring/tailoring_2.jpg?tr=q-80',
         alt: 'Tailoring classes',
-        points: ['Pattern drafting and garment tailoring', 'Sewing machine maintenance and operation', 'Exhibiting custom-made apparel']
+        points: [
+          'Tailoring and stitching skills',
+          'Sewing machine training',
+          'Cutting, pattern making, and embroidery',
+          'Creating clothes and products for sale',
+          'Skills that can lead to income and independence'
+        ]
       },
       cards: [
         {
@@ -28,19 +34,25 @@ router.get('/', (req, res) => {
     },
     {
       id: 'skill-candle',
-      title: 'Candle Unit',
-      intro: 'A creative workshop for crafting decorative, scented, and organic wax products.',
+      title: 'Candle Making',
+      intro: 'At Spread A Smile India, women learn to make beautiful scented and decorative candles right here at our centre. What starts as a skill becomes an opportunity to create, earn, and become more financially independent.',
       main: {
-        tag: 'Creative Entrepreneurship',
-        heading: 'Handcrafted light and opportunity',
-        text: 'Participants learn the science of wax chemistry, fragrance blending, and molding. During festivals, these candles are sold locally, teaching students marketing and direct income creation.',
-        image: 'https://ik.imagekit.io/l15cczdgu/candle/candle_1.jpg?tr=q-80',
+        tag: 'LEARNING TO CREATE',
+        heading: 'Made by Hand, Made with Purpose',
+        text: 'Our women learn candle making from the basics, experimenting with colours, fragrances, shapes, and designs. The candles they create are used for celebrations and special occasions, giving them a chance to turn their skills into an income.',
+        image: 'https://ik.imagekit.io/l15cczdgu/candle/%7BCBC32225-57F7-4CE1-B478-907231FF8783%7D.png',
         alt: 'Candle making training',
-        points: ['Scented, decorative, and gel candle making', 'Raw materials management & color theory', 'Festive sales and product packaging']
+        points: [
+          'Scented and decorative candle making',
+          'Learning colours, fragrances, and different designs',
+          'Making candles for festivals and special occasions',
+          'Packaging and preparing candles for sale',
+          'Creating opportunities to earn from their skills'
+        ]
       },
       cards: [
         {
-          image: 'https://ik.imagekit.io/l15cczdgu/candle/candle_2.jpg',
+          image: 'https://ik.imagekit.io/l15cczdgu/candle/%7BBD51088A-7175-431B-B358-3FEF2249D11D%7D.png',
           alt: 'Diwali candles'
         },
         {
@@ -51,15 +63,20 @@ router.get('/', (req, res) => {
     },
     {
       id: 'skill-english',
-      title: 'Spoken English Unit',
-      intro: 'Language classes designed to build conversational confidence, pronunciation, and basic vocabulary.',
+      title: 'Spoken English',
+      intro: 'For many children, speaking English can feel difficult and intimidating. At Spread A Smile India, we help them practise, speak, ask questions, and express themselves without fear. With regular classes and encouragement, they slowly gain the confidence to use English in school and in everyday life.',
       main: {
-        tag: 'Language Skills',
-        heading: 'Breaking language barriers',
-        text: 'Classes focus on breaking communication barriers. Through interactive conversation games, reading circles, and group discussion drills, students develop language fluency and interview readiness.',
+        tag: 'LEARNING TO SPEAK WITH CONFIDENCE',
+        heading: 'From Hesitant Words to Confident Voices',
+        text: 'Our classes focus on everyday English, conversation, reading, pronunciation, and speaking. Children learn by talking, practising, and taking part in activities rather than simply memorising lessons.',
         image: 'https://ik.imagekit.io/l15cczdgu/spoken_english/spoken_english_1.jpg?tr=q-80',
         alt: 'English class',
-        points: ['Everyday conversational grammar', 'Public speaking and pronunciation labs', 'Confidence building and interactive skits']
+        points: [
+          'Everyday English and conversation',
+          'Reading and pronunciation',
+          'Speaking and expressing ideas',
+          'Confidence through practice'
+        ]
       },
       cards: [
         {
@@ -75,46 +92,28 @@ router.get('/', (req, res) => {
     {
       id: 'skill-dance',
       title: 'Dance Workshop',
-      intro: 'Connecting children to rhythm, physical fitness, and cultural expressions.',
+      intro: 'Dance gives children a chance to express themselves, stay active, discover their talents, and simply enjoy being children. At Spread A Smile India, our dance sessions give them a space to learn, practise, perform, and grow in confidence.',
       main: {
-        tag: 'Cultural Activity',
-        heading: 'Joy in rhythm and expression',
-        text: 'Dance classes offer a joyful physical outlet, building teamwork, coordination, and creative presence. Children learn classical and contemporary folk routines, boosting their stage confidence.',
+        tag: 'DANCE & EXPRESSION',
+        heading: 'A Place to Dance, Play & Shine',
+        text: 'Children learn different forms of dance, from classical and folk to contemporary styles. More than learning steps, the sessions help them come out of their comfort zone, work together, and enjoy the confidence that comes from performing.',
         image: 'https://ik.imagekit.io/l15cczdgu/dance/dance_1.jpg?tr=q-80',
         alt: 'Dance workshop',
-        points: ['Classical and folk dance choreography', 'Rhythmic timing and stage expression', 'Cooperative group performance skills']
+        points: [
+          'Classical, folk, and contemporary dance',
+          'Regular practice and choreography',
+          'Group performances and celebrations',
+          'Building confidence through performance'
+        ]
       },
       cards: [
         {
-          image: 'https://ik.imagekit.io/l15cczdgu/dance/dance_1.jpg',
+          image: 'https://ik.imagekit.io/l15cczdgu/dance/IMG-20231014-WA0323.jpg?updatedAt=1784187892440',
           alt: 'Stage performance'
         },
         {
-          image: 'https://ik.imagekit.io/l15cczdgu/programs/celebrations/zoo%20park.jpg',
+          image: 'https://ik.imagekit.io/l15cczdgu/dance/IMG_20220704_173138.jpg?updatedAt=1784187901814',
           alt: 'Outdoor group dance'
-        }
-      ]
-    },
-    {
-      id: 'skill-singing',
-      title: 'Singing Unit',
-      intro: 'Vocal coaching classes to help children discover pitch control and chorus coordination.',
-      main: {
-        tag: 'Musical Training',
-        heading: 'Nurturing vocal talent',
-        text: 'Music offers a therapeutic and healing medium. Children practice vocal scales, group chorus harmonies, and cultural melodies, helping them build stage presence and musical appreciation.',
-        image: 'https://ik.imagekit.io/l15cczdgu/Landing%20page/carouselSlides/image%207.jpg?updatedAt=1773644101961',
-        alt: 'Singing classes',
-        points: ['Basic vocal exercise and scales', 'Chorus singing and pitch coordination', 'Solo and performance coaching']
-      },
-      cards: [
-        {
-          image: 'https://ik.imagekit.io/l15cczdgu/programs/nutrition/image%202.jpg',
-          alt: 'Chorus practice'
-        },
-        {
-          image: 'https://ik.imagekit.io/l15cczdgu/programs/celebrations/movie%20party.jpg',
-          alt: 'Solo performance'
         }
       ]
     },
@@ -126,7 +125,7 @@ router.get('/', (req, res) => {
         tag: 'Creative Arts',
         heading: 'Painting a brighter future',
         text: 'Children explore drawing, painting, origami, and crafting products out of waste materials. It promotes spatial skills, fine motor coordination, and provides a peaceful medium for visual self-expression.',
-        image: 'https://ik.imagekit.io/l15cczdgu/art/art_1.jpg',
+        image: 'https://ik.imagekit.io/l15cczdgu/art/IMG-20240614-WA0114.jpg',
         alt: 'Arts & crafts workshop',
         points: ['Sketching, drawing & color mixing', 'Origami & decorative paper crafting', 'Recycled material art creations']
       },
@@ -136,7 +135,7 @@ router.get('/', (req, res) => {
           alt: 'Painting session'
         },
         {
-          image: 'https://ik.imagekit.io/l15cczdgu/transformation/transformation1.jpg',
+          image: 'https://ik.imagekit.io/l15cczdgu/art/IMG_20180915_182506.jpg',
           alt: 'Craft exhibition'
         }
       ]
@@ -145,7 +144,7 @@ router.get('/', (req, res) => {
 
   res.render('pages/skills', {
     title: 'Skill Development | Spread Smile India',
-    description: 'Learn about Spread Smile India\'s vocational and creative training programs, including Tailoring, Candle Making, Spoken English, Singing, and Arts.',
+    description: 'Learn about Spread Smile India\'s vocational and creative training programs, including Tailoring, Candle Making, Spoken English, and Arts.',
     urlPath: '/skill-development',
     sections
   });

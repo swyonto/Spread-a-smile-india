@@ -13,6 +13,12 @@
         <img src="<%= section.main.image %>" alt="<%= section.main.alt %>" loading="lazy" />
       </div>
       <div class="skill-main-card__content">
+        <% if (section.main.tag) { %>
+          <span class="skill-main-card__tag"><%= section.main.tag %></span>
+        <% } %>
+        <% if (section.main.heading) { %>
+          <h3 class="skill-main-card__heading"><%= section.main.heading %></h3>
+        <% } %>
         <p class="skills-main-desc"><%= section.main.text %></p>
 
         <% if (section.main.points && section.main.points.length) { %>
