@@ -30,9 +30,9 @@
         </div>
       </div>
 
-      <!-- Card 2: Healthcare Support (Image Left, Text Right) -->
+      <!-- Card 2: Health Camps (Image Left, Text Right) -->
       <% const card2 = section.cards[1]; %>
-      <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card2.title %>" data-health-subcards="<%- JSON.stringify(card2.subCards || []).replace(/"/g, '&quot;') %>">
+      <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card2.title %>" data-health-subcards="<%- JSON.stringify(card2.subCards || []).replace(/"/g, '&quot;') %>" data-health-mode="camp-cards">
         <div class="health-group-block__media">
           <img src="<%= getOptimizedImg(card2.image, 'w-1000,q-80') %>" alt="<%= card2.alt %>" loading="lazy" />
           <div class="health-hover-reveal">
@@ -57,6 +57,7 @@
           <% } %>
         </div>
       </div>
+
 
     <% } else { %>
       <div class="program-band__heading">

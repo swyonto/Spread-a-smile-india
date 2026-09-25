@@ -895,3 +895,434 @@ body.program-video-open {
       padding: 0.3rem 0.75rem;
    }
 }
+
+/* ============================================
+   Health Camps — Intro Block & Vertical Cards
+   ============================================ */
+
+.health-camps-intro {
+   max-width: 1000px;
+   margin: 0 auto 2.25rem;
+}
+
+.health-camps-intro__title {
+   font-size: clamp(1.65rem, 2.8vw, 2.2rem);
+   color: var(--color-heading);
+   margin: 0.35rem 0 0.65rem;
+   font-family: 'Cormorant Garamond', serif;
+   font-weight: 700;
+}
+
+.health-camps-intro__text {
+   color: var(--color-text-muted);
+   font-size: 0.96rem;
+   line-height: 1.65;
+   max-width: 54rem;
+}
+
+/* 3-column grid of vertical camp cards */
+.health-camp-cards-row {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 1.5rem;
+   max-width: 1000px;
+   margin: 0 auto 2.5rem;
+}
+
+/* Vertical card */
+.health-camp-card {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid var(--color-border);
+   border-radius: 1.25rem;
+   background: var(--color-card-bg);
+   box-shadow: var(--shadow-sm);
+   overflow: hidden;
+   cursor: pointer;
+   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.health-camp-card:hover {
+   transform: translateY(-6px);
+   box-shadow: var(--shadow-lg);
+   border-color: var(--color-primary);
+}
+
+/* Image area */
+.health-camp-card__media {
+   position: relative;
+   aspect-ratio: 4 / 3;
+   overflow: hidden;
+   background: #000;
+}
+
+.health-camp-card__media img {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.55s ease, filter 0.45s ease;
+}
+
+.health-camp-card:hover .health-camp-card__media img {
+   transform: scale(1.07);
+   filter: brightness(0.72);
+}
+
+/* Overlay with "View Details" CTA */
+.health-camp-card__overlay {
+   position: absolute;
+   inset: 0;
+   display: flex;
+   align-items: flex-end;
+   padding: 1.1rem;
+   background: linear-gradient(180deg, transparent 40%, rgba(10, 9, 25, 0.6) 100%);
+   opacity: 0;
+   transition: opacity 0.35s ease;
+}
+
+.health-camp-card:hover .health-camp-card__overlay {
+   opacity: 1;
+}
+
+.health-camp-card__view-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
+   padding: 0.45rem 1.1rem;
+   border-radius: 99px;
+   background: var(--color-primary);
+   color: #fff;
+   font-size: 0.82rem;
+   font-weight: 600;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+   letter-spacing: 0.02em;
+   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+   transition: transform 0.2s ease;
+}
+
+.health-camp-card:hover .health-camp-card__view-btn {
+   transform: translateX(3px);
+}
+
+/* Text area below image */
+.health-camp-card__content {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.health-camp-card__title {
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 1.45rem;
+   font-weight: 700;
+   color: var(--color-heading);
+   margin: 0;
+   line-height: 1.25;
+   transition: color var(--transition);
+}
+
+.health-camp-card:hover .health-camp-card__title {
+   color: var(--color-primary);
+}
+
+.health-camp-card__desc {
+   color: var(--color-text-muted);
+   font-size: 0.84rem;
+   line-height: 1.55;
+   margin: 0;
+   /* clamp to 2 lines */
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+
+.health-camp-card__count {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.4rem;
+   margin-top: 0.25rem;
+   font-size: 0.78rem;
+   font-weight: 600;
+   color: var(--color-primary);
+   font-family: 'Cinzel', serif;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+}
+
+.health-camp-card__count i {
+   font-size: 0.72rem;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+   .health-camp-cards-row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .health-camp-cards-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+   }
+
+   .health-camp-card__media {
+      aspect-ratio: 16 / 10;
+   }
+}
+
+/* ============================================
+   Health Panel — Camp Cards (Level 1 in panel)
+   ============================================ */
+
+/* Flexible grid inside the full-screen panel (supports 5 camp cards) */
+.health-camp-panel-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 1.25rem;
+   padding: 2rem 0 3rem;
+   align-items: start;
+}
+
+/* Vertical card */
+.health-camp-panel-card {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid var(--color-border);
+   border-radius: 1.25rem;
+   background: var(--color-card-bg);
+   box-shadow: var(--shadow-sm);
+   overflow: hidden;
+   cursor: pointer;
+   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.health-camp-panel-card:hover {
+   transform: translateY(-6px);
+   box-shadow: var(--shadow-lg);
+   border-color: var(--color-primary);
+}
+
+/* Image area */
+.health-camp-panel-card__media {
+   position: relative;
+   aspect-ratio: 4 / 3;
+   overflow: hidden;
+   background: #000;
+}
+
+.health-camp-panel-card__media img {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.55s ease, filter 0.45s ease;
+}
+
+.health-camp-panel-card:hover .health-camp-panel-card__media img {
+   transform: scale(1.07);
+   filter: brightness(0.72);
+}
+
+/* Overlay CTA */
+.health-camp-panel-card__overlay {
+   position: absolute;
+   inset: 0;
+   display: flex;
+   align-items: flex-end;
+   padding: 1rem;
+   background: linear-gradient(180deg, transparent 40%, rgba(10, 9, 25, 0.62) 100%);
+   opacity: 0;
+   transition: opacity 0.35s ease;
+}
+
+.health-camp-panel-card:hover .health-camp-panel-card__overlay {
+   opacity: 1;
+}
+
+.health-camp-panel-card__view-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
+   padding: 0.4rem 1rem;
+   border-radius: 99px;
+   background: var(--color-primary);
+   color: #fff;
+   font-size: 0.82rem;
+   font-weight: 600;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+   transition: transform 0.2s ease;
+}
+
+.health-camp-panel-card:hover .health-camp-panel-card__view-btn {
+   transform: translateX(3px);
+}
+
+/* Text content */
+.health-camp-panel-card__content {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.health-camp-panel-card__title {
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 1.45rem;
+   font-weight: 700;
+   color: var(--color-heading);
+   margin: 0;
+   line-height: 1.25;
+   transition: color var(--transition);
+}
+
+.health-camp-panel-card:hover .health-camp-panel-card__title {
+   color: var(--color-primary);
+}
+
+.health-camp-panel-card__desc {
+   color: var(--color-text-muted);
+   font-size: 0.84rem;
+   line-height: 1.55;
+   margin: 0;
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.health-camp-panel-card__count {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.4rem;
+   margin-top: 0.2rem;
+   font-size: 0.78rem;
+   font-weight: 600;
+   color: var(--color-primary);
+   font-family: 'Cinzel', serif;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+}
+
+/* Back button in panel header */
+.health-panel-back-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.55rem;
+   padding: 0.5rem 1.1rem;
+   border-radius: 99px;
+   border: 1px solid var(--color-border);
+   background: var(--color-bg-alt);
+   color: var(--color-text);
+   font-size: 0.88rem;
+   font-weight: 600;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+   cursor: pointer;
+   transition: background var(--transition), color var(--transition), border-color var(--transition), transform 0.2s ease;
+}
+
+.health-panel-back-btn:hover {
+   background: var(--color-primary);
+   color: #fff;
+   border-color: var(--color-primary);
+   transform: translateX(-3px);
+}
+
+.health-panel-back-btn i {
+   font-size: 0.82rem;
+}
+
+/* Responsive panel camp cards */
+@media (max-width: 1024px) {
+   .health-camp-panel-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
+   }
+}
+
+@media (max-width: 540px) {
+   .health-camp-panel-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+   }
+}
+
+/* ============================================
+   Health Camp — Image-Only Photo Grid (Level 2)
+   ============================================ */
+
+.health-camp-img-grid {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+   gap: 0.65rem;
+   padding: 1.5rem 0 3rem;
+}
+
+.health-camp-img-card {
+   position: relative;
+   aspect-ratio: 1 / 1;
+   overflow: hidden;
+   border-radius: 0.85rem;
+   background: var(--color-bg-alt);
+   cursor: pointer;
+}
+
+.health-camp-img-card img,
+.health-camp-img-card video {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   transition: transform 0.5s ease;
+}
+
+.health-camp-img-card:hover img,
+.health-camp-img-card:hover video {
+   transform: scale(1.06);
+}
+
+/* Play icon badge for video cards */
+.health-camp-img-play {
+   position: absolute;
+   bottom: 0.6rem;
+   left: 0.6rem;
+   display: grid;
+   place-items: center;
+   width: 2.2rem;
+   height: 2.2rem;
+   border-radius: 50%;
+   background: rgba(10, 9, 25, 0.72);
+   border: 1px solid rgba(255, 255, 255, 0.18);
+   color: #fff;
+   font-size: 0.72rem;
+   pointer-events: none;
+   transition: opacity 0.25s ease, background 0.25s ease;
+}
+
+.health-camp-img-card:hover .health-camp-img-play {
+   background: var(--color-primary);
+}
+
+@media (max-width: 860px) {
+   .health-camp-img-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .health-camp-img-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.4rem;
+   }
+}

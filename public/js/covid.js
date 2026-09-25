@@ -13,40 +13,49 @@ const initHoverPlay = () => {
       return;
     }
 
+    // Ensure safe ImageKit delivery bypassing transformation limits
+    if (video.src && video.src.includes('ik.imagekit.io') && !video.src.includes('orig-true')) {
+      video.src = video.src.includes('?') ? `${video.src}&tr=orig-true` : `${video.src}?tr=orig-true`;
+    }
+
     // Explicitly set muted, loop, and playsinline attributes programmatically
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
 
-    // Play video on hover
-    card.addEventListener('mouseenter', () => {
-      // Force muted state again on hover to comply with browser autoplay requirements
+    function playVideo() {
       video.muted = true;
-      
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.then(() => {
-          console.log(`Video ${index} started playing successfully on hover.`);
-          // Fade out play icon overlay when video plays successfully
           if (playOverlay) {
             playOverlay.style.opacity = '0';
             playOverlay.style.transform = 'translate(-50%, -50%) scale(0.8)';
           }
-        }).catch(error => {
-          console.warn(`Video ${index} play attempt failed:`, error);
-        });
+        }).catch(() => {});
       }
-    });
+    }
 
-    // Pause video when mouse leaves
-    card.addEventListener('mouseleave', () => {
+    function pauseVideo() {
       video.pause();
-      console.log(`Video ${index} paused.`);
-      // Show the play icon overlay again
       if (playOverlay) {
         playOverlay.style.opacity = '1';
         playOverlay.style.transform = 'translate(-50%, -50%) scale(1)';
       }
+    }
+
+    // Play video on hover
+    card.addEventListener('mouseenter', playVideo);
+
+    // Pause video when mouse leaves
+    card.addEventListener('mouseleave', pauseVideo);
+
+    // Toggle play/pause on card click
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.covid-video-sound-btn')) return;
+      if (video.paused) playVideo(); else pauseVideo();
     });
 
     // Toggle mute/unmute on button click
