@@ -79,6 +79,7 @@ app.use('/skill-development', skillsRouter);
 app.use('/celebrations', celebrationsRouter);
 app.use('/timeline', timelineRouter);
 app.get('/timezone', (req, res) => res.redirect('/timeline'));
+app.get('/events', (req, res) => res.redirect(301, '/celebrations'));
 app.get('/covid', (req, res) => res.redirect(301, '/programs#program-covid')); // permanent redirect to covid section
 
 // 404 handler

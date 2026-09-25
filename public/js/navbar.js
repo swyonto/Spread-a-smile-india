@@ -8,17 +8,22 @@
   const dropdowns   = document.querySelectorAll('.nav-dropdown');
 
   // --- Active nav link indicator ---
-  (function markActiveLink() {
-    const path = window.location.pathname;
-    // All plain <a> nav links
+  function markActiveLink() {
+    const rawPath = window.location.pathname.replace(/\/$/, '') || '/';
+    const path = rawPath === '/events' ? '/celebrations' : rawPath;
     document.querySelectorAll('.navbar-links .nav-link').forEach(function (link) {
-      const href = link.getAttribute('href');
-      if (!href) return;
-      // Exact match for '/', prefix match for everything else
-      const isActive = href === '/' ? path === '/' : path.startsWith(href);
-      if (isActive) link.classList.add('active');
+      const rawHref = (link.getAttribute('href') || '').replace(/\/$/, '') || '/';
+      const href = rawHref === '/events' ? '/celebrations' : rawHref;
+      const isActive = href === '/' ? path === '/' : (path === href || path.startsWith(href + '/'));
+      if (isActive) {
+        link.classList.add('active');
+      }
     });
-  })();
+  }
+  markActiveLink();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', markActiveLink);
+  }
   // --- Mobile menu open/close ---
   function openMenu() {
     navLinks.classList.add('open');

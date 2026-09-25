@@ -45,7 +45,7 @@
 
 .navbar-name {
   font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   color: var(--color-nav-text);
@@ -57,7 +57,7 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.32rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -68,10 +68,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.35rem 0.4rem;
+  gap: 0.3rem;
+  padding: 0.35rem 0.42rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.71rem;
+  font-size: 0.82rem;
   font-weight: 500;
   color: var(--color-nav-text);
   background: none;
@@ -272,17 +272,17 @@ button.nav-link::after {
   }
 
   .navbar-name {
-    font-size: 0.86rem;
+    font-size: 0.95rem;
   }
 
   .navbar-links {
-    gap: 0.25rem;
+    gap: 0.28rem;
   }
 
   .nav-link {
     padding: 0.4rem 0.42rem;
-    font-size: 0.81rem;
-    gap: 0.25rem;
+    font-size: 0.93rem;
+    gap: 0.28rem;
   }
 }
 
@@ -375,7 +375,7 @@ button.nav-link::after {
   }
 
   .navbar-name {
-    font-size: 0.9rem;
+    font-size: 0.99rem;
   }
 
   .navbar-logo {

@@ -12,12 +12,12 @@
   <!-- Center: Nav Links -->
   <ul class="navbar-links" id="navbarLinks">
 
-    <li><a href="/" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
-    <li><a href="/about" class="nav-link"><i class="fa-solid fa-hands-holding-child"></i> About Us</a></li>
+    <li><a href="/" class="nav-link <%= (typeof urlPath !== 'undefined' && urlPath === '/') ? 'active' : '' %>"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="/about" class="nav-link <%= (typeof urlPath !== 'undefined' && urlPath === '/about') ? 'active' : '' %>"><i class="fa-solid fa-hands-holding-child"></i> About Us</a></li>
 
     <!-- Programs Dropdown -->
     <li class="nav-dropdown">
-      <a href="/programs" class="nav-link dropdown-toggle">
+      <a href="/programs" class="nav-link dropdown-toggle <%= (typeof urlPath !== 'undefined' && urlPath.startsWith('/programs')) ? 'active' : '' %>">
         <i class="fa-solid fa-hand-holding-heart"></i> Programs
         <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
       </a>
@@ -30,12 +30,12 @@
       </ul>
     </li>
 
-    <li><a href="/impact" class="nav-link"><i class="fa-solid fa-chart-line"></i> Impact</a></li>
-    <li><a href="/dignitaries" class="nav-link"><i class="fa-solid fa-user-tie"></i> Dignitaries</a></li>
+    <li><a href="/impact" class="nav-link <%= (typeof urlPath !== 'undefined' && urlPath === '/impact') ? 'active' : '' %>"><i class="fa-solid fa-chart-line"></i> Impact</a></li>
+    <li><a href="/dignitaries" class="nav-link <%= (typeof urlPath !== 'undefined' && urlPath === '/dignitaries') ? 'active' : '' %>"><i class="fa-solid fa-user-tie"></i> Dignitaries</a></li>
 
     <!-- Skill Development Dropdown -->
     <li class="nav-dropdown">
-      <a href="/skill-development" class="nav-link dropdown-toggle">
+      <a href="/skill-development" class="nav-link dropdown-toggle <%= (typeof urlPath !== 'undefined' && urlPath.startsWith('/skill-development')) ? 'active' : '' %>">
         <i class="fa-solid fa-graduation-cap"></i> Skill Development
         <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
       </a>
@@ -56,8 +56,8 @@
       </ul>
     </li>
 
-    <li><a href="/timeline" class="nav-link"><i class="fa-solid fa-timeline"></i> Timeline</a></li>
-    <li><a href="/celebrations" class="nav-link"><i class="fa-solid fa-cake-candles"></i> Events</a></li>
+    <li><a href="/timeline" class="nav-link <%= (typeof urlPath !== 'undefined' && urlPath === '/timeline') ? 'active' : '' %>"><i class="fa-solid fa-timeline"></i> Timeline</a></li>
+    <li><a href="/celebrations" class="nav-link <%= (typeof urlPath !== 'undefined' && (urlPath === '/celebrations' || urlPath === '/events')) ? 'active' : '' %>"><i class="fa-solid fa-cake-candles"></i> Events</a></li>
 
   </ul>
 
@@ -73,4 +73,4 @@
 <!-- Mobile overlay -->
 <div class="nav-overlay" id="navOverlay"></div>
 
-<script src="/js/navbar.js" defer></script>
+<script src="/js/navbar.js?v=<%= Date.now() %>" defer></script>
