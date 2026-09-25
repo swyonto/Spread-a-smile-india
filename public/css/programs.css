@@ -557,6 +557,74 @@ body.program-video-open {
    padding: 2.5rem 0;
 }
 
+/* Topic Grouped Layout for Health Modal */
+.program-health-panel__grid--grouped {
+   display: flex;
+   flex-direction: column;
+   gap: 3.5rem;
+   padding: 1.5rem 0 3rem;
+}
+
+.health-topic-group {
+   display: flex;
+   flex-direction: column;
+   gap: 1.75rem;
+   width: 100%;
+}
+
+.health-topic-header {
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   padding-bottom: 0.25rem;
+}
+
+.health-topic-title {
+   font-family: 'Cinzel', serif;
+   font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+   font-weight: 700;
+   color: var(--color-heading);
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   gap: 0.75rem;
+}
+
+.health-topic-title::before {
+   content: '';
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: var(--color-primary);
+   box-shadow: 0 0 10px color-mix(in srgb, var(--color-primary) 50%, transparent);
+}
+
+.health-topic-divider {
+   flex: 1;
+   height: 1px;
+   background: linear-gradient(90deg, var(--color-border), transparent);
+}
+
+.health-topic-subgrid {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 2rem;
+}
+
+@media (max-width: 990px) {
+   .health-topic-subgrid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+   }
+   
+   .health-topic-header {
+      gap: 1rem;
+   }
+}
+
 /* Sub-card: 60% Media, 40% Text Content */
 .health-sub-card {
    display: flex;
@@ -727,6 +795,21 @@ body.program-video-open {
    color: var(--color-heading);
 }
 
+.health-group-block__subtitle {
+   display: inline-block;
+   width: fit-content;
+   background-color: #2563eb;
+   color: #ffffff;
+   padding: 0.35rem 0.85rem;
+   border-radius: 0.5rem;
+   font-size: 1.05rem;
+   font-weight: 600;
+   letter-spacing: 0.02em;
+   margin: -0.25rem 0 0;
+   line-height: 1.4;
+   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
 .health-group-block__content p {
    color: var(--color-text-muted);
    font-size: 1.05rem;
@@ -805,5 +888,10 @@ body.program-video-open {
 
    .health-group-block__content h3 {
       font-size: 1.5rem;
+   }
+
+   .health-group-block__subtitle {
+      font-size: 0.95rem;
+      padding: 0.3rem 0.75rem;
    }
 }

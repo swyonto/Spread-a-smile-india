@@ -116,136 +116,170 @@
     document.body.classList.remove('program-video-open');
   }
 
+  function createSubCardElement(sub) {
+    const cardEl = document.createElement('div');
+    cardEl.className = 'health-sub-card';
+    
+    let mediaHtml = '';
+    if (sub.videoSrc) {
+      const thumbnailUrl = sub.image || (sub.videoSrc.split('?')[0] + '/ik-thumbnail.jpg');
+      mediaHtml = `
+        <img class="health-video-thumbnail" src="${thumbnailUrl}" alt="${sub.title}" loading="lazy" />
+        <div class="health-video-controls">
+          <button class="health-video-btn health-video-play-btn" type="button" aria-label="Play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button class="health-video-btn health-video-mute-btn" type="button" aria-label="Unmute" style="display: none;">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+        </div>
+      `;
+    } else {
+      mediaHtml = `<img src="${sub.image}" alt="${sub.title}" loading="lazy" />`;
+    }
+    
+    cardEl.innerHTML = `
+      <div class="health-sub-card__media">
+        ${mediaHtml}
+      </div>
+      <div class="health-sub-card__content">
+        <h3>${sub.title}</h3>
+        <p>${sub.desc || ''}</p>
+      </div>
+    `;
+
+    if (sub.videoSrc) {
+      const mediaContainer = cardEl.querySelector('.health-sub-card__media');
+      const thumbnail = cardEl.querySelector('.health-video-thumbnail');
+      const playBtn = cardEl.querySelector('.health-video-play-btn');
+      const muteBtn = cardEl.querySelector('.health-video-mute-btn');
+      let video = null;
+
+      function loadAndPlayVideo() {
+        if (!video) {
+          video = document.createElement('video');
+          video.src = sub.videoSrc;
+          video.loop = true;
+          video.muted = true;
+          video.playsInline = true;
+          video.setAttribute('autoplay', 'true');
+          video.setAttribute('playsinline', 'true');
+          
+          video.style.position = 'absolute';
+          video.style.inset = '0';
+          video.style.width = '100%';
+          video.style.height = '100%';
+          video.style.objectFit = 'cover';
+
+          mediaContainer.insertBefore(video, mediaContainer.firstChild);
+          
+          thumbnail.style.transition = 'opacity 0.3s ease';
+          video.addEventListener('playing', () => {
+            thumbnail.style.opacity = '0';
+            setTimeout(() => {
+              thumbnail.style.display = 'none';
+            }, 300);
+          });
+          
+          muteBtn.style.display = 'grid';
+        }
+
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            playBtn.setAttribute('aria-label', 'Pause');
+          }).catch(() => {});
+        }
+      }
+
+      function pauseVideo() {
+        if (video && !video.paused) {
+          video.pause();
+          playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+          playBtn.setAttribute('aria-label', 'Play');
+        }
+      }
+
+      playBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!video || video.paused) {
+          loadAndPlayVideo();
+        } else {
+          pauseVideo();
+        }
+      });
+
+      cardEl.addEventListener('mouseenter', () => {
+        loadAndPlayVideo();
+      });
+
+      cardEl.addEventListener('mouseleave', () => {
+        pauseVideo();
+      });
+
+      muteBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (video) {
+          video.muted = !video.muted;
+          if (video.muted) {
+            muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+            muteBtn.setAttribute('aria-label', 'Unmute');
+          } else {
+            muteBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+            muteBtn.setAttribute('aria-label', 'Mute');
+          }
+        }
+      });
+    }
+
+    return cardEl;
+  }
+
   function openHealthPanel(title, subCards) {
     if (!healthPanel || !healthPanelHeaderTitle || !healthPanelGrid) return;
     healthPanelHeaderTitle.textContent = title || 'Health Program Details';
     healthPanelGrid.innerHTML = '';
 
-    subCards.forEach((sub) => {
-      const cardEl = document.createElement('div');
-      cardEl.className = 'health-sub-card';
-      
-      let mediaHtml = '';
-      if (sub.videoSrc) {
-        const thumbnailUrl = sub.image || (sub.videoSrc.split('?')[0] + '/ik-thumbnail.jpg');
-        mediaHtml = `
-          <img class="health-video-thumbnail" src="${thumbnailUrl}" alt="${sub.title}" loading="lazy" />
-          <div class="health-video-controls">
-            <button class="health-video-btn health-video-play-btn" type="button" aria-label="Play">
-              <i class="fa-solid fa-play"></i>
-            </button>
-            <button class="health-video-btn health-video-mute-btn" type="button" aria-label="Unmute" style="display: none;">
-              <i class="fa-solid fa-volume-xmark"></i>
-            </button>
-          </div>
+    const isGrouped = Array.isArray(subCards) && subCards.length > 0 && (subCards[0].cards || subCards[0].items);
+
+    if (isGrouped) {
+      healthPanelGrid.classList.add('program-health-panel__grid--grouped');
+      subCards.forEach((group) => {
+        const topicTitle = group.topic || group.title || group.heading || 'Camp Topic';
+        const cards = group.cards || group.items || [];
+        
+        const sectionEl = document.createElement('div');
+        sectionEl.className = 'health-topic-group';
+
+        const headerEl = document.createElement('div');
+        headerEl.className = 'health-topic-header';
+        headerEl.innerHTML = `
+          <h3 class="health-topic-title">${topicTitle}</h3>
+          <div class="health-topic-divider"></div>
         `;
-      } else {
-        mediaHtml = `<img src="${sub.image}" alt="${sub.title}" loading="lazy" />`;
-      }
-      
-      cardEl.innerHTML = `
-        <div class="health-sub-card__media">
-          ${mediaHtml}
-        </div>
-        <div class="health-sub-card__content">
-          <h3>${sub.title}</h3>
-          <p>${sub.desc}</p>
-        </div>
-      `;
+        sectionEl.appendChild(headerEl);
 
-      if (sub.videoSrc) {
-        const mediaContainer = cardEl.querySelector('.health-sub-card__media');
-        const thumbnail = cardEl.querySelector('.health-video-thumbnail');
-        const playBtn = cardEl.querySelector('.health-video-play-btn');
-        const muteBtn = cardEl.querySelector('.health-video-mute-btn');
-        let video = null;
+        const gridEl = document.createElement('div');
+        gridEl.className = 'health-topic-subgrid';
 
-        function loadAndPlayVideo() {
-          if (!video) {
-            video = document.createElement('video');
-            video.src = sub.videoSrc;
-            video.loop = true;
-            video.muted = true;
-            video.playsInline = true;
-            video.setAttribute('autoplay', 'true');
-            video.setAttribute('playsinline', 'true');
-            
-            // Position the video absolutely under controls
-            video.style.position = 'absolute';
-            video.style.inset = '0';
-            video.style.width = '100%';
-            video.style.height = '100%';
-            video.style.objectFit = 'cover';
-
-            // Insert video tag before thumbnail
-            mediaContainer.insertBefore(video, mediaContainer.firstChild);
-            
-            thumbnail.style.transition = 'opacity 0.3s ease';
-            video.addEventListener('playing', () => {
-              thumbnail.style.opacity = '0';
-              setTimeout(() => {
-                thumbnail.style.display = 'none';
-              }, 300);
-            });
-            
-            muteBtn.style.display = 'grid';
-          }
-
-          const playPromise = video.play();
-          if (playPromise !== undefined) {
-            playPromise.then(() => {
-              playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-              playBtn.setAttribute('aria-label', 'Pause');
-            }).catch(() => {});
-          }
-        }
-
-        function pauseVideo() {
-          if (video && !video.paused) {
-            video.pause();
-            playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-            playBtn.setAttribute('aria-label', 'Play');
-          }
-        }
-
-        playBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          if (!video || video.paused) {
-            loadAndPlayVideo();
-          } else {
-            pauseVideo();
-          }
+        cards.forEach((sub) => {
+          const cardEl = createSubCardElement(sub);
+          gridEl.appendChild(cardEl);
         });
 
-        // Trigger load/play on hover
-        cardEl.addEventListener('mouseenter', () => {
-          loadAndPlayVideo();
-        });
-
-        // Pause on mouseleave
-        cardEl.addEventListener('mouseleave', () => {
-          pauseVideo();
-        });
-
-        muteBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          if (video) {
-            video.muted = !video.muted;
-            if (video.muted) {
-              muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
-              muteBtn.setAttribute('aria-label', 'Unmute');
-            } else {
-              muteBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
-              muteBtn.setAttribute('aria-label', 'Mute');
-            }
-          }
-        });
-      }
-
-      healthPanelGrid.appendChild(cardEl);
-    });
+        sectionEl.appendChild(gridEl);
+        healthPanelGrid.appendChild(sectionEl);
+      });
+    } else {
+      healthPanelGrid.classList.remove('program-health-panel__grid--grouped');
+      (subCards || []).forEach((sub) => {
+        const cardEl = createSubCardElement(sub);
+        healthPanelGrid.appendChild(cardEl);
+      });
+    }
 
     healthPanel.classList.add('is-open');
     healthPanel.setAttribute('aria-hidden', 'false');

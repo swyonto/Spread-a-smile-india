@@ -13,7 +13,13 @@
       <% const card1 = section.cards[0]; %>
       <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card1.title %>" data-health-subcards="<%- JSON.stringify(card1.subCards || []).replace(/"/g, '&quot;') %>">
         <div class="health-group-block__content">
+          <% if (card1.tag) { %>
+            <span class="program-card__tag"><%= card1.tag %></span>
+          <% } %>
           <h3><%= card1.title %></h3>
+          <% if (card1.subtitle) { %>
+            <h4 class="health-group-block__subtitle"><%= card1.subtitle %></h4>
+          <% } %>
           <p><%= card1.text %></p>
         </div>
         <div class="health-group-block__media">
@@ -24,7 +30,7 @@
         </div>
       </div>
 
-      <!-- Card 2: Health Camps (Image Left, Text Right) -->
+      <!-- Card 2: Healthcare Support (Image Left, Text Right) -->
       <% const card2 = section.cards[1]; %>
       <div class="health-group-block program-reveal" data-health-trigger data-health-title="<%= card2.title %>" data-health-subcards="<%- JSON.stringify(card2.subCards || []).replace(/"/g, '&quot;') %>">
         <div class="health-group-block__media">
@@ -34,32 +40,23 @@
           </div>
         </div>
         <div class="health-group-block__content">
-          <h3><%= card2.title %></h3>
-          <p><%= card2.text %></p>
-        </div>
-      </div>
-
-      <!-- Card 3: Healthcare Support (Standard Main Card layout: Image Left, Text Right) -->
-      <article class="program-main-card program-reveal">
-        <div class="program-main-card__media">
-          <img src="<%= getOptimizedImg(section.main.image, 'w-800,q-80') %>" alt="<%= section.main.alt %>" loading="lazy" />
-        </div>
-        <div class="program-main-card__content">
-          <% if (section.main.tag) { %>
-            <span class="program-card__tag"><%= section.main.tag %></span>
+          <% if (card2.tag) { %>
+            <span class="program-card__tag"><%= card2.tag %></span>
           <% } %>
-          <h3><%= section.main.heading %></h3>
-          <p><%= section.main.text %></p>
-
-          <% if (section.main.points && section.main.points.length) { %>
+          <h3><%= card2.title %></h3>
+          <% if (card2.subtitle) { %>
+            <h4 class="health-group-block__subtitle"><%= card2.subtitle %></h4>
+          <% } %>
+          <p><%= card2.text %></p>
+          <% if (card2.points && card2.points.length) { %>
             <ul class="program-points">
-              <% section.main.points.forEach((point) => { %>
+              <% card2.points.forEach((point) => { %>
                 <li><i class="fa-solid fa-check"></i> <%= point %></li>
               <% }) %>
             </ul>
           <% } %>
         </div>
-      </article>
+      </div>
 
     <% } else { %>
       <div class="program-band__heading">
